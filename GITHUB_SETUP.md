@@ -7,7 +7,7 @@
 3. **创建新仓库**：
    - 点击右上角的 "+" 号
    - 选择 "New repository"
-   - 仓库名称：`guoyichen.github.io`（必须完全匹配）
+   - 仓库名称：`EasonAI-5589.github.io`（必须完全匹配）
    - 描述：`Guoyichen's Personal Academic Website`
    - 设置为 **Public** 仓库
    - **不要**勾选 "Add a README file"
@@ -21,7 +21,7 @@
 
 ```bash
 cd /Users/guoyichen/EasonAI/academicpages-website
-git remote add origin https://github.com/guoyichen/guoyichen.github.io.git
+git remote add origin https://github.com/EasonAI-5589/EasonAI-5589.github.io.git
 git branch -M main
 git push -u origin main
 ```
@@ -39,11 +39,11 @@ git push -u origin main
 GitHub Pages 通常需要5-10分钟来构建和部署你的网站。
 
 部署完成后，你的网站将在以下地址可用：
-**https://guoyichen.github.io**
+**https://EasonAI-5589.github.io**
 
 ## 步骤5：验证网站
 
-访问 https://guoyichen.github.io 确认网站正常运行。
+访问 https://EasonAI-5589.github.io 确认网站正常运行。
 
 ---
 
