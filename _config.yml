@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Yichen Guo - AI Researcher"
+title                    : "Yichen Guo"
 title_separator          : "-"
 name                     : &name "Yichen Guo"
 description              : &description "AI Researcher specializing in Large Language Models and Large Vision-Language Models"
@@ -22,7 +22,7 @@ repository               : "EasonAI-5589/EasonAI.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "/images/profile.png"
   name             : "Yichen Guo"
   pronouns         : # example: "she/her"  
   bio              : "AI Researcher specializing in Large Language Models and Large Vision-Language Models. Currently pursuing M.Eng at NTU Singapore."
