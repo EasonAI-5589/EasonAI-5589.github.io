@@ -1,0 +1,31 @@
+#!/bin/bash
+
+echo "📸 添加个人照片到网站"
+echo ""
+
+# 检查images目录
+echo "📁 检查images目录..."
+ls -la images/ | grep -E "(profile|bio-photo)"
+
+echo ""
+echo "📋 请按照以下步骤添加你的照片："
+echo ""
+echo "1. 将你的照片文件复制到以下位置："
+echo "   cp /path/to/your/photo.jpg /Users/guoyichen/EasonAI/academicpages-website/images/profile.png"
+echo ""
+echo "2. 或者使用新文件名："
+echo "   cp /path/to/your/photo.jpg /Users/guoyichen/EasonAI/academicpages-website/images/yichen-photo.jpg"
+echo ""
+echo "3. 如果使用新文件名，需要修改_config.yml中的avatar设置"
+echo ""
+echo "4. 预览效果："
+echo "   export PATH=\"\$HOME/.rbenv/bin:\$PATH\""
+echo "   eval \"\$(rbenv init -)\""
+echo "   bundle exec jekyll serve"
+echo ""
+echo "5. 提交更改："
+echo "   git add images/your-photo.jpg"
+echo "   git commit -m \"Add personal photo\""
+echo "   git push origin main"
+echo ""
+echo "✅ 完成！你的照片将显示在网站的侧边栏和个人资料页面"
