@@ -1,12 +1,14 @@
 ---
+collection: publications
+category: manuscripts
 title: "MAP: Mitigating Hallucinations in Large Vision-Language Models with Map-Level Attention Processing"
 authors: "C. Li*, Yichen Guo*, B. Qian, J. You, K. Tang, Y. Du, Z. Zhang, X. Huang"
 venue: "AAAI 2026"
 year: 2026
 type: "conference"
 status: "under_review"
-pdf: "/files/map-aaai2026.pdf"
-code: "https://github.com/EasonAI-5589/MAP"
+legacy_pdf: "/files/map-aaai2026.pdf"
+legacy_code: "https://github.com/EasonAI-5589/MAP"
 note: "*Equal contribution"
 ---
 

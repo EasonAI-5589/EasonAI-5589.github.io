@@ -1,12 +1,14 @@
 ---
+collection: publications
+category: manuscripts
 title: "SeeMe: Mitigating Hallucinations in Large Vision-Language Models through Effective Visual Token Engineering"
 authors: "J. You*, K. Tang*, Yichen Guo, C. Li, H. Li, Y. Qu, X. Huang"
 venue: "AAAI 2026"
 year: 2026
 type: "conference"
 status: "under_review"
-pdf: "/files/seeme-aaai2026.pdf"
-code: "https://github.com/EasonAI-5589/SeeMe"
+legacy_pdf: "/files/seeme-aaai2026.pdf"
+legacy_code: "https://github.com/EasonAI-5589/SeeMe"
 note: "*Equal contribution"
 ---
 

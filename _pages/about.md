@@ -31,14 +31,13 @@ My research focuses on:
 - **Token Reduction**: Optimizing visual token processing for faster inference
 - **Multimodal Learning**: Improving cross-modal understanding and reasoning
 
-## Current Work
+## Recent Work
 
-I am actively working on several research projects:
+**STAR-Pro: Stage-Wise Token Adaptive Reduction with Progressive Refinement for Efficient Large Vision-Language Models** (2026). A training-free framework that preserves visual feature coverage with pivoted QR and progressively refines retained tokens using evolving text-to-visual attention. [Paper](https://arxiv.org/abs/2609.05916) · [Code](https://github.com/EasonAI-5589/starpro)
 
-1. **STAR (Stage-wise Attention-Guided Token Reduction)**: A novel framework for efficient LVLM inference
-2. **MAP (Map-Level Attention Processing)**: Mitigating hallucinations in LVLMs through semantic map processing
-3. **DCLA (Dynamic Consistency Layer Aggregation)**: Improving semantic consistency in multimodal models
-4. **FinePruner**: An optimized attention-score guided framework for pruning redundant visual tokens
+**Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned Generation for Policy Learning** (2026). WorldEcho evaluates action following beyond expert demonstrations; WorldSync improves action-conditioned generation to support more reliable policy learning. [Paper](https://arxiv.org/abs/2608.24885) · [Project](https://siriyep.github.io/worldecho-worldsync-project-page/)
+
+See [Publications](/publications/) for the full author lists and earlier manuscripts on efficient vision-language models and hallucination mitigation.
 
 ## Professional Experience
 

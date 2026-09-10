@@ -1,12 +1,14 @@
 ---
+collection: publications
+category: manuscripts
 title: "Mitigating Hallucinations via Inter-Layer Consistency Aggregation in Large Vision-Language Models"
 authors: "K. Tang*, J. You*, X. Ge, H. Li, Yichen Guo, X. Huang"
 venue: "NeurIPS 2025"
 year: 2025
 type: "conference"
 status: "under_review"
-pdf: "/files/dcla-neurips2025.pdf"
-code: "https://github.com/EasonAI-5589/DCLA"
+legacy_pdf: "/files/dcla-neurips2025.pdf"
+legacy_code: "https://github.com/EasonAI-5589/DCLA"
 note: "*Equal contribution"
 ---
 
