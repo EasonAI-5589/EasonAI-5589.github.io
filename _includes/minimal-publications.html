@@ -61,9 +61,7 @@
           <p class="periodical">{% if paper.category == 'preprints' %}Preprint · {{ paper.date | date: '%Y' }}{% else %}Manuscript · {{ paper.year }}{% endif %} · <span class="pub-role">{{ paper_role }}</span></p>
           {% if paper_summary != '' %}<p class="pub-summary">{{ paper_summary | escape }}</p>{% endif %}
           <div class="links">
-            {% if paper.paperurl %}<a class="btn btn-sm" href="{{ paper.paperurl | escape }}">Paper</a>{% endif %}
-            {% if paper.codeurl %}<a class="btn btn-sm" href="{{ paper.codeurl | escape }}">Code</a>{% endif %}
-            {% if paper.projecturl %}<a class="btn btn-sm" href="{{ paper.projecturl | escape }}">Project page</a>{% endif %}
+            {% include publication-links.html paper=paper %}
             <a class="btn btn-sm" href="{{ paper.url | relative_url }}">Details</a>
           </div>
         </div>
