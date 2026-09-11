@@ -2,6 +2,7 @@
 title: "Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned Generation for Policy Learning"
 collection: publications
 category: preprints
+selected_order: 2
 permalink: /publication/2026-worldecho-worldsync/
 authors: "Sixiang Chen, Jiaming Liu, Jixian Wu, Yichen Guo, Tinghao Wang, Siyuan Qian, Hao Chen, Jiajun Cao, Jian Tang, Shanghang Zhang"
 date: 2026-08-25

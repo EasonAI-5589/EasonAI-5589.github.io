@@ -3,9 +3,15 @@
 {%- for resource_key in resource_keys -%}
   {%- assign resource_label = resource_labels[forloop.index0] -%}
   {%- assign resource_url = include.paper[resource_key] | default: '' | strip -%}
+  {%- if resource_key == 'projecturl' and site.url contains '127.0.0.1' -%}
+    {%- assign project_preview_url = include.paper.projectpreviewurl | default: '' | strip -%}
+    {%- if project_preview_url != '' -%}
+      {%- assign resource_url = project_preview_url -%}
+    {%- endif -%}
+  {%- endif -%}
   {% if resource_url != '' %}
-    <a class="btn btn-sm" href="{{ resource_url | escape }}">{{ resource_label }}</a>
+    <a class="btn btn-sm" href="{{ resource_url | escape }}"><span class="resource-label">{{ resource_label }}</span></a>
   {% else %}
-    <span class="btn btn-sm resource-pending">{{ resource_label }} · Coming soon</span>
+    <span class="btn btn-sm resource-pending"><span class="resource-label">{{ resource_label }}</span><span class="resource-status">Coming soon</span></span>
   {% endif %}
 {%- endfor -%}

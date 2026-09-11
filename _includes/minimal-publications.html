@@ -1,7 +1,9 @@
-{%- assign ml_conferences = site.publications | where: 'category', 'conferences' | sort: 'date' | reverse -%}
-{%- assign ml_preprints = site.publications | where: 'category', 'preprints' | sort: 'date' | reverse -%}
-{%- assign ml_manuscripts = site.publications | where: 'category', 'manuscripts' | sort: 'year' | reverse -%}
-{%- assign ml_publications = ml_preprints | concat: ml_conferences | concat: ml_manuscripts -%}
+{%- assign ml_selected = site.publications | where_exp: 'paper', 'paper.selected_order != nil' | sort: 'selected_order' -%}
+{%- assign ml_remaining = site.publications | where_exp: 'paper', 'paper.selected_order == nil' -%}
+{%- assign ml_conferences = ml_remaining | where: 'category', 'conferences' | sort: 'date' | reverse -%}
+{%- assign ml_preprints = ml_remaining | where: 'category', 'preprints' | sort: 'date' | reverse -%}
+{%- assign ml_manuscripts = ml_remaining | where: 'category', 'manuscripts' | sort: 'year' | reverse -%}
+{%- assign ml_publications = ml_selected | concat: ml_preprints | concat: ml_conferences | concat: ml_manuscripts -%}
 <div class="publications minimal-publications">
   <ol class="bibliography">
     {% for paper in ml_publications %}
@@ -10,6 +12,8 @@
       {%- assign paper_summary = paper.excerpt | strip_html -%}
       {%- if paper.arxiv_id == '2606.20698' -%}
         {%- assign paper_media = 'safedojo' -%}
+      {%- elsif paper.arxiv_id == '2606.18439' -%}
+        {%- assign paper_media = 'regimevggt' -%}
       {%- elsif paper.arxiv_id == '2609.05916' -%}
         {%- assign paper_media = 'starpro' -%}
         {%- assign paper_role = 'Co-first author' -%}
@@ -31,7 +35,13 @@
       {%- endif -%}
     <li class="pub-item">
       <article class="pub-row {% if paper_media != '' %}pub-row--media{% else %}pub-row--text{% endif %}">
-        {% if paper_media == 'safedojo' %}
+        {% if paper_media == 'regimevggt' %}
+        <figure class="pub-media">
+          <a data-zoom href="{{ '/assets/research/regimevggt-method.png' | relative_url }}" aria-label="View the full RegimeVGGT framework figure">
+            <img class="teaser" src="{{ '/assets/research/regimevggt-method.png' | relative_url }}" width="1204" height="601" loading="lazy" alt="RegimeVGGT uses a layer-wise U-shaped schedule for token merging and spatially preserving key/value downsampling in visual geometry transformers.">
+          </a>
+        </figure>
+        {% elsif paper_media == 'safedojo' %}
         <figure class="pub-media">
           <a data-zoom href="{{ '/assets/research/safedojo-method.png' | relative_url }}" aria-label="View the full SafeDojo method figure">
             <img class="teaser" src="{{ '/assets/research/safedojo-method.png' | relative_url }}" width="2015" height="832" loading="lazy" alt="SafeDojo's pipeline combines action-conditioned world-model rollouts, task-success and safety evaluation, and constrained GRPO policy updates.">
@@ -53,7 +63,7 @@
         <div class="pub-content">
           <h3 class="title">{% if paper.paperurl %}<a href="{{ paper.paperurl | escape }}">{{ paper.title | escape }}</a>{% else %}{{ paper.title | escape }}{% endif %}</h3>
           <p class="author">
-            {%- if paper.category == 'preprints' -%}
+            {%- if paper.category == 'preprints' and paper.show_all_authors != true -%}
               {%- assign paper_authors = paper.authors | split: ',' -%}
               {%- for author in paper_authors limit: 4 -%}
                 {%- assign author_name = author | strip -%}
@@ -65,7 +75,7 @@
               {{- paper.authors | escape | replace: 'Yichen Guo', '<strong>Yichen Guo</strong>' -}}
             {%- endif -%}
           </p>
-          <p class="periodical">{% if paper.category == 'conferences' %}<strong>{{ paper.venue | escape }} {{ paper.year }}{% if paper.status == 'accepted' %} · Accepted{% endif %}</strong>{% elsif paper.category == 'preprints' %}Preprint · {{ paper.date | date: '%Y' }}{% else %}Manuscript · {{ paper.year }}{% endif %} · <span class="pub-role">{{ paper_role }}</span></p>
+          <p class="periodical">{% if paper.status == 'under_review' and paper.category == 'preprints' %}Under review · {{ paper.date | date: '%Y' }}{% elsif paper.category == 'conferences' %}<strong>{{ paper.venue | escape }} {{ paper.year }}{% if paper.status == 'accepted' %} · Accepted{% endif %}</strong>{% elsif paper.category == 'preprints' %}Preprint · {{ paper.date | date: '%Y' }}{% else %}Manuscript · {{ paper.year }}{% endif %} · <span class="pub-role">{{ paper_role }}</span></p>
           {% if paper_summary != '' %}<p class="pub-summary">{{ paper_summary | escape }}</p>{% endif %}
           <div class="links">
             {% include publication-links.html paper=paper %}

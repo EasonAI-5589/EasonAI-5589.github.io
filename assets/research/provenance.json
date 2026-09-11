@@ -142,5 +142,11 @@
     "source_project": "SafeDojo",
     "source_path": "https://arxiv.org/html/2606.20698v1/method_v3.png",
     "sha256": "df2c2e630177d37765986acef8e14572a8328d41ce7b3a5a9912afaa3cbb7026"
+  },
+  {
+    "file": "regimevggt-method.png",
+    "source_project": "RegimeVGGT",
+    "source_path": "https://arxiv.org/html/2606.18439v1/overview.png",
+    "sha256": "abe5f1e65f36b04b3341719ecf4dd824875e29108b5be5f5181d1347ea9ffdb6"
   }
 ]
