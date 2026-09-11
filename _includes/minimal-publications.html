@@ -1,7 +1,7 @@
 {%- assign ml_conferences = site.publications | where: 'category', 'conferences' | sort: 'date' | reverse -%}
 {%- assign ml_preprints = site.publications | where: 'category', 'preprints' | sort: 'date' | reverse -%}
 {%- assign ml_manuscripts = site.publications | where: 'category', 'manuscripts' | sort: 'year' | reverse -%}
-{%- assign ml_publications = ml_conferences | concat: ml_preprints | concat: ml_manuscripts -%}
+{%- assign ml_publications = ml_preprints | concat: ml_conferences | concat: ml_manuscripts -%}
 <div class="publications minimal-publications">
   <ol class="bibliography">
     {% for paper in ml_publications %}
@@ -33,10 +33,10 @@
       <article class="pub-row {% if paper_media != '' %}pub-row--media{% else %}pub-row--text{% endif %}">
         {% if paper_media == 'safedojo' %}
         <figure class="pub-media">
-          <a data-zoom href="{{ '/assets/research/safedojo-overview.png' | relative_url }}" aria-label="View the full SafeDojo overview">
-            <img class="teaser" src="{{ '/assets/research/safedojo-overview.png' | relative_url }}" width="2024" height="504" loading="lazy" alt="SafeDojo trains vision-language-action policies using imagined rollouts in an interactive world model and separate task-reward and safety-cost signals.">
+          <a data-zoom href="{{ '/assets/research/safedojo-method.png' | relative_url }}" aria-label="View the full SafeDojo method figure">
+            <img class="teaser" src="{{ '/assets/research/safedojo-method.png' | relative_url }}" width="2015" height="832" loading="lazy" alt="SafeDojo's pipeline combines action-conditioned world-model rollouts, task-success and safety evaluation, and constrained GRPO policy updates.">
           </a>
-          <figcaption class="pub-caption">SafeDojo overview · <a href="{{ '/assets/research/safedojo-overview.png' | relative_url }}">Full figure</a></figcaption>
+          <figcaption class="pub-caption">SafeDojo method · <a href="{{ '/assets/research/safedojo-method.png' | relative_url }}">Full figure</a></figcaption>
         </figure>
         {% elsif paper_media == 'starpro' %}
         <figure class="pub-media">
