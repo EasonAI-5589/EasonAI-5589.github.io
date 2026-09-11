@@ -37,11 +37,10 @@
         </figure>
         {% elsif paper_media == 'worldecho' %}
         <figure class="pub-media">
-          <video controls muted playsinline loop preload="none" width="320" height="240" poster="{{ '/assets/research/handover-mismatch.png' | relative_url }}" aria-label="WorldEcho handover action-following failure example: plausible video with an action mismatch">
-            <source src="{{ '/assets/research/handover-mismatch.mp4' | relative_url }}" type="video/mp4">
-            <a href="{{ '/assets/research/handover-mismatch.mp4' | relative_url }}">Watch the handover failure example.</a>
-          </video>
-          <figcaption class="pub-caption">WorldEcho failure case: handover action mismatch.</figcaption>
+          <a data-zoom href="{{ '/assets/research/worldecho-overview.png' | relative_url }}" aria-label="View the full WorldEcho and WorldSync overview">
+            <img class="teaser" src="{{ '/assets/research/worldecho-overview.png' | relative_url }}" width="3200" height="1673" loading="lazy" alt="WorldEcho and WorldSync: diagnosing action following, aligning world models, and validating policy learning.">
+          </a>
+          <figcaption class="pub-caption">WorldEcho / WorldSync · <a href="{{ '/assets/research/worldecho-overview.png' | relative_url }}">Full figure</a></figcaption>
         </figure>
         {% endif %}
         <div class="pub-content">
