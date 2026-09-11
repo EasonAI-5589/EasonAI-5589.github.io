@@ -1,13 +1,16 @@
+{%- assign ml_conferences = site.publications | where: 'category', 'conferences' | sort: 'date' | reverse -%}
 {%- assign ml_preprints = site.publications | where: 'category', 'preprints' | sort: 'date' | reverse -%}
 {%- assign ml_manuscripts = site.publications | where: 'category', 'manuscripts' | sort: 'year' | reverse -%}
-{%- assign ml_publications = ml_preprints | concat: ml_manuscripts -%}
+{%- assign ml_publications = ml_conferences | concat: ml_preprints | concat: ml_manuscripts -%}
 <div class="publications minimal-publications">
   <ol class="bibliography">
     {% for paper in ml_publications %}
       {%- assign paper_media = '' -%}
       {%- assign paper_role = 'Co-author' -%}
       {%- assign paper_summary = paper.excerpt | strip_html -%}
-      {%- if paper.arxiv_id == '2609.05916' -%}
+      {%- if paper.arxiv_id == '2606.20698' -%}
+        {%- assign paper_media = 'safedojo' -%}
+      {%- elsif paper.arxiv_id == '2609.05916' -%}
         {%- assign paper_media = 'starpro' -%}
         {%- assign paper_role = 'Co-first author' -%}
         {%- assign paper_summary = 'Training-free visual token reduction that preserves feature coverage, then progressively refines retained tokens as language and vision interact.' -%}
@@ -28,7 +31,14 @@
       {%- endif -%}
     <li class="pub-item">
       <article class="pub-row {% if paper_media != '' %}pub-row--media{% else %}pub-row--text{% endif %}">
-        {% if paper_media == 'starpro' %}
+        {% if paper_media == 'safedojo' %}
+        <figure class="pub-media">
+          <a data-zoom href="{{ '/assets/research/safedojo-overview.png' | relative_url }}" aria-label="View the full SafeDojo overview">
+            <img class="teaser" src="{{ '/assets/research/safedojo-overview.png' | relative_url }}" width="2024" height="504" loading="lazy" alt="SafeDojo trains vision-language-action policies using imagined rollouts in an interactive world model and separate task-reward and safety-cost signals.">
+          </a>
+          <figcaption class="pub-caption">SafeDojo overview · <a href="{{ '/assets/research/safedojo-overview.png' | relative_url }}">Full figure</a></figcaption>
+        </figure>
+        {% elsif paper_media == 'starpro' %}
         <figure class="pub-media">
           <a data-zoom href="{{ '/assets/research/starpro-method.png' | relative_url }}" aria-label="View the full STAR-Pro method figure">
             <img class="teaser" src="{{ '/assets/research/starpro-method.png' | relative_url }}" width="2200" height="1238" loading="lazy" alt="STAR-Pro's Adaptive Stage preserves visual feature coverage, followed by progressive token refinement across decoder layers.">
@@ -58,7 +68,7 @@
               {{- paper.authors | escape | replace: 'Yichen Guo', '<strong>Yichen Guo</strong>' -}}
             {%- endif -%}
           </p>
-          <p class="periodical">{% if paper.category == 'preprints' %}Preprint · {{ paper.date | date: '%Y' }}{% else %}Manuscript · {{ paper.year }}{% endif %} · <span class="pub-role">{{ paper_role }}</span></p>
+          <p class="periodical">{% if paper.category == 'conferences' %}<strong>{{ paper.venue | escape }} {{ paper.year }}{% if paper.status == 'accepted' %} · Accepted{% endif %}</strong>{% elsif paper.category == 'preprints' %}Preprint · {{ paper.date | date: '%Y' }}{% else %}Manuscript · {{ paper.year }}{% endif %} · <span class="pub-role">{{ paper_role }}</span></p>
           {% if paper_summary != '' %}<p class="pub-summary">{{ paper_summary | escape }}</p>{% endif %}
           <div class="links">
             {% include publication-links.html paper=paper %}

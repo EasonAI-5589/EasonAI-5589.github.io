@@ -130,5 +130,11 @@
     "source_project": "WorldEcho / WorldSync",
     "source_path": "worldecho-page/assets/posters/bread-mismatch.png",
     "sha256": "108d86c8eae10dd050cbd9a7f399c48345e10afae64d594c0f22ca5a8714e756"
+  },
+  {
+    "file": "safedojo-overview.png",
+    "source_project": "SafeDojo",
+    "source_path": "https://arxiv.org/html/2606.20698v1/teaser_v4.png",
+    "sha256": "8f607d6091f1f32206d68da3c5eefb4496a937bfe4d658d4414125de7fbdd1a1"
   }
 ]
