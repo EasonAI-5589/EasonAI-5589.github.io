@@ -2,7 +2,11 @@
   <h2 id="projects">Projects</h2>
   <div class="project-list">
     {% for project in site.data.projects %}
-    <article class="project-row{% if project.image %} project-row--media{% endif %}" id="{{ project.id | escape }}">
+    {% assign project_resources = project %}
+    {% if project.arxiv_id %}
+      {% assign project_resources = site.publications | where: 'arxiv_id', project.arxiv_id | first %}
+    {% endif %}
+    <article class="project-row{% if project.image %} project-row--media{% else %} project-row--text{% endif %}" id="{{ project.id | escape }}">
       {% if project.image %}
       <a class="project-media" data-zoom href="{{ project.image | relative_url }}" aria-label="View the full {{ project.name | escape }} figure">
         <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | escape }}" width="{{ project.image_width }}" height="{{ project.image_height }}" loading="lazy">
@@ -13,10 +17,10 @@
           <h3><a href="{{ '/projects/' | relative_url }}#{{ project.id | escape }}">{{ project.name | escape }}</a></h3>
           <a class="project-permalink" href="{{ '/projects/' | relative_url }}#{{ project.id | escape }}" aria-label="Permanent link to {{ project.name | escape }}">Project link ↗</a>
         </div>
-        <p class="project-focus">{{ project.focus | escape }}</p>
+        <p class="project-focus">{{ project.focus | escape }}{% if project_resources.category == 'conferences' %} · <strong>{{ project_resources.venue | escape }} {{ project_resources.year }}{% if project_resources.status == 'accepted' %} · Accepted{% endif %}</strong>{% elsif project_resources.status == 'under_review' %} · Under review{% elsif project_resources.category == 'preprints' %} · Preprint{% endif %}</p>
         <p class="project-summary">{{ project.summary | escape }}</p>
         {% if project.contribution %}<p class="project-contribution">{{ project.contribution | escape }}</p>{% endif %}
-        <div class="project-links">{% include publication-links.html paper=project %}</div>
+        <div class="project-links">{% include publication-links.html paper=project_resources %}</div>
         {% if project.dataseturl %}<p class="project-dataset"><a href="{{ project.dataseturl | escape }}">Dataset on Hugging Face ↗</a></p>{% endif %}
       </div>
     </article>
