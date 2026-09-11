@@ -86,7 +86,6 @@ a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,
 .minimal-publications .periodical { line-height:1.35; margin-bottom:5px; }
 .minimal-publications .pub-role { color:var(--role); font-style:italic; font-size:14px; }
 .minimal-publications .pub-summary { margin:5px 0 7px; line-height:1.4; }
-.minimal-publications .pub-caption { color:var(--muted); font-size:12px; line-height:1.35; margin-top:8px; }
 .minimal-publications .links { display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
 .publications.minimal-publications ol.bibliography li .links .btn,.paper-links .btn { display:inline-block; color:var(--page-text); border:1px solid var(--control-border); padding:.1rem .5rem; font-size:12px; line-height:1.4; text-decoration:none; border-radius:2px; white-space:nowrap; }
 .publications.minimal-publications ol.bibliography li .links a.btn:hover,.paper-links a.btn:hover { color:var(--heading); border-color:var(--heading); background:var(--surface); }
@@ -147,7 +146,6 @@ button:disabled { cursor:wait; opacity:.7; }
   .minimal-publications .pub-row { display:block; }
   .minimal-publications .pub-media { width:min(270px,100%); margin:0 0 14px; }
   .publications.minimal-publications ol.bibliography li .pub-media img,.minimal-publications .pub-media video { width:100%; }
-  .minimal-publications .pub-caption { max-width:270px; }
   .minimal-publications .bibliography .pub-item { margin-bottom:34px; }
   .video-grid { grid-template-columns:1fr; gap:20px; }
   .video-grid figure { max-width:360px; }
