@@ -56,6 +56,17 @@
       "bytes": 64195,
       "sha256": "e83f947c3d9a358eea51217f4ece2753cb6eaf379b7b655d81765606a923a78d",
       "modified": false
+    },
+    {
+      "organization": "Nanyang Technological University",
+      "file": "nanyang-technological-university.png",
+      "source": "Original NTU Logo.png supplied in the owner's 2026-09-02 English CV source package.",
+      "content_type": "image/png",
+      "width": 1042,
+      "height": 1042,
+      "bytes": 487900,
+      "sha256": "4ecb6a30579cca3a9603235bc65c31b4b41f48c44e2c81f05ba3dc49ac9771b5",
+      "modified": false
     }
   ]
 }
