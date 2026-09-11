@@ -1,0 +1,134 @@
+[
+  {
+    "file": "starpro-method.png",
+    "source_project": "STAR-Pro",
+    "source_path": "starpro-page/assets/figures/fig3-method.png",
+    "sha256": "a483ccb979a071acafb9da4e278441dfbc546288af26bd8a7d5544a2b29a0441"
+  },
+  {
+    "file": "starpro-performance.png",
+    "source_project": "STAR-Pro",
+    "source_path": "starpro-page/assets/figures/fig1-performance.png",
+    "sha256": "4cab2a9618dfa2ecd8344435ced612210617bce257d7747284b5a54605e7ad37"
+  },
+  {
+    "file": "starpro-efficiency.png",
+    "source_project": "STAR-Pro",
+    "source_path": "starpro-page/assets/figures/fig4-efficiency.png",
+    "sha256": "b0dbe977c4ea853801453d4e3cae015c2494708bf223c45d0ffbb4d88f37f5d0"
+  },
+  {
+    "file": "worldecho-overview.png",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/figures/paper-figure-1.png",
+    "sha256": "9bd6ee942a0d646be88d7c5d74ea87a3778e3b8317d8cea1e08b0215657658b3"
+  },
+  {
+    "file": "grab-gt.mp4",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/videos/grab-gt.mp4",
+    "sha256": "fb526f6708f372acbd8e8d17a201331e31cc4a2b0b0af1681848349baa0742a5"
+  },
+  {
+    "file": "grab-gt.png",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/posters/grab-gt.png",
+    "sha256": "3f101c49a2442a8ae3e01260a325d48845798e888d7f21a08f36514ac27afd61"
+  },
+  {
+    "file": "grab-collapse.mp4",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/videos/grab-collapse.mp4",
+    "sha256": "f20ae6f9506e5ae07be4dff0625bb5dc699dc24996e1530eabd5887ce962a845"
+  },
+  {
+    "file": "grab-collapse.png",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/posters/grab-collapse.png",
+    "sha256": "83596e7379347e27a16ecc85e524cf7fe987398ed38a970916e3255a7421a0e4"
+  },
+  {
+    "file": "grab-mismatch.mp4",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/videos/grab-mismatch.mp4",
+    "sha256": "a5a08e3b518b070fd4a58390b39ab5b45374b7fd017927b1d327ad2e36ef04ec"
+  },
+  {
+    "file": "grab-mismatch.png",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/posters/grab-mismatch.png",
+    "sha256": "dad9a5d2f5fd14bb3f1ed23df0bafcf44b67e28d7512c6c96f3353c752995be0"
+  },
+  {
+    "file": "handover-gt.mp4",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/videos/handover-gt.mp4",
+    "sha256": "13e7353336b4efa0e949555037228f5bfc1215cef2688d3c763b778aaa514609"
+  },
+  {
+    "file": "handover-gt.png",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/posters/handover-gt.png",
+    "sha256": "e105259f87718b7ac53f8017937ecc25b3d10793b175164f225099dad27e855d"
+  },
+  {
+    "file": "handover-collapse.mp4",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/videos/handover-collapse.mp4",
+    "sha256": "6752ca646e4b9aeaa89c82b68cc79f2c32061d3e71bd681445b32b356931b5a0"
+  },
+  {
+    "file": "handover-collapse.png",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/posters/handover-collapse.png",
+    "sha256": "bd6fe946933f0ef061c62972f957d24de1d9d28b1c26bc1c5a8feaa4dd413953"
+  },
+  {
+    "file": "handover-mismatch.mp4",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/videos/handover-mismatch.mp4",
+    "sha256": "67595e32458b659b7302a59abd9d8bf31170b1c4d98055769d5b3e90cffe7663"
+  },
+  {
+    "file": "handover-mismatch.png",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/posters/handover-mismatch.png",
+    "sha256": "383669716039418baf015b69cc6aa9d77f96879c79f2366eb09dd942c889499e"
+  },
+  {
+    "file": "bread-gt.mp4",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/videos/bread-gt.mp4",
+    "sha256": "ab80ba0bd5e949eaef675b7794c768a28f05f0895ffc9cf77d68ded91e4b82d1"
+  },
+  {
+    "file": "bread-gt.png",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/posters/bread-gt.png",
+    "sha256": "2ff3714a8fe391cbe7d254f9fc3e2fe30f90441c8961bfd6ad3b8259b5515836"
+  },
+  {
+    "file": "bread-collapse.mp4",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/videos/bread-collapse.mp4",
+    "sha256": "5205647de3414b2f8e0eff838dee36585823f4346bf7fd4b52f03cb3b3c5b063"
+  },
+  {
+    "file": "bread-collapse.png",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/posters/bread-collapse.png",
+    "sha256": "447c3dbe48dac10412c36cacc07dab447ad479bccb4bf4da95546d426d562373"
+  },
+  {
+    "file": "bread-mismatch.mp4",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/videos/bread-mismatch.mp4",
+    "sha256": "e11900af759ae58a6044ace67024ff5640465e2b8d2fbf8134294e2b8d2099ef"
+  },
+  {
+    "file": "bread-mismatch.png",
+    "source_project": "WorldEcho / WorldSync",
+    "source_path": "worldecho-page/assets/posters/bread-mismatch.png",
+    "sha256": "108d86c8eae10dd050cbd9a7f399c48345e10afae64d594c0f22ca5a8714e756"
+  }
+]

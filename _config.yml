@@ -12,7 +12,7 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "Yichen Guo"
 title_separator          : "-"
 name                     : &name "Yichen Guo"
-description              : &description "AI Researcher specializing in Large Language Models and Large Vision-Language Models"
+description              : &description "Yichen Guo researches efficient vision-language models, faithful robotic world models, and visual hallucination mitigation."
 url                      : https://EasonAI-5589.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "EasonAI-5589/EasonAI-5589.github.io"
@@ -25,7 +25,7 @@ author:
   avatar           : "profile.png"
   name             : "Yichen Guo"
   pronouns         : # example: "she/her"  
-  bio              : "AI Researcher specializing in Large Language Models and Large Vision-Language Models. Currently pursuing M.Eng at NTU Singapore."
+  bio              : "Efficient vision-language models, faithful robotic world models, and visual grounding."
   location         : "Singapore"
   employer         : "Nanyang Technological University"
   uri              : # URL
@@ -267,7 +267,7 @@ defaults:
       path: ""
       type: publications
     values:
-      layout: single
+      layout: research-publication
       author_profile: true
       share: true
       comments: true

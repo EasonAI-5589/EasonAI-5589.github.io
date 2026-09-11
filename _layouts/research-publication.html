@@ -1,0 +1,14 @@
+---
+layout: research
+---
+<article class="publication-detail">
+  <a class="quiet-link" href="{{ '/publications/' | relative_url }}">← All publications</a>
+  <p class="eyebrow">{% if page.category == 'preprints' %}arXiv preprint · {{ page.date | date: '%Y' }}{% else %}Manuscript · {{ page.year }}{% endif %}</p>
+  <h1>{{ page.title }}</h1>
+  <p class="authors">{{ page.authors | replace: 'Yichen Guo', '<strong>Yichen Guo</strong>' }}</p>
+  {% if page.note %}<p class="small-note">{{ page.note }}</p>{% endif %}
+  <div class="paper-links">{% if page.paperurl %}<a class="primary-link" href="{{ page.paperurl }}">Read paper ↗</a>{% endif %}{% if page.codeurl %}<a href="{{ page.codeurl }}">Code ↗</a>{% endif %}{% if page.projecturl %}<a href="{{ page.projecturl }}">Project ↗</a>{% endif %}</div>
+  {% if page.arxiv_id == '2609.05916' %}<a class="detail-figure zoom-figure" data-zoom href="{{ '/assets/research/starpro-method.png' | relative_url }}"><img src="{{ '/assets/research/starpro-method.png' | relative_url }}" width="2200" height="1238" alt="STAR-Pro method overview"><span class="zoom-label">View full figure ↗</span></a>{% endif %}
+  {% if page.arxiv_id == '2608.24885' %}<a class="detail-figure zoom-figure" data-zoom href="{{ '/assets/research/worldecho-overview.png' | relative_url }}"><img src="{{ '/assets/research/worldecho-overview.png' | relative_url }}" width="3200" height="1673" alt="WorldEcho and WorldSync overview"><span class="zoom-label">View full figure ↗</span></a>{% endif %}
+  <div class="publication-body">{{ content }}</div>
+</article>
