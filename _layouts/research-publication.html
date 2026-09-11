@@ -1,14 +1,26 @@
 ---
-layout: research
+layout: minimal
 ---
 <article class="publication-detail">
   <a class="quiet-link" href="{{ '/publications/' | relative_url }}">← All publications</a>
   <p class="eyebrow">{% if page.category == 'preprints' %}arXiv preprint · {{ page.date | date: '%Y' }}{% else %}Manuscript · {{ page.year }}{% endif %}</p>
   <h1>{{ page.title }}</h1>
   <p class="authors">{{ page.authors | replace: 'Yichen Guo', '<strong>Yichen Guo</strong>' }}</p>
+  {% if page.arxiv_id == '2609.05916' %}<p class="small-note"><strong>Co-first author</strong> · Yichen Guo, Tinghao Wang and Qizhe Zhang contributed equally.</p>{% elsif page.arxiv_id == '2608.24885' %}<p class="small-note"><strong>Core contributor</strong></p>{% endif %}
   {% if page.note %}<p class="small-note">{{ page.note }}</p>{% endif %}
   <div class="paper-links">{% if page.paperurl %}<a class="primary-link" href="{{ page.paperurl }}">Read paper ↗</a>{% endif %}{% if page.codeurl %}<a href="{{ page.codeurl }}">Code ↗</a>{% endif %}{% if page.projecturl %}<a href="{{ page.projecturl }}">Project ↗</a>{% endif %}</div>
   {% if page.arxiv_id == '2609.05916' %}<a class="detail-figure zoom-figure" data-zoom href="{{ '/assets/research/starpro-method.png' | relative_url }}"><img src="{{ '/assets/research/starpro-method.png' | relative_url }}" width="2200" height="1238" alt="STAR-Pro method overview"><span class="zoom-label">View full figure ↗</span></a>{% endif %}
   {% if page.arxiv_id == '2608.24885' %}<a class="detail-figure zoom-figure" data-zoom href="{{ '/assets/research/worldecho-overview.png' | relative_url }}"><img src="{{ '/assets/research/worldecho-overview.png' | relative_url }}" width="3200" height="1673" alt="WorldEcho and WorldSync overview"><span class="zoom-label">View full figure ↗</span></a>{% endif %}
   <div class="publication-body">{{ content }}</div>
+  {% if page.arxiv_id == '2609.05916' %}
+  <h2>Results &amp; figures</h2>
+  <p>On LLaVA-Video-7B with 64 input frames and nominal T=16: <strong>90.5% fewer visual tokens</strong>, <strong>92.7% of baseline performance</strong>, and <strong>2.24× measured inference speedup</strong>.</p>
+  <p class="small-note">Timing only: one A800-80GB, batch size 1, one generated token; CPU video decoding and preprocessing excluded.</p>
+  <figure class="paper-figure"><a data-zoom href="{{ '/assets/research/starpro-efficiency.png' | relative_url }}"><img src="{{ '/assets/research/starpro-efficiency.png' | relative_url }}" width="2200" height="893" loading="lazy" alt="STAR-Pro measured efficiency comparison"></a><figcaption>Efficiency comparison. Click to inspect the original figure.</figcaption></figure>
+  <figure class="paper-figure"><a data-zoom href="{{ '/assets/research/starpro-performance.png' | relative_url }}"><img src="{{ '/assets/research/starpro-performance.png' | relative_url }}" width="1600" height="1662" loading="lazy" alt="STAR-Pro benchmark performance overview"></a><figcaption>Benchmark performance overview.</figcaption></figure>
+  {% elsif page.arxiv_id == '2608.24885' %}
+  <h2>Evaluation &amp; policy learning</h2>
+  <p>WorldEcho covers <strong>50 RoboTwin tasks</strong> and <strong>5 action-query categories</strong>. On the real-robot cup-stacking task, policy success improves from <strong>48% to 68%</strong> after two rounds of WorldSync-based policy improvement.</p>
+  {% include worldecho-demo.html %}
+  {% endif %}
 </article>

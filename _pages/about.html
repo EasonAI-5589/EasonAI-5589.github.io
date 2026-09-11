@@ -1,37 +1,34 @@
 ---
-layout: research
+layout: minimal
 permalink: /
-title: "Research"
-description: "Yichen Guo researches efficient vision-language models, faithful robotic world models, and visual hallucination mitigation. Explore STAR-Pro and WorldEcho / WorldSync through figures, results, and videos."
+title: "Home"
+description: "Yichen Guo — efficient vision-language models, action-faithful robotic world models, and reliable visual reasoning."
 redirect_from:
   - /about/
   - /about.html
 ---
+<h2 id="about">About Me</h2>
+<p>I study efficient and reliable multimodal intelligence. My research focuses on preserving useful visual information with less computation, and understanding whether robotic world models faithfully follow actions.</p>
 
-<section class="hero" aria-labelledby="intro-title">
-  <div class="hero-copy">
-    <p class="eyebrow">Yichen Guo <span class="quiet-divider">/</span> AI Research</p>
-    <h1 id="intro-title">Efficient perception.<br><em>Faithful action.</em></h1>
-    <p class="hero-description">I study how multimodal models can do more with less computation—and how robotic world models can stay faithful to the actions they are given.</p>
-    <div class="text-links"><a href="{{ site.author.googlescholar }}">Google Scholar <span aria-hidden="true">↗</span></a><a href="https://github.com/{{ site.author.github }}">GitHub <span aria-hidden="true">↗</span></a><a href="mailto:{{ site.author.email }}">Email <span aria-hidden="true">↗</span></a></div>
-  </div>
-  <figure class="portrait"><img src="{{ '/images/profile.png' | relative_url }}" alt="Yichen Guo" width="600" height="600"><figcaption><strong>Yichen Guo</strong><span>Nanyang Technological University</span><span>Singapore</span></figcaption></figure>
-</section>
-<div class="research-directions" aria-label="Research directions">
-  <a href="#starpro"><span class="direction-number">01</span><span><strong>Multimodal efficiency</strong><small>Visual token reduction · STAR-Pro</small></span><span aria-hidden="true">↗</span></a>
-  <a href="#worldecho"><span class="direction-number">02</span><span><strong>Faithful world models</strong><small>Action following · WorldEcho / WorldSync</small></span><span aria-hidden="true">↗</span></a>
-  <a href="{{ '/publications/' | relative_url }}#earlier"><span class="direction-number">03</span><span><strong>Visual grounding</strong><small>Hallucination mitigation · Multimodal reasoning</small></span><span aria-hidden="true">↗</span></a>
-</div>
-<section id="research" class="selected-section" aria-labelledby="research-title">
-  <div class="section-heading"><div><p class="eyebrow">Ideas, methods & evidence</p><h2 id="research-title">Selected research</h2></div><a class="quiet-link" href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">↗</span></a></div>
-  {% include selected-research.html %}
-</section>
-{% include worldecho-demo.html %}
-<section class="about-section" id="about" aria-labelledby="about-title">
-  <div class="section-heading"><div><p class="eyebrow">Background</p><h2 id="about-title">A little more about me</h2></div></div>
-  <div class="about-grid">
-    <div class="about-intro"><p>My work connects efficient inference with reliable multimodal behavior: preserving useful visual information, reducing hallucinations, and measuring whether generated worlds respond correctly to actions.</p><a class="quiet-link" href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a></div>
-    <div class="background-list"><h3>Education</h3><div><strong>Nanyang Technological University</strong><p>M.Eng (by Research), Computer Science & Engineering</p></div><div><strong>University of Electronic Science and Technology of China</strong><p>B.Eng, Electronic Information Engineering · 2021–2025</p></div></div>
-    <div class="background-list"><h3>Experience & recognition</h3><div><strong>Tencent LightSpeed Studios</strong><p>Data science internship · Multi-agent systems for gaming</p></div><div><strong>West China Hospital, Sichuan University</strong><p>Computer vision internship · Self-supervised visual learning</p></div><div><strong>International Talent & Leadership Scholarship</strong><p>Top 1% · 2022</p></div></div>
-  </div>
-</section>
+<h2 id="research">Research Interests</h2>
+<ul class="interests">
+  <li><strong>Efficient vision-language models:</strong> visual token reduction and efficient inference.</li>
+  <li><strong>Robotic world models:</strong> action following, evaluation, and policy learning.</li>
+  <li><strong>Reliable visual reasoning:</strong> visual grounding and hallucination mitigation.</li>
+</ul>
+
+<h2 id="publications">Publications</h2>
+{% include minimal-publications.html %}
+
+<h2 id="background">Education</h2>
+<ul class="background-list">
+  <li><strong>Nanyang Technological University</strong><br>M.Eng (by Research), Computer Science &amp; Engineering</li>
+  <li><strong>University of Electronic Science and Technology of China</strong><br>B.Eng, Electronic Information Engineering · 2021–2025</li>
+</ul>
+<h2>Experience</h2>
+<ul class="background-list">
+  <li><strong>Tencent LightSpeed Studios</strong> — Data science internship<br>Multi-agent systems for gaming.</li>
+  <li><strong>West China Hospital, Sichuan University</strong> — Computer vision internship<br>Self-supervised visual learning.</li>
+</ul>
+<h2>Awards</h2>
+<p>International Talent &amp; Leadership Scholarship · Top 1% · 2022</p>

@@ -1,26 +1,9 @@
 ---
-layout: research
+layout: minimal
 title: "Publications"
 permalink: /publications/
-description: "Research by Yichen Guo in efficient vision-language models and faithful robotic world models: paper figures, results, videos, and publication records."
+description: "Publications by Yichen Guo, including STAR-Pro and WorldEcho / WorldSync."
 ---
-
-<section class="publications-intro">
-  <p class="eyebrow">Research collection</p>
-  <h1>Publications<span class="accent">.</span></h1>
-  <p>Efficient multimodal models. Reliable visual reasoning. Action-faithful world models.</p>
-  <div class="text-links"><a href="{{ site.author.googlescholar }}">Google Scholar ↗</a><a href="#earlier">Earlier manuscripts ↓</a></div>
-</section>
-<section id="research" class="selected-section" aria-label="Featured preprints">
-  <div class="section-heading compact"><h2>Featured preprints</h2><span class="eyebrow">2026</span></div>
-  {% include selected-research.html %}
-</section>
-{% include worldecho-demo.html %}
-<section class="earlier-section" id="earlier" aria-labelledby="earlier-title">
-  <div class="section-heading"><div><p class="eyebrow">Research archive</p><h2 id="earlier-title">Earlier manuscripts</h2></div></div>
-  <div class="manuscript-list">
-    {% for post in site.publications reversed %}{% if post.category == 'manuscripts' %}
-    <article class="manuscript"><div class="manuscript-year">{{ post.year }}<span>Manuscript</span></div><div><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p class="authors">{{ post.authors | replace: 'Yichen Guo', '<strong>Yichen Guo</strong>' }}</p>{% if post.note %}<p class="small-note">{{ post.note }}</p>{% endif %}</div><a class="manuscript-arrow" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title | escape }}">↗</a></article>
-    {% endif %}{% endfor %}
-  </div>
-</section>
+<h2 id="publications">Publications</h2>
+<p>Research in efficient multimodal models, robotic world models, and reliable visual reasoning. <a href="{{ site.author.googlescholar }}">Google Scholar</a></p>
+{% include minimal-publications.html %}

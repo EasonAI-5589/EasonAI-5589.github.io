@@ -162,8 +162,30 @@ analytics:
 include:
   - .htaccess
   - _pages
-  - files
 exclude:
+  # Legacy template pages are retained in source but excluded from the Minimal Light site.
+  - files
+  - talkmap
+  - _posts
+  - _talks
+  - _teaching
+  - _portfolio
+  - _pages/archive-layout-with-content.md
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - _pages/cv-json.md
+  - _pages/cv.md
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/page-archive.html
+  - _pages/portfolio.html
+  - _pages/sitemap.md
+  - _pages/tag-archive.html
+  - _pages/talkmap.html
+  - _pages/talks.html
+  - _pages/teaching.html
+  - _pages/terms.md
+  - _pages/year-archive.html
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
