@@ -50,13 +50,16 @@ html { scroll-padding-top:24px; }
 .background-list { padding-left:24px; }
 .background-list li { margin-bottom:12px; }
 .experience-list { list-style:none; padding:0; margin:0 0 30px; }
-.experience-list li { margin:0 0 23px; }
+.experience-list > li { margin:0 0 25px; }
 .experience-heading { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:0 18px; }
 .experience-heading strong { font-weight:600; }
 .experience-dates,.education-dates { color:var(--muted); font-size:14px; }
 .experience-dates { white-space:nowrap; }
 .experience-list p { margin:3px 0 0; line-height:1.4; }
 .experience-list .experience-role { color:var(--muted); font-style:italic; margin-bottom:5px; }
+.experience-list .experience-supervisor { color:var(--muted); font-size:14px; margin-bottom:7px; }
+.experience-points { margin:7px 0 0; padding-left:20px; }
+.experience-points li { margin:5px 0; line-height:1.4; }
 .theme-credit { margin-top:36px; }
 .theme-credit small { font-size:12px; }
 .skip-link { position:fixed; left:16px; top:-80px; z-index:10; background:var(--page-bg); padding:8px 14px; border:1px solid currentColor; }

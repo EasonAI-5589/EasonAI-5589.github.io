@@ -44,7 +44,7 @@
         </figure>
         {% endif %}
         <div class="pub-content">
-          <h3 class="title"><a href="{{ paper.url | relative_url }}">{{ paper.title | escape }}</a></h3>
+          <h3 class="title">{% if paper.paperurl %}<a href="{{ paper.paperurl | escape }}">{{ paper.title | escape }}</a>{% else %}{{ paper.title | escape }}{% endif %}</h3>
           <p class="author">
             {%- if paper.category == 'preprints' -%}
               {%- assign paper_authors = paper.authors | split: ',' -%}
@@ -62,7 +62,6 @@
           {% if paper_summary != '' %}<p class="pub-summary">{{ paper_summary | escape }}</p>{% endif %}
           <div class="links">
             {% include publication-links.html paper=paper %}
-            <a class="btn btn-sm" href="{{ paper.url | relative_url }}">Details</a>
           </div>
         </div>
       </article>
