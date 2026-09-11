@@ -1,0 +1,61 @@
+{
+  "retrieved_on": "2026-09-11",
+  "purpose": "Identify institutions in the academic homepage experience section. Original colors and image bytes are preserved.",
+  "logos": [
+    {
+      "organization": "Peking University",
+      "file": "peking-university-emblem.png",
+      "official_page": "https://vim.pku.edu.cn/xzzq/",
+      "asset_url": "https://vim.pku.edu.cn/docs/20240527144201516364.zip",
+      "archive_member": "标志_红色.png",
+      "content_type": "image/png",
+      "width": 360,
+      "height": 360,
+      "alpha": true,
+      "notes": "Original red emblem PNG extracted byte-for-byte from the official Visual Identity Office download. No redraw, crop, recoloring or resize.",
+      "bytes": 25869,
+      "sha256": "b328ed3c9e579ec8c2031ad8a5b6c244994fba5d1e93cc98901d1fcc3c306bdb",
+      "modified": false
+    },
+    {
+      "organization": "Harvard University",
+      "file": "harvard-university-shield.png",
+      "official_page": "https://www.harvard.edu/about/history/shields/",
+      "asset_url": "https://www.harvard.edu/wp-content/uploads/2020/10/cropped-logo-branding-compressed.png",
+      "content_type": "image/png",
+      "width": 512,
+      "height": 512,
+      "alpha": true,
+      "notes": "Original university favicon/apple-touch icon asset linked by the official Harvard University page. Crimson Veritas shield, transparent padding. No redraw, crop, recoloring or resize.",
+      "bytes": 26194,
+      "sha256": "3d5a862efb58f14b50e967caeebbda8d653a4947b623fd4f089f5653acf84bfe",
+      "modified": false
+    },
+    {
+      "organization": "Binance",
+      "file": "binance.png",
+      "official_page": "https://www.binance.com/en/press",
+      "asset_url": "https://bin.bnbstatic.com/static/images/bnb-for/brand.png",
+      "notes": "Original icon linked from the official Binance Newsroom page.",
+      "content_type": "image/png",
+      "width": 200,
+      "height": 200,
+      "bytes": 3970,
+      "sha256": "83eef421c3682a87d0a7107f6872a1e36222cb1623ade9211b817ee2dfc0059b",
+      "modified": false
+    },
+    {
+      "organization": "Tencent",
+      "file": "tencent-vertical.png",
+      "official_page": "https://www.tencent.com/newsroom/media-resources/logos/",
+      "asset_url": "https://www.tencent.com/wp-content/uploads/2022/12/02_Tencent_Vertical-logo.png",
+      "notes": "Original blue bilingual vertical logo from the official Tencent media library.",
+      "content_type": "image/png",
+      "width": 1915,
+      "height": 889,
+      "bytes": 64195,
+      "sha256": "e83f947c3d9a358eea51217f4ece2753cb6eaf379b7b655d81765606a923a78d",
+      "modified": false
+    }
+  ]
+}
