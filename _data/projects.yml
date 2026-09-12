@@ -4,4 +4,6 @@
   summary: "A benchmark and research initiative for AI agents that carry out empirical studies in economics, finance, and related fields. The public dataset brings together 2,644 research tasks from 36 journals."
   contribution: "My work focuses on evaluation pipelines and reproducibility audits for AI agents on real-world empirical research tasks."
   projecturl: "https://huggingface.co/spaces/CamoAiLab/InferenceNet-Leaderboard"
+  projectlabel: "Hugging Face"
+  projecticon: "/assets/icons/huggingface.svg"
   dataseturl: "https://huggingface.co/datasets/CamoAiLab/InferenceNet"

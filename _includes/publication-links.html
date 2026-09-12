@@ -2,6 +2,11 @@
 {%- assign resource_labels = 'Paper,Code,Project Page' | split: ',' -%}
 {%- for resource_key in resource_keys -%}
   {%- assign resource_label = resource_labels[forloop.index0] -%}
+  {%- assign resource_icon = '' -%}
+  {%- if resource_key == 'projecturl' -%}
+    {%- assign resource_label = include.paper.projectlabel | default: resource_label -%}
+    {%- assign resource_icon = include.paper.projecticon | default: '' -%}
+  {%- endif -%}
   {%- assign resource_url = include.paper[resource_key] | default: '' | strip -%}
   {%- if resource_key == 'projecturl' and site.url contains '127.0.0.1' -%}
     {%- assign project_preview_url = include.paper.projectpreviewurl | default: '' | strip -%}
@@ -10,7 +15,7 @@
     {%- endif -%}
   {%- endif -%}
   {% if resource_url != '' %}
-    <a class="btn btn-sm" href="{{ resource_url | escape }}"><span class="resource-label">{{ resource_label }}</span></a>
+    <a class="btn btn-sm" href="{{ resource_url | escape }}"><span class="resource-label{% if resource_icon != '' %} resource-label--icon{% endif %}">{% if resource_icon != '' %}<img class="resource-icon" src="{{ resource_icon | relative_url }}" alt="" width="16" height="16">{% endif %}{{ resource_label }}</span></a>
   {% else %}
     <span class="btn btn-sm resource-pending"><span class="resource-label">{{ resource_label }}</span><span class="resource-status">Coming soon</span></span>
   {% endif %}
