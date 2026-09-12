@@ -212,6 +212,27 @@ exclude:
   - README
   - tmp
   - vendor
+  - ADD_PHOTO_GUIDE.md
+  - CONTRIBUTING.md
+  - CUSTOMIZATION_GUIDE.md
+  - DETAILED_DIAGNOSIS.md
+  - GITHUB_SETUP.md
+  - PHOTO_OPTIMIZATION.md
+  - QUICK_CUSTOMIZATION.md
+  - QUICK_START.md
+  - SETUP_INSTRUCTIONS.md
+  - TROUBLESHOOTING.md
+  - add_photo.sh
+  - check_deployment.sh
+  - check_github_pages.sh
+  - docker-compose.yaml
+  - fix_photo_issue.md
+  - fix_url_issue.md
+  - markdown_generator
+  - rename_repo.sh
+  - rename_repository_guide.md
+  - scripts
+  - setup_github.sh
 keep_files:
   - .git
   - .svn

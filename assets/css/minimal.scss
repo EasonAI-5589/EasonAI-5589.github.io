@@ -100,6 +100,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,
 .project-row { padding:0 0 22px; margin:24px 0 0; border-bottom:1px solid var(--rule); }
 .project-row--media { display:grid; grid-template-columns:180px minmax(0,1fr); align-items:center; gap:24px; }
 .project-row--text { padding-left:204px; }
+.project-row--text:only-child { padding-left:0; }
 .project-media { display:block; }
 .project-media img { display:block; box-sizing:border-box; width:100%; height:auto; border:1px solid var(--rule); border-radius:5px; background:#fff; box-shadow:var(--image-shadow); }
 .project-content { min-width:0; }
