@@ -36,7 +36,8 @@ html { scroll-padding-top:24px; }
 .profile-affiliation { margin-bottom:4px; }
 .profile .email { font-size:13px; }
 .profile-contact { display:flex; flex-wrap:wrap; justify-content:center; align-items:baseline; gap:4px 10px; }
-.profile-cv { font-size:13px; text-decoration:underline; text-underline-offset:3px; }
+.profile-cv { display:inline-flex; align-items:center; gap:4px; font-size:13px; text-decoration:underline; text-underline-offset:3px; }
+.profile-cv svg { flex:none; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
 .profile-phd { margin:12px 0 0; font-size:14px; line-height:1.4; }
 .profile-phd a { color:var(--heading); }
 .social-icons { margin-top:16px; }
