@@ -1,7 +1,9 @@
 <section class="projects-section" aria-labelledby="projects">
   <h2 id="projects">Projects</h2>
+  <h3 class="project-status-heading" id="ongoing">Ongoing</h3>
   <div class="project-list">
-    {% for project in site.data.projects %}
+    {% assign ongoing_projects = site.data.projects | where: 'status', 'ongoing' %}
+    {% for project in ongoing_projects %}
     {% assign project_resources = project %}
     {% if project.arxiv_id %}
       {% assign project_resources = site.publications | where: 'arxiv_id', project.arxiv_id | first %}
@@ -14,13 +16,14 @@
       {% endif %}
       <div class="project-content">
         <div class="project-heading">
-          <h3><a href="{% if project_resources.projecturl %}{{ project_resources.projecturl | escape }}{% else %}{{ '/projects/' | relative_url }}#{{ project.id | escape }}{% endif %}">{{ project.name | escape }}</a></h3>
+          <h4><a href="{% if project_resources.projecturl %}{{ project_resources.projecturl | escape }}{% else %}{{ '/projects/' | relative_url }}#{{ project.id | escape }}{% endif %}">{{ project.name | escape }}</a></h4>
         </div>
         <p class="project-focus">{{ project.focus | escape }}{% if project_resources.category == 'conferences' %} · <strong>{{ project_resources.venue | escape }} {{ project_resources.year }}{% if project_resources.status == 'accepted' %} · Accepted{% endif %}</strong>{% elsif project_resources.status == 'under_review' %} · Under review{% elsif project_resources.category == 'preprints' %} · Preprint{% endif %}</p>
         <p class="project-summary">{{ project.summary | escape }}</p>
         {% if project.benchmark %}<p class="project-benchmark">{{ project.benchmark | escape }}</p>{% endif %}
         {% if project.website_summary %}<p class="project-summary">{{ project.website_summary | escape }}</p>{% endif %}
         {% if project.contribution %}<p class="project-contribution"><strong>My contribution:</strong> {{ project.contribution | escape }}</p>{% endif %}
+        {% if project.current_research %}<p class="project-summary"><strong>Current research:</strong> {{ project.current_research | escape }}</p>{% endif %}
         <div class="project-links">{% include publication-links.html paper=project_resources %}</div>
         {% if project.codebranch and project.workspaceurl %}
         <p class="project-code-note">Code links to the evaluation development branch, <code>{{ project.codebranch | escape }}</code>. The <a href="{{ project.workspaceurl | escape }}">project workspace</a> contains the broader project source and documentation. Both repositories require collaborator access.</p>
@@ -35,4 +38,15 @@
     </article>
     {% endfor %}
   </div>
+  <h3 class="project-status-heading" id="completed">Completed</h3>
+  <p class="completed-projects-intro">Projects that have developed into papers and preprints.</p>
+  {% assign completed_projects = site.publications | where_exp: 'paper', 'paper.project_id != nil' | sort: 'selected_order' %}
+  <ul class="completed-projects">
+    {% for paper in completed_projects %}
+    <li>
+      <a href="{{ '/publications/' | relative_url }}#paper-{{ paper.project_id | slugify }}" title="{{ paper.title | escape }}">{{ paper.project_name | escape }} <span aria-hidden="true">↗</span></a>
+      <span class="completed-project-status">{% if paper.status == 'accepted' %}{{ paper.venue | escape }} {{ paper.year }} · Accepted{% elsif paper.status == 'under_review' %}Under review{% else %}Preprint{% endif %}</span>
+    </li>
+    {% endfor %}
+  </ul>
 </section>

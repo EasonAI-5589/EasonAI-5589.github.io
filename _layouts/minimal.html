@@ -34,7 +34,7 @@
       <h1>Yichen Guo</h1>
       <p class="profile-position">AI Research</p>
       <p class="profile-affiliation">Nanyang Technological University</p>
-      <div class="profile-contact"><a class="email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a><a class="profile-cv" href="{{ '/assets/cv/yichen-guo-cv.pdf' | relative_url }}?v={{ site.time | date: '%s' }}" download="Yichen_Guo_CV.pdf" title="Download CV (PDF)"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M12 3v12m-4-4 4 4 4-4M4 16v5h16v-5"/></svg>Download CV</a></div>
+      <div class="profile-contact"><a class="email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></div>
       </div>
       <p class="profile-phd"><a href="{{ '/' | relative_url }}#phd">Seeking PhD · Spring / Fall 2027</a></p>
       <div class="social-icons" aria-label="Academic profiles">
@@ -42,6 +42,7 @@
         <a href="https://github.com/{{ site.author.github }}" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1 .1-2-.5-2.5 3-.3 6-1.5 6-6a5 5 0 0 0-1.3-3.5A4.5 4.5 0 0 0 19 2s-1 0-3.5 1.5a13 13 0 0 0-7 0C6 2 5 2 5 2a4.5 4.5 0 0 0-.2 4A5 5 0 0 0 3.5 9.5c0 4.5 3 5.7 6 6C8.9 16 9 17 9 18v4"/></svg></a>
         {% if site.author.linkedin %}<a href="https://linkedin.com/in/{{ site.author.linkedin | escape }}" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-7m0 3c0-4 6-4 6 0v4"/></svg></a>{% endif %}
         <a href="mailto:{{ site.author.email }}" aria-label="Email Yichen" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 6 9 7 9-7"/></svg></a>
+        <a class="profile-cv" href="{{ '/assets/cv/yichen-guo-cv.pdf' | relative_url }}?v={{ site.time | date: '%s' }}" download="Yichen_Guo_CV.pdf" aria-label="Download CV (PDF)" title="Download CV (PDF)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 3H5v18h14V8l-5-5Z M14 3v5h5"/><text x="12" y="16.5" text-anchor="middle" fill="currentColor" stroke="none" font-family="Arial, sans-serif" font-size="7" font-weight="700">CV</text></svg></a>
       </div>
       <nav class="profile-nav" aria-label="Main navigation"><a href="{{ '/' | relative_url }}#about">About</a><a href="{{ '/projects/' | relative_url }}#projects"{% if page.url == '/projects/' %} aria-current="page"{% endif %}>Projects</a><a href="{{ '/publications/' | relative_url }}#publications"{% if page.url == '/publications/' %} aria-current="page"{% endif %}>Publications</a><a href="{{ '/' | relative_url }}#experience">Experience</a></nav>
       <div class="theme-switch" role="group" aria-label="Color theme" hidden>

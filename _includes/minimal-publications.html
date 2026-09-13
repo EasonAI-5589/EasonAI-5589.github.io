@@ -36,7 +36,7 @@
       {%- elsif paper.path contains '2025-dcla-neurips' -%}
         {%- assign paper_summary = 'Training-free decoding that aggregates inter-layer representations to improve semantic consistency and reduce hallucinations.' -%}
       {%- endif -%}
-    <li class="pub-item">
+    <li class="pub-item" id="paper-{{ paper.project_id | default: paper.slug | slugify }}">
       <article class="pub-row {% if paper_media != '' %}pub-row--media{% else %}pub-row--text{% endif %}">
         {% if paper_media == 'regimevggt' %}
         <figure class="pub-media">

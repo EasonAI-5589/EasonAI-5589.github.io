@@ -3,6 +3,8 @@ title: "Do Robotic World Models Really Follow Actions? Diagnosing and Aligning A
 collection: publications
 category: preprints
 selected_order: 2
+project_id: worldecho-worldsync
+project_name: WorldEcho / WorldSync
 permalink: /publication/2026-worldecho-worldsync/
 authors: "Sixiang Chen, Jiaming Liu, Jixian Wu, Yichen Guo, Tinghao Wang, Siyuan Qian, Hao Chen, Jiajun Cao, Jian Tang, Shanghang Zhang"
 date: 2026-08-25

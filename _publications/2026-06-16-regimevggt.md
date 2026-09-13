@@ -3,6 +3,8 @@ title: "RegimeVGGT: Layer-Wise Spatially Preserving Redundancy Removal for Visua
 collection: publications
 category: preprints
 selected_order: 4
+project_id: regimevggt
+project_name: RegimeVGGT
 authors: "Jinhao You, Shuo Lyu, Zhuohang Lyu, Tanxuan Li, Zibo Zhao, Jiaxiang Hu, Kai Tang, Yichen Guo"
 show_all_authors: true
 date: 2026-06-16
