@@ -98,7 +98,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,
 .minimal-publications .links { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; width:330px; max-width:100%; align-items:stretch; }
 .publications.minimal-publications ol.bibliography li .links .btn,.paper-links .btn { display:inline-block; color:var(--page-text); border:1px solid var(--control-border); padding:.1rem .5rem; font-size:12px; line-height:1.4; text-decoration:none; border-radius:2px; white-space:nowrap; }
 .publications.minimal-publications ol.bibliography li .links .btn { box-sizing:border-box; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1px; min-height:34px; padding:3px 4px; text-align:center; white-space:normal; }
-.resource-label { white-space:nowrap; }
+.resource-label { display:inline-flex; align-items:center; justify-content:center; gap:5px; white-space:nowrap; }
 .resource-status { display:block; font-size:10px; line-height:1.2; }
 .publications.minimal-publications ol.bibliography li .links a.btn:hover,.paper-links a.btn:hover { color:var(--heading); border-color:var(--heading); background:var(--surface); }
 .publications.minimal-publications ol.bibliography li .links .resource-pending,.paper-links .resource-pending { color:var(--muted); border-color:var(--rule); border-style:dashed; }
@@ -123,8 +123,8 @@ a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,
 .project-links .resource-pending { color:var(--muted); border-color:var(--rule); border-style:dashed; }
 .project-code-note { max-width:580px; margin:9px 0 0; color:var(--muted); font-size:13px; line-height:1.45; }
 .project-code-note code { font-size:12px; overflow-wrap:anywhere; }
-.resource-label--icon { display:inline-flex; align-items:center; justify-content:center; gap:4px; }
 .resource-icon { display:block; width:16px; height:16px; flex:none; }
+.resource-icon--outline { fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
 .project-dataset { display:flex; flex-wrap:wrap; gap:6px 16px; font-size:13px; margin:7px 0 0; }
 .project-dataset a { display:inline-flex; align-items:center; gap:4px; }
 .publication-detail h1 { font-size:27px; line-height:1.2; margin:12px 0; }
