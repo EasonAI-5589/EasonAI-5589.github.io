@@ -6,6 +6,8 @@
   {%- assign resource_status = '' -%}
   {%- if resource_key == 'codeurl' -%}
     {%- assign resource_status = include.paper.codestatus | default: '' | strip -%}
+  {%- elsif resource_key == 'huggingfaceurl' -%}
+    {%- assign resource_status = include.paper.huggingfacestatus | default: '' | strip -%}
   {%- endif -%}
   {%- if resource_key == 'projecturl' -%}
     {%- assign resource_label = include.paper.projectlabel | default: resource_label -%}

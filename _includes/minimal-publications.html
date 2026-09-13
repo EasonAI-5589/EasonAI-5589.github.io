@@ -81,9 +81,12 @@
           <p class="periodical">{% if paper.status == 'under_review' and paper.category == 'preprints' %}Under review · {{ paper.date | date: '%Y' }}{% elsif paper.category == 'conferences' %}<strong>{{ paper.venue | escape }} {{ paper.year }}{% if paper.status == 'accepted' %} · Accepted{% endif %}</strong>{% elsif paper.category == 'preprints' %}Preprint · {{ paper.date | date: '%Y' }}{% else %}Manuscript · {{ paper.year }}{% endif %} · <span class="pub-role">{{ paper_role }}</span></p>
           {% if paper_summary != '' %}<p class="pub-summary">{{ paper_summary | escape }}</p>{% endif %}
           {% if paper_contribution != '' %}<p class="pub-contribution"><strong>My contribution:</strong> {{ paper_contribution | escape }}</p>{% endif %}
-          <div class="links">
+          {%- assign paper_huggingface_url = paper.huggingfaceurl | default: '' | strip -%}
+          {%- assign paper_huggingface_note = paper.huggingfacenote | default: '' | strip -%}
+          <div class="links{% if paper_huggingface_url != '' %} links--extended{% endif %}">
             {% include publication-links.html paper=paper %}
           </div>
+          {% if paper_huggingface_url != '' and paper_huggingface_note != '' %}<p class="pub-resource-note">{{ paper_huggingface_note | escape }}</p>{% endif %}
         </div>
       </article>
     </li>

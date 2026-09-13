@@ -14,6 +14,9 @@ arxiv_id: "2608.24885"
 doi: "10.48550/arXiv.2608.24885"
 paperurl: "https://arxiv.org/abs/2608.24885"
 projecturl: "https://siriyep.github.io/worldecho-worldsync-project-page/"
+huggingfaceurl: "https://huggingface.co/datasets/YICHEN013/WorldEcho"
+huggingfacestatus: "Private dataset"
+huggingfacenote: "Dataset access is currently restricted; data upload is pending."
 excerpt: "WorldEcho diagnoses action following beyond expert demonstrations; WorldSync improves action-conditioned generation for more reliable policy learning."
 ---
 
