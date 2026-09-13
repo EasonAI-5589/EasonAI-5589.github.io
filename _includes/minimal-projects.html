@@ -20,8 +20,11 @@
         <p class="project-summary">{{ project.summary | escape }}</p>
         {% if project.benchmark %}<p class="project-benchmark">{{ project.benchmark | escape }}</p>{% endif %}
         {% if project.website_summary %}<p class="project-summary">{{ project.website_summary | escape }}</p>{% endif %}
-        {% if project.contribution %}<p class="project-contribution">{{ project.contribution | escape }}</p>{% endif %}
+        {% if project.contribution %}<p class="project-contribution"><strong>My contribution:</strong> {{ project.contribution | escape }}</p>{% endif %}
         <div class="project-links">{% include publication-links.html paper=project_resources %}</div>
+        {% if project.codebranch and project.workspaceurl %}
+        <p class="project-code-note">Code links to the evaluation development branch, <code>{{ project.codebranch | escape }}</code>. The <a href="{{ project.workspaceurl | escape }}">project workspace</a> contains the broader project source and documentation. Both repositories require collaborator access.</p>
+        {% endif %}
         {% if project.leaderboardurl or project.dataseturl %}
         <p class="project-dataset">
           {% if project.leaderboardurl %}<a href="{{ project.leaderboardurl | escape }}"><img class="resource-icon" src="{{ '/assets/icons/huggingface.svg' | relative_url }}" alt="" width="16" height="16">Hugging Face leaderboard ↗</a>{% endif %}

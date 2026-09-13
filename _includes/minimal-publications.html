@@ -10,6 +10,7 @@
       {%- assign paper_media = '' -%}
       {%- assign paper_role = 'Co-author' -%}
       {%- assign paper_summary = paper.excerpt | strip_html -%}
+      {%- assign paper_contribution = '' -%}
       {%- if paper.arxiv_id == '2606.20698' -%}
         {%- assign paper_media = 'safedojo' -%}
       {%- elsif paper.arxiv_id == '2606.18439' -%}
@@ -18,10 +19,12 @@
         {%- assign paper_media = 'starpro' -%}
         {%- assign paper_role = 'Co-first author' -%}
         {%- assign paper_summary = 'Training-free visual token reduction that preserves feature coverage, then progressively refines retained tokens as language and vision interact.' -%}
+        {%- assign paper_contribution = 'As a co-first author, I contributed to the design of adaptive-to-progressive token pruning and its evaluation across vision-language architectures.' -%}
       {%- elsif paper.arxiv_id == '2608.24885' -%}
         {%- assign paper_media = 'worldecho' -%}
         {%- assign paper_role = 'Core contributor' -%}
         {%- assign paper_summary = 'WorldEcho diagnoses action-following failures; WorldSync aligns generation with robot dynamics to support policy learning.' -%}
+        {%- assign paper_contribution = 'As a core contributor, I work on understanding and improving action following in robotic world models.' -%}
       {%- elsif paper.path contains '2026-map-aaai' -%}
         {%- assign paper_role = 'Equal contribution' -%}
         {%- assign paper_summary = 'Training-free decoding with map-level attention processing to mitigate hallucinations in vision-language models.' -%}
@@ -77,6 +80,7 @@
           </p>
           <p class="periodical">{% if paper.status == 'under_review' and paper.category == 'preprints' %}Under review · {{ paper.date | date: '%Y' }}{% elsif paper.category == 'conferences' %}<strong>{{ paper.venue | escape }} {{ paper.year }}{% if paper.status == 'accepted' %} · Accepted{% endif %}</strong>{% elsif paper.category == 'preprints' %}Preprint · {{ paper.date | date: '%Y' }}{% else %}Manuscript · {{ paper.year }}{% endif %} · <span class="pub-role">{{ paper_role }}</span></p>
           {% if paper_summary != '' %}<p class="pub-summary">{{ paper_summary | escape }}</p>{% endif %}
+          {% if paper_contribution != '' %}<p class="pub-contribution"><strong>My contribution:</strong> {{ paper_contribution | escape }}</p>{% endif %}
           <div class="links">
             {% include publication-links.html paper=paper %}
           </div>
