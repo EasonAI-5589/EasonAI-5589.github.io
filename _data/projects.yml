@@ -2,6 +2,11 @@
   name: InferenceNet
   status: ongoing
   focus: "AI agents for econometric analysis and replication"
+  card_summary: "Evaluating how AI agents plan econometric analyses, use tools, and reproduce statistical findings from published research."
+  highlights:
+    - "2,644 research tasks"
+    - "36 journals"
+    - "1,000-task evaluation subset"
   summary: "InferenceNet is a collaborative research initiative investigating whether AI agents can carry out econometric analyses and reproduce key results from published studies. Its benchmark brings together 2,644 tasks from 36 academic journals, pairing task descriptions with published data and author-provided replication code."
   benchmark: "Selected_1000 provides a 1,000-task evaluation subset covering ordinary least squares, difference-in-differences, instrumental variables, regression discontinuity, and other econometric methods."
   contribution: "I work on evaluation pipelines, agent harness integration, and reproducibility audits. This includes connecting agents to controlled Python execution, aligning task inputs and scoring protocols, and investigating failures across data preparation, code generation, execution, and statistical replication."

@@ -8,22 +8,33 @@
     {% if project.arxiv_id %}
       {% assign project_resources = site.publications | where: 'arxiv_id', project.arxiv_id | first %}
     {% endif %}
-    <article class="project-row{% if project.image %} project-row--media{% else %} project-row--text{% endif %}" id="{{ project.id | escape }}">
-      {% if project.image %}
-      <a class="project-media" data-zoom href="{{ project.image | relative_url }}" aria-label="View the full {{ project.name | escape }} figure">
-        <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | escape }}" width="{{ project.image_width }}" height="{{ project.image_height }}" loading="lazy">
-      </a>
-      {% endif %}
-      <div class="project-content">
-        <div class="project-heading">
-          <h4><a href="{% if project_resources.projecturl %}{{ project_resources.projecturl | escape }}{% else %}{{ '/projects/' | relative_url }}#{{ project.id | escape }}{% endif %}">{{ project.name | escape }}</a></h4>
+    <article class="project-card" id="{{ project.id | escape }}" aria-labelledby="{{ project.id | escape }}-title">
+      <details class="project-disclosure">
+        <summary class="project-card-summary" aria-labelledby="{{ project.id | escape }}-title {{ project.id | escape }}-toggle">
+          <span class="project-card-heading"><span class="project-card-name" id="{{ project.id | escape }}-title">{{ project.name | escape }}</span><span class="project-card-status">Ongoing</span></span>
+          <span class="project-focus">{{ project.focus | escape }}</span>
+          <span class="project-card-description">{{ project.card_summary | default: project.summary | escape }}</span>
+          {% if project.highlights %}<span class="project-card-highlights">{% for highlight in project.highlights %}<span>{{ highlight | escape }}</span>{% endfor %}</span>{% endif %}
+          <span class="project-card-toggle" id="{{ project.id | escape }}-toggle"><span class="project-expand-label">Explore project</span><span class="project-collapse-label">Show less</span><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span>
+        </summary>
+        <div class="project-card-details">
+          {% if project.image %}
+          <a class="project-media" data-zoom href="{{ project.image | relative_url }}" aria-label="View the full {{ project.name | escape }} figure">
+            <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | escape }}" width="{{ project.image_width }}" height="{{ project.image_height }}" loading="lazy">
+          </a>
+          {% endif %}
+          <h4>Benchmark</h4>
+          <p class="project-summary">{{ project.summary | escape }}</p>
+          {% if project.benchmark %}<p class="project-benchmark">{{ project.benchmark | escape }}</p>{% endif %}
+          {% if project.website_summary %}<p class="project-summary">{{ project.website_summary | escape }}</p>{% endif %}
+          {% if project.contribution %}<h4>My contribution</h4><p class="project-contribution">{{ project.contribution | escape }}</p>{% endif %}
+          {% if project.current_research %}<h4>Current research</h4><p class="project-summary">{{ project.current_research | escape }}</p>{% endif %}
+          {% if project.codebranch and project.workspaceurl %}
+          <p class="project-code-note">Code links to the evaluation development branch, <code>{{ project.codebranch | escape }}</code>. The <a href="{{ project.workspaceurl | escape }}">project workspace</a> contains the broader project source and documentation. Both repositories require collaborator access.</p>
+          {% endif %}
         </div>
-        <p class="project-focus">{{ project.focus | escape }}{% if project_resources.category == 'conferences' %} · <strong>{{ project_resources.venue | escape }} {{ project_resources.year }}{% if project_resources.status == 'accepted' %} · Accepted{% endif %}</strong>{% elsif project_resources.status == 'under_review' %} · Under review{% elsif project_resources.category == 'preprints' %} · Preprint{% endif %}</p>
-        <p class="project-summary">{{ project.summary | escape }}</p>
-        {% if project.benchmark %}<p class="project-benchmark">{{ project.benchmark | escape }}</p>{% endif %}
-        {% if project.website_summary %}<p class="project-summary">{{ project.website_summary | escape }}</p>{% endif %}
-        {% if project.contribution %}<p class="project-contribution"><strong>My contribution:</strong> {{ project.contribution | escape }}</p>{% endif %}
-        {% if project.current_research %}<p class="project-summary"><strong>Current research:</strong> {{ project.current_research | escape }}</p>{% endif %}
+      </details>
+      <div class="project-card-resources">
         <div class="project-links{% if project.leaderboardurl or project.dataseturl %} project-links--extended{% endif %}">
           {% include publication-links.html paper=project_resources %}
           {% if project.leaderboardurl %}
@@ -33,9 +44,6 @@
           <a class="btn btn-sm" href="{{ project.dataseturl | escape }}"><span class="resource-label">{% include resource-icon.html kind='huggingfaceurl' %}Dataset</span><span class="resource-status">Hugging Face</span></a>
           {% endif %}
         </div>
-        {% if project.codebranch and project.workspaceurl %}
-        <p class="project-code-note">Code links to the evaluation development branch, <code>{{ project.codebranch | escape }}</code>. The <a href="{{ project.workspaceurl | escape }}">project workspace</a> contains the broader project source and documentation. Both repositories require collaborator access.</p>
-        {% endif %}
       </div>
     </article>
     {% endfor %}
