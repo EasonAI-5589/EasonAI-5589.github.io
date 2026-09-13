@@ -24,15 +24,17 @@
         {% if project.website_summary %}<p class="project-summary">{{ project.website_summary | escape }}</p>{% endif %}
         {% if project.contribution %}<p class="project-contribution"><strong>My contribution:</strong> {{ project.contribution | escape }}</p>{% endif %}
         {% if project.current_research %}<p class="project-summary"><strong>Current research:</strong> {{ project.current_research | escape }}</p>{% endif %}
-        <div class="project-links">{% include publication-links.html paper=project_resources %}</div>
+        <div class="project-links{% if project.leaderboardurl or project.dataseturl %} project-links--extended{% endif %}">
+          {% include publication-links.html paper=project_resources %}
+          {% if project.leaderboardurl %}
+          <a class="btn btn-sm" href="{{ project.leaderboardurl | escape }}"><span class="resource-label">{% include resource-icon.html kind='huggingfaceurl' %}Leaderboard</span><span class="resource-status">Hugging Face</span></a>
+          {% endif %}
+          {% if project.dataseturl %}
+          <a class="btn btn-sm" href="{{ project.dataseturl | escape }}"><span class="resource-label">{% include resource-icon.html kind='huggingfaceurl' %}Dataset</span><span class="resource-status">Hugging Face</span></a>
+          {% endif %}
+        </div>
         {% if project.codebranch and project.workspaceurl %}
         <p class="project-code-note">Code links to the evaluation development branch, <code>{{ project.codebranch | escape }}</code>. The <a href="{{ project.workspaceurl | escape }}">project workspace</a> contains the broader project source and documentation. Both repositories require collaborator access.</p>
-        {% endif %}
-        {% if project.leaderboardurl or project.dataseturl %}
-        <p class="project-dataset">
-          {% if project.leaderboardurl %}<a href="{{ project.leaderboardurl | escape }}"><img class="resource-icon" src="{{ '/assets/icons/huggingface.svg' | relative_url }}" alt="" width="16" height="16">Hugging Face leaderboard ↗</a>{% endif %}
-          {% if project.dataseturl %}<a href="{{ project.dataseturl | escape }}">Dataset on Hugging Face ↗</a>{% endif %}
-        </p>
         {% endif %}
       </div>
     </article>
