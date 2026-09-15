@@ -59,18 +59,20 @@ en:
     home: "Home"
   about:
     bio_html: >-
-      I am currently pursuing an <strong>M.Eng. (by Research) in Computer Science and Engineering</strong> at <strong>Nanyang Technological University (NTU)</strong> and am a <strong>Research Affiliate at GIFTS, NTU (DEFT Lab)</strong>, where I am honored to be advised by <a href="https://www.linwilliamcong.com/about">Prof. Lin William Cong</a>. I also have the privilege of working under the guidance of <a href="https://www.shanghangzhang.com/">Prof. Shanghang Zhang</a> at the <strong>School of Computer Science, Peking University</strong>. At <strong>Binance</strong>, I work on <strong>AI trading agents and trading algorithms</strong> as a Data Science Intern.
+      I am currently pursuing an <strong>M.Eng. (by Research) in Computer Science and Engineering</strong> at <strong>Nanyang Technological University (NTU)</strong> and am a <strong>Research Affiliate at GIFTS, NTU (DEFT Lab)</strong>, where I am honored to be advised by <a href="https://www.linwilliamcong.com/about">Prof. Lin William Cong</a>. I also collaborate with the <strong>HMI Lab at Peking University's School of Computer Science</strong> under the guidance of <a href="https://www.shanghangzhang.com/">Prof. Shanghang Zhang</a>. In addition, I maintain a long-term remote research collaboration with <a href="https://eye.hms.harvard.edu/mengyuwang">Prof. Mengyu Wang</a> and his <a href="https://wang.hms.harvard.edu/">Harvard AI and Robotics Lab</a> at <strong>Harvard University</strong>.
+    internships_html: >-
+      I am currently a <strong>Data Science Intern at Binance</strong>, working on <strong>AI trading agents and trading algorithms</strong>. Previously, I interned with <strong>Tencent LightSpeed Studios' Singapore team</strong>.
     research_html: >-
-      My research focuses on <strong>efficient and reliable vision-language models (VLMs)</strong>, <strong>world models</strong>, and <strong>AI agents</strong>. My work on agents spans <strong>post-training and agent harnesses</strong>, with applications in finance and empirical research. Previously, I received my <strong>B.Eng. in Electronic Information Engineering</strong> from the University of Electronic Science and Technology of China (UESTC) in June 2025.
+      My research interests center on <strong>world models</strong> and <strong>AI agents</strong>, with a focus on action-conditioned generation, policy learning, agent harnesses, and post-training for tasks such as robotic manipulation, trading algorithms, market analysis, and the replication of econometric studies. I also study the efficiency and reliability of <strong>vision-language models (VLMs)</strong>.
     phd_html: >-
-      I am seeking <strong>PhD opportunities starting in Spring or Fall 2027</strong>. Feel free to contact me at <a href="mailto:yichen013@e.ntu.edu.sg">yichen013@e.ntu.edu.sg</a> to discuss research, PhD opportunities, or potential collaborations.
+      I am seeking <strong>PhD opportunities starting in Spring or Fall 2027</strong>. Feel free to contact me at <a href="mailto:yichen013@e.ntu.edu.sg">yichen013@e.ntu.edu.sg</a> to discuss research ideas, PhD opportunities, or potential collaborations. Recommendations are also welcome.
   interests:
-    - label: "Vision-Language Models (VLMs)"
-      text: "Efficient inference, visual token reduction, and hallucination mitigation."
     - label: "World Models"
-      text: "Action-conditioned generation, action-following evaluation, and policy learning."
+      text: "Action-conditioned generation, action following, policy training and learning, and unified models, with applications in robotic manipulation."
     - label: "AI Agents"
-      text: "Post-training and agent harnesses for tool use, execution, and evaluation, with applications in finance and empirical research."
+      text: "Agent harnesses, agentic capabilities such as autonomous planning and tool use, and post-training through supervised fine-tuning (SFT) and reinforcement learning (RL), with applications in trading algorithms, market analysis, and the replication of econometric studies."
+    - label: "Vision-Language Models (VLMs)"
+      text: "Visual token reduction, efficient inference, and hallucination mitigation to improve model efficiency and reliability."
   experience:
     - logo: "/assets/logos/nanyang-technological-university.png"
       logo_class: "experience-logo--shield"
@@ -125,7 +127,7 @@ en:
       institution: "Harvard AI and Robotics Lab, Harvard University"
       dates: "Sep–Nov 2025"
       role: "Visiting Student · Remote"
-      supervisor_html: "Prof. Mengyu Wang"
+      supervisor_html: '<a href="https://eye.hms.harvard.edu/mengyuwang">Prof. Mengyu Wang</a>'
       points:
         - "Studied multi-objective reinforcement learning for financial agents and LLM-powered trading scenarios."
         - "Explored multimodal visual-memory reasoning for medical models, including memory-enhanced post-training, multi-image inference, supervised fine-tuning, and GRPO."
@@ -260,9 +262,9 @@ zh:
     home: "首页"
   about:
     bio_html: >-
-      我目前在<strong>南洋理工大学（NTU）</strong>攻读<strong>计算机科学与工程研究型硕士</strong>，并在 <strong>GIFTS（DEFT Lab）</strong>担任 Research Affiliate，很荣幸能在 <a href="https://www.linwilliamcong.com/about">Lin William Cong 教授</a>的指导下开展研究。我也与<strong>北京大学计算机学院 HMI Lab</strong> 的 <a href="https://www.shanghangzhang.com/">Shanghang Zhang 教授</a>开展科研合作。目前还在 <strong>Binance</strong> 担任数据科学实习生，参与 <strong>AI 交易智能体与交易算法</strong>的研发。
-    previous_html: >-
-      此前，我曾在<strong>腾讯光子工作室群的新加坡团队</strong>实习，并以远程访问学生的身份，与<strong>哈佛大学 Harvard AI and Robotics Lab</strong> 开展科研合作。
+      我目前在<strong>南洋理工大学（NTU）</strong>攻读<strong>计算机科学与工程研究型硕士</strong>，并在 <strong>GIFTS（DEFT Lab）</strong>担任 Research Affiliate，很荣幸能在 <a href="https://www.linwilliamcong.com/about">Lin William Cong 教授</a>的指导下开展研究。我也在 <a href="https://www.shanghangzhang.com/">Shanghang Zhang 教授</a>的指导下，与<strong>北京大学计算机学院 HMI Lab</strong> 开展科研合作。此外，我与<strong>哈佛大学</strong>的 <a href="https://eye.hms.harvard.edu/mengyuwang">Mengyu Wang 教授</a>及其 <a href="https://wang.hms.harvard.edu/">Harvard AI and Robotics Lab</a> 长期保持线上科研合作。
+    internships_html: >-
+      目前，我在 <strong>Binance</strong> 担任<strong>数据科学实习生</strong>，参与 <strong>AI 交易智能体与交易算法</strong>的研发。此前，我曾在<strong>腾讯光子工作室群的新加坡团队</strong>实习。
     research_html: >-
       我的研究兴趣主要集中在<strong>世界模型（World Models）</strong>与 <strong>AI 智能体（AI Agents）</strong>，关注动作条件生成、策略学习，以及智能体运行框架和后训练，面向机器人操作、交易算法与市场分析、计量研究复现等具体任务。我也关注<strong>视觉语言模型（VLMs）</strong>的高效推理与可靠性。
     phd_html: >-
@@ -328,7 +330,7 @@ zh:
       institution: "哈佛大学 Harvard AI and Robotics Lab"
       dates: "2025 年 9 月至 11 月"
       role: "访问学生 · 远程"
-      supervisor_html: "Prof. Mengyu Wang"
+      supervisor_html: '<a href="https://eye.hms.harvard.edu/mengyuwang">Prof. Mengyu Wang</a>'
       points:
         - "研究金融智能体及大语言模型交易场景中的多目标强化学习。"
         - "探索医疗模型的多模态视觉记忆推理，包括记忆增强后训练、多图推理、监督微调与 GRPO。"

@@ -2,6 +2,6 @@
 {% assign copy = site.data.homepage[locale] %}
 <h2 id="about">{{ copy.ui.about }}</h2>
 <p>{{ copy.about.bio_html }}</p>
-{% if copy.about.previous_html %}<p>{{ copy.about.previous_html }}</p>{% endif %}
+{% if copy.about.internships_html %}<p>{{ copy.about.internships_html }}</p>{% endif %}
 <p>{{ copy.about.research_html }}</p>
 <p class="phd-opportunities" id="phd">{{ copy.about.phd_html }} <a href="{% if locale == 'zh' %}{{ '/zh/cv/' | relative_url }}{% else %}{{ '/cv/' | relative_url }}{% endif %}">{{ copy.ui.view_cv }}</a></p>
