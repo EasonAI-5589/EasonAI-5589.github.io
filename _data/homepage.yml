@@ -59,7 +59,7 @@ en:
     home: "Home"
   about:
     bio_html: >-
-      I am currently pursuing an <strong>M.Eng. (by Research) in Computer Science and Engineering</strong> at <strong>Nanyang Technological University (NTU)</strong> and am a <strong>Research Affiliate at GIFTS, NTU (DEFT Lab)</strong>, where I am honored to be advised by <a href="https://www.linwilliamcong.com/about">Prof. Lin William Cong</a>. I also collaborate with the <strong>HMI Lab at Peking University's School of Computer Science</strong> under the guidance of <a href="https://www.shanghangzhang.com/">Prof. Shanghang Zhang</a>. In addition, I maintain a long-term remote research collaboration with <a href="https://eye.hms.harvard.edu/mengyuwang">Prof. Mengyu Wang</a> and his <a href="https://wang.hms.harvard.edu/">Harvard AI and Robotics Lab</a> at <strong>Harvard University</strong>.
+      I am currently pursuing an <strong>M.Eng. (by Research) in Computer Science and Engineering</strong> at <strong>Nanyang Technological University (NTU)</strong> and am a <strong>Research Affiliate at <a href="https://www.ntu.edu.sg/gifts/about">GIFTS</a></strong>. I am honored to work under the guidance of <a href="https://www.linwilliamcong.com/about">Prof. Lin William Cong</a> in the <a href="https://www.ntu.edu.sg/gifts/research-and-innovation">Digital Economy and Financial Technology Lab (DEFT Lab)</a>. I also collaborate with the <a href="https://github.com/PKU-HMI-Lab">Human Machine Intelligence (HMI) Lab</a> at <strong>Peking University's School of Computer Science</strong> under the guidance of <a href="https://www.ai.pku.edu.cn/en/info/1459/2068.htm">Prof. Shanghang Zhang</a>. In addition, I maintain a long-term remote research collaboration with <a href="https://eye.hms.harvard.edu/mengyuwang">Prof. Mengyu Wang</a> and his <a href="https://wang.hms.harvard.edu/">Harvard AI and Robotics Lab</a> at <strong>Harvard University</strong>.
     internships_html: >-
       I am currently a <strong>Data Science Intern at Binance</strong>, working on <strong>AI trading agents and trading algorithms</strong>. Previously, I interned with <strong>Tencent LightSpeed Studios' Singapore team</strong>.
     research_html: >-
@@ -92,7 +92,7 @@ en:
       institution: "HMI Lab, Peking University"
       dates: "Jul 2025–Present"
       role: "Research Assistant · School of Computer Science"
-      supervisor_html: '<a href="https://www.shanghangzhang.com/">Prof. Shanghang Zhang</a>'
+      supervisor_html: '<a href="https://www.ai.pku.edu.cn/en/info/1459/2068.htm">Prof. Shanghang Zhang</a>'
       points:
         - "Working on efficient vision-language models through STAR-Pro, combining adaptive visual token selection with progressive refinement inside the language decoder."
         - "Studying reliable multimodal reasoning and hallucination mitigation by reducing the dominance of language priors."
@@ -262,7 +262,7 @@ zh:
     home: "首页"
   about:
     bio_html: >-
-      我目前在<strong>南洋理工大学（NTU）</strong>攻读<strong>计算机科学与工程研究型硕士</strong>，并在 <strong>GIFTS（DEFT Lab）</strong>担任 Research Affiliate，很荣幸能在 <a href="https://www.linwilliamcong.com/about">Lin William Cong 教授</a>的指导下开展研究。我也在 <a href="https://www.shanghangzhang.com/">Shanghang Zhang 教授</a>的指导下，与<strong>北京大学计算机学院 HMI Lab</strong> 开展科研合作。此外，我与<strong>哈佛大学</strong>的 <a href="https://eye.hms.harvard.edu/mengyuwang">Mengyu Wang 教授</a>及其 <a href="https://wang.hms.harvard.edu/">Harvard AI and Robotics Lab</a> 长期保持线上科研合作。
+      我目前在<strong>南洋理工大学（NTU）</strong>攻读<strong>计算机科学与工程研究型硕士</strong>，并在 <a href="https://www.ntu.edu.sg/gifts/about">GIFTS</a> 担任 Research Affiliate，很荣幸能在 <a href="https://www.linwilliamcong.com/about">Lin William Cong 教授</a>的指导下，于<a href="https://www.ntu.edu.sg/gifts/research-and-innovation">数字经济与金融科技实验室（DEFT Lab）</a>开展研究。我也在 <a href="https://cs.pku.edu.cn/info/1086/1735.htm">Shanghang Zhang 教授</a>的指导下，与<strong>北京大学计算机学院</strong>的<a href="https://github.com/PKU-HMI-Lab">人机智能实验室（HMI Lab）</a>开展科研合作。此外，我与<strong>哈佛大学</strong>的 <a href="https://eye.hms.harvard.edu/mengyuwang">Mengyu Wang 教授</a>及其 <a href="https://wang.hms.harvard.edu/">Harvard AI and Robotics Lab</a> 长期保持线上科研合作。
     internships_html: >-
       目前，我在 <strong>Binance</strong> 担任<strong>数据科学实习生</strong>，参与 <strong>AI 交易智能体与交易算法</strong>的研发。此前，我曾在<strong>腾讯光子工作室群的新加坡团队</strong>实习。
     research_html: >-
@@ -295,7 +295,7 @@ zh:
       institution: "北京大学 HMI Lab"
       dates: "2025 年 7 月至今"
       role: "研究助理 · 计算机学院"
-      supervisor_html: '<a href="https://www.shanghangzhang.com/">Prof. Shanghang Zhang</a>'
+      supervisor_html: '<a href="https://cs.pku.edu.cn/info/1086/1735.htm">Prof. Shanghang Zhang</a>'
       points:
         - "通过 STAR-Pro 研究高效视觉语言模型，将自适应视觉 token 选择与语言解码器内的渐进细化相结合。"
         - "研究可靠的多模态推理，通过减弱语言先验的过度主导来缓解幻觉。"
