@@ -3,4 +3,4 @@
 <h2 id="about">{{ copy.ui.about }}</h2>
 <p>{{ copy.about.bio_html }}</p>
 <p>{{ copy.about.research_html }}</p>
-<p class="phd-opportunities" id="phd">{{ copy.about.phd_html }} <a href="{{ '/assets/cv/yichen-guo-cv.pdf' | relative_url }}?v={{ site.time | date: '%s' }}" download="Yichen_Guo_CV.pdf">{{ copy.ui.download_cv }}</a></p>
+<p class="phd-opportunities" id="phd">{{ copy.about.phd_html }} <a href="{% if locale == 'zh' %}{{ '/zh/cv/' | relative_url }}{% else %}{{ '/cv/' | relative_url }}{% endif %}">{{ copy.ui.view_cv }}</a></p>

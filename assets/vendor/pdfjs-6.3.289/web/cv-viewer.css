@@ -1,0 +1,6 @@
+/* CV preview colors match the personal homepage. */
+:root {
+  --body-bg-color: light-dark(#eef1f5, #20222b);
+  --toolbar-bg-color: light-dark(#fff, #282d38);
+  --sidebar-toolbar-bg-color: light-dark(#f3f6fa, #282d38);
+}
