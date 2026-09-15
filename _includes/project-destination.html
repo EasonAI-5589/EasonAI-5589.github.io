@@ -1,0 +1,8 @@
+{%- assign destination = include.work.projecturl -%}
+{%- if page.lang == 'zh' and include.work.projecturl_zh -%}
+  {%- assign destination = include.work.projecturl_zh -%}
+{%- endif -%}
+{%- if site.url contains '127.0.0.1' and include.work.projectpreviewurl -%}
+  {%- assign destination = include.work.projectpreviewurl -%}
+{%- endif -%}
+{{- destination -}}

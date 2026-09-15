@@ -1,7 +1,16 @@
+{%- assign locale = page.lang | default: 'en' -%}
+{%- assign copy = site.data.homepage[locale] -%}
 {%- assign resource_keys = 'paperurl,codeurl,projecturl,huggingfaceurl' | split: ',' -%}
-{%- assign resource_labels = 'Paper,Code,Project Page,Hugging Face' | split: ',' -%}
+{%- if include.project_first -%}
+  {%- assign resource_keys = 'projecturl,paperurl,codeurl,huggingfaceurl' | split: ',' -%}
+{%- endif -%}
 {%- for resource_key in resource_keys -%}
-  {%- assign resource_label = resource_labels[forloop.index0] -%}
+  {%- case resource_key -%}
+    {%- when 'paperurl' -%}{%- assign resource_label = copy.ui.paper | default: 'Paper' -%}
+    {%- when 'codeurl' -%}{%- assign resource_label = copy.ui.code | default: 'Code' -%}
+    {%- when 'projecturl' -%}{%- assign resource_label = copy.ui.project_page | default: 'Project Page' -%}
+    {%- when 'huggingfaceurl' -%}{%- assign resource_label = 'Hugging Face' -%}
+  {%- endcase -%}
   {%- assign resource_icon = '' -%}
   {%- assign resource_status = '' -%}
   {%- if resource_key == 'codeurl' -%}
@@ -9,23 +18,33 @@
   {%- elsif resource_key == 'huggingfaceurl' -%}
     {%- assign resource_status = include.paper.huggingfacestatus | default: '' | strip -%}
   {%- endif -%}
+  {%- if resource_status == 'Collaborator access' -%}
+    {%- assign resource_status = copy.ui.collaborator_access | default: resource_status -%}
+  {%- elsif resource_status == 'Private dataset' -%}
+    {%- assign resource_status = copy.ui.private_dataset | default: resource_status -%}
+  {%- elsif resource_status == 'Coming soon' -%}
+    {%- assign resource_status = copy.ui.coming_soon | default: resource_status -%}
+  {%- endif -%}
   {%- if resource_key == 'projecturl' -%}
-    {%- assign resource_label = include.paper.projectlabel | default: resource_label -%}
+    {%- if include.paper.projectlabel and include.paper.projectlabel != 'Project Page' -%}
+      {%- assign resource_label = include.paper.projectlabel -%}
+    {%- endif -%}
     {%- assign resource_icon = include.paper.projecticon | default: '' -%}
   {%- endif -%}
   {%- assign resource_url = include.paper[resource_key] | default: '' | strip -%}
+  {%- if resource_key == 'projecturl' -%}
+    {%- capture resource_url -%}{%- include project-destination.html work=include.paper -%}{%- endcapture -%}
+    {%- assign resource_url = resource_url | strip -%}
+  {%- endif -%}
+  {%- if include.hide_missing and resource_url == '' -%}
+    {%- continue -%}
+  {%- endif -%}
   {%- if resource_key == 'huggingfaceurl' and resource_url == '' -%}
     {%- continue -%}
   {%- endif -%}
-  {%- if resource_key == 'projecturl' and site.url contains '127.0.0.1' -%}
-    {%- assign project_preview_url = include.paper.projectpreviewurl | default: '' | strip -%}
-    {%- if project_preview_url != '' -%}
-      {%- assign resource_url = project_preview_url -%}
-    {%- endif -%}
-  {%- endif -%}
   {% if resource_url != '' %}
-    <a class="btn btn-sm" href="{{ resource_url | escape }}"><span class="resource-label">{% include resource-icon.html kind=resource_key image=resource_icon %}{{ resource_label | escape }}</span>{% if resource_status != '' %}<span class="resource-status">{{ resource_status | escape }}</span>{% endif %}</a>
+    <a class="btn btn-sm" href="{{ resource_url | escape }}"{% if include.project_entry and resource_key == 'projecturl' %} data-project-entry{% endif %}><span class="resource-label">{% include resource-icon.html kind=resource_key image=resource_icon %}{{ resource_label | escape }}</span>{% if resource_status != '' %}<span class="resource-status">{{ resource_status | escape }}</span>{% endif %}</a>
   {% else %}
-    <span class="btn btn-sm resource-pending"><span class="resource-label">{% include resource-icon.html kind=resource_key image=resource_icon %}{{ resource_label | escape }}</span><span class="resource-status">Coming soon</span></span>
+    <span class="btn btn-sm resource-pending"><span class="resource-label">{% include resource-icon.html kind=resource_key image=resource_icon %}{{ resource_label | escape }}</span><span class="resource-status">{{ copy.ui.coming_soon | default: 'Coming soon' }}</span></span>
   {% endif %}
 {%- endfor -%}

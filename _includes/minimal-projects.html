@@ -1,62 +1,81 @@
-<section class="projects-section" aria-labelledby="projects">
-  <h2 id="projects">Projects</h2>
-  <h3 class="project-status-heading" id="ongoing">Ongoing</h3>
+{%- assign locale = page.lang | default: 'en' -%}
+{%- assign copy = site.data.homepage[locale] -%}
+{%- assign publications_path = '/publications/' -%}
+{%- if locale == 'zh' -%}{%- assign publications_path = '/zh/publications/' -%}{%- endif -%}
+<section class="projects-section" {% if include.selected_work %}aria-label="{{ copy.ui.ongoing | default: 'Ongoing' | escape }} {{ copy.ui.projects | default: 'projects' | escape }}"{% else %}aria-labelledby="projects"{% endif %}>
+  {% unless include.selected_work %}
+  <h2 id="projects">{{ copy.ui.projects | default: 'Projects' }}</h2>
+  <h3 class="project-status-heading" id="ongoing">{{ copy.ui.ongoing | default: 'Ongoing' }}</h3>
+  {% endunless %}
   <div class="project-list">
     {% assign ongoing_projects = site.data.projects | where: 'status', 'ongoing' %}
     {% for project in ongoing_projects %}
+    {% assign project_copy = copy.projects[project.id] %}
     {% assign project_resources = project %}
     {% if project.arxiv_id %}
       {% assign project_resources = site.publications | where: 'arxiv_id', project.arxiv_id | first %}
     {% endif %}
-    <article class="project-card" id="{{ project.id | escape }}" aria-labelledby="{{ project.id | escape }}-title">
+    <article class="project-card work-card" id="{{ project.id | escape }}" aria-labelledby="{{ project.id | escape }}-title">
       <details class="project-disclosure">
         <summary class="project-card-summary" aria-labelledby="{{ project.id | escape }}-title {{ project.id | escape }}-toggle">
-          <span class="project-card-heading"><span class="project-card-name" id="{{ project.id | escape }}-title">{{ project.name | escape }}</span><span class="project-card-status">Ongoing</span></span>
-          <span class="project-focus">{{ project.focus | escape }}</span>
-          <span class="project-card-description">{{ project.card_summary | default: project.summary | escape }}</span>
-          {% if project.highlights %}<span class="project-card-highlights">{% for highlight in project.highlights %}<span>{{ highlight | escape }}</span>{% endfor %}</span>{% endif %}
-          <span class="project-card-toggle" id="{{ project.id | escape }}-toggle"><span class="project-expand-label">Explore project</span><span class="project-collapse-label">Show less</span><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span>
+          <span class="project-card-heading"><span class="project-card-name" id="{{ project.id | escape }}-title">{{ project.name | escape }}</span><span class="project-card-status">{{ copy.ui.ongoing | default: 'Ongoing' }}</span></span>
+          <span class="project-focus">{{ project_copy.focus | default: project.focus | escape }}</span>
+          <span class="project-card-description">{{ project_copy.card_summary | default: project.card_summary | default: project.summary | escape }}</span>
+          {% assign card_contribution = project_copy.card_contribution | default: project.card_contribution %}
+          {% if card_contribution %}<span class="project-card-contribution"><strong>{{ copy.ui.contribution | default: 'My contribution' }}:</strong> {{ card_contribution | escape }}</span>{% endif %}
+          {% assign project_highlights = project_copy.highlights | default: project.highlights %}
+          {% if project_highlights %}<span class="project-card-highlights">{% for highlight in project_highlights %}<span>{{ highlight | escape }}</span>{% endfor %}</span>{% endif %}
+          <span class="project-card-toggle" id="{{ project.id | escape }}-toggle"><span class="project-expand-label">{{ copy.ui.explore | default: 'Explore project' }}</span><span class="project-collapse-label">{{ copy.ui.less | default: 'Show less' }}</span><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span>
         </summary>
         <div class="project-card-details">
           {% if project.image %}
-          <a class="project-media" data-zoom href="{{ project.image | relative_url }}" aria-label="View the full {{ project.name | escape }} figure">
-            <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | escape }}" width="{{ project.image_width }}" height="{{ project.image_height }}" loading="lazy">
+          <a class="project-media" data-zoom href="{{ project.image | relative_url }}" aria-label="{{ copy.ui.view_figure | default: 'View full figure' | escape }}: {{ project.name | escape }}">
+            <img src="{{ project.image | relative_url }}" alt="{{ project_copy.image_alt | default: project.image_alt | escape }}" width="{{ project.image_width }}" height="{{ project.image_height }}" loading="lazy">
           </a>
+          {% assign image_caption = project_copy.image_caption | default: project.image_caption %}
+          {% if image_caption %}<p class="project-code-note">{{ image_caption | escape }}{% if project.caseurl %} <a href="{{ project.caseurl | escape }}">{{ project_copy.case_label | default: 'View a recorded case' }} →</a>{% endif %}</p>{% endif %}
           {% endif %}
-          <h4>Benchmark</h4>
-          <p class="project-summary">{{ project.summary | escape }}</p>
-          {% if project.benchmark %}<p class="project-benchmark">{{ project.benchmark | escape }}</p>{% endif %}
-          {% if project.website_summary %}<p class="project-summary">{{ project.website_summary | escape }}</p>{% endif %}
-          {% if project.contribution %}<h4>My contribution</h4><p class="project-contribution">{{ project.contribution | escape }}</p>{% endif %}
-          {% if project.current_research %}<h4>Current research</h4><p class="project-summary">{{ project.current_research | escape }}</p>{% endif %}
-          {% if project.codebranch and project.workspaceurl %}
+          <h4>{{ copy.ui.benchmark | default: 'Benchmark' }}</h4>
+          <p class="project-summary">{{ project_copy.summary | default: project.summary | escape }}</p>
+          {% assign project_benchmark = project_copy.benchmark | default: project.benchmark %}
+          {% if project_benchmark %}<p class="project-benchmark">{{ project_benchmark | escape }}</p>{% endif %}
+          {% if project.website_summary %}<p class="project-summary">{{ project_copy.website_summary | default: project.website_summary | escape }}</p>{% endif %}
+          {% assign project_contribution = project_copy.contribution | default: project.contribution %}
+          {% if project_contribution %}<h4>{{ copy.ui.contribution | default: 'My contribution' }}</h4><p class="project-contribution">{{ project_contribution | escape }}</p>{% endif %}
+          {% assign current_research = project_copy.current_research | default: project.current_research %}
+          {% if current_research %}<h4>{{ copy.ui.current_research | default: 'Current research' }}</h4><p class="project-summary">{{ current_research | escape }}</p>{% endif %}
+          {% if project_copy.code_note_html %}
+          <p class="project-code-note">{{ project_copy.code_note_html }}</p>
+          {% elsif project.codebranch and project.workspaceurl %}
           <p class="project-code-note">Code links to the evaluation development branch, <code>{{ project.codebranch | escape }}</code>. The <a href="{{ project.workspaceurl | escape }}">project workspace</a> contains the broader project source and documentation. Both repositories require collaborator access.</p>
           {% endif %}
         </div>
       </details>
       <div class="project-card-resources">
         <div class="project-links{% if project.leaderboardurl or project.dataseturl %} project-links--extended{% endif %}">
-          {% include publication-links.html paper=project_resources %}
+          {% include publication-links.html paper=project_resources project_first=true hide_missing=true %}
           {% if project.leaderboardurl %}
-          <a class="btn btn-sm" href="{{ project.leaderboardurl | escape }}"><span class="resource-label">{% include resource-icon.html kind='huggingfaceurl' %}Leaderboard</span><span class="resource-status">Hugging Face</span></a>
+          <a class="btn btn-sm" href="{{ project.leaderboardurl | escape }}"><span class="resource-label">{% include resource-icon.html kind='huggingfaceurl' %}{{ copy.ui.leaderboard | default: 'Leaderboard' }}</span><span class="resource-status">Hugging Face</span></a>
           {% endif %}
           {% if project.dataseturl %}
-          <a class="btn btn-sm" href="{{ project.dataseturl | escape }}"><span class="resource-label">{% include resource-icon.html kind='huggingfaceurl' %}Dataset</span><span class="resource-status">Hugging Face</span></a>
+          <a class="btn btn-sm" href="{{ project.dataseturl | escape }}"><span class="resource-label">{% include resource-icon.html kind='huggingfaceurl' %}{{ copy.ui.dataset | default: 'Dataset' }}</span><span class="resource-status">Hugging Face</span></a>
           {% endif %}
         </div>
       </div>
     </article>
     {% endfor %}
   </div>
-  <h3 class="project-status-heading" id="completed">Completed</h3>
-  <p class="completed-projects-intro">Projects that have developed into papers and preprints.</p>
+  {% unless include.selected_work %}
+  <h3 class="project-status-heading" id="completed">{{ copy.ui.completed | default: 'Completed' }}</h3>
+  <p class="completed-projects-intro">{{ copy.ui.completed_intro | default: 'Projects that have developed into papers and preprints.' }}</p>
   {% assign completed_projects = site.publications | where_exp: 'paper', 'paper.project_id != nil' | sort: 'selected_order' %}
   <ul class="completed-projects">
     {% for paper in completed_projects %}
     <li>
-      <a href="{{ '/publications/' | relative_url }}#paper-{{ paper.project_id | slugify }}" title="{{ paper.title | escape }}">{{ paper.project_name | escape }} <span aria-hidden="true">↗</span></a>
-      <span class="completed-project-status">{% if paper.status == 'accepted' %}{{ paper.venue | escape }} {{ paper.year }} · Accepted{% elsif paper.status == 'under_review' %}Under review{% else %}Preprint{% endif %}</span>
+      <a href="{{ publications_path | relative_url }}#paper-{{ paper.project_id | slugify }}" title="{{ paper.title | escape }}">{{ paper.project_name | escape }} <span aria-hidden="true">↗</span></a>
+      <span class="completed-project-status">{% if paper.status == 'accepted' %}{{ paper.venue | escape }} {{ paper.year }} · {{ copy.ui.accepted | default: 'Accepted' }}{% elsif paper.status == 'under_review' %}{{ copy.ui.under_review | default: 'Under review' }}{% else %}{{ copy.ui.preprint | default: 'Preprint' }}{% endif %}</span>
     </li>
     {% endfor %}
   </ul>
+  {% endunless %}
 </section>

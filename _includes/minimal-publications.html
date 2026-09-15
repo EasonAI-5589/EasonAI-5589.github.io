@@ -1,88 +1,70 @@
+{%- assign locale = page.lang | default: 'en' -%}
+{%- assign copy = site.data.homepage[locale] -%}
 {%- assign ml_selected = site.publications | where_exp: 'paper', 'paper.selected_order != nil' | sort: 'selected_order' -%}
 {%- assign ml_remaining = site.publications | where_exp: 'paper', 'paper.selected_order == nil' -%}
 {%- assign ml_conferences = ml_remaining | where: 'category', 'conferences' | sort: 'date' | reverse -%}
 {%- assign ml_preprints = ml_remaining | where: 'category', 'preprints' | sort: 'date' | reverse -%}
 {%- assign ml_manuscripts = ml_remaining | where: 'category', 'manuscripts' | sort: 'year' | reverse -%}
 {%- assign ml_publications = ml_selected | concat: ml_preprints | concat: ml_conferences | concat: ml_manuscripts -%}
+{%- if include.selected_only -%}
+  {%- assign ml_publications = ml_selected -%}
+{%- endif -%}
 <div class="publications minimal-publications">
   <ol class="bibliography">
     {% for paper in ml_publications %}
+      {%- assign paper_key = paper.arxiv_id | default: paper.slug -%}
+      {%- assign paper_copy = copy.papers[paper_key] -%}
       {%- assign paper_media = '' -%}
-      {%- assign paper_role = 'Co-author' -%}
-      {%- assign paper_summary = paper.excerpt | strip_html -%}
-      {%- assign paper_contribution = '' -%}
+      {%- assign paper_role = paper_copy.role | default: copy.ui.co_author | default: 'Co-author' -%}
+      {%- assign paper_summary = paper_copy.summary | default: paper.excerpt | default: '' | strip_html -%}
+      {%- assign paper_contribution = paper_copy.contribution | default: '' -%}
+      {%- assign paper_image_alt = paper_copy.image_alt | default: paper.title -%}
       {%- if paper.arxiv_id == '2606.20698' -%}
         {%- assign paper_media = 'safedojo' -%}
       {%- elsif paper.arxiv_id == '2606.18439' -%}
         {%- assign paper_media = 'regimevggt' -%}
       {%- elsif paper.arxiv_id == '2609.05916' -%}
         {%- assign paper_media = 'starpro' -%}
-        {%- assign paper_role = 'Co-first author' -%}
-        {%- assign paper_summary = 'Training-free visual token reduction that preserves feature coverage, then progressively refines retained tokens as language and vision interact.' -%}
-        {%- assign paper_contribution = 'As a co-first author, I contributed to the design of adaptive-to-progressive token pruning and its evaluation across vision-language architectures.' -%}
       {%- elsif paper.arxiv_id == '2608.24885' -%}
         {%- assign paper_media = 'worldecho' -%}
-        {%- assign paper_role = 'Core contributor' -%}
-        {%- assign paper_summary = 'WorldEcho diagnoses action-following failures; WorldSync aligns generation with robot dynamics to support policy learning.' -%}
-        {%- assign paper_contribution = 'As a core contributor, I work on understanding and improving action following in robotic world models.' -%}
-      {%- elsif paper.path contains '2026-map-aaai' -%}
-        {%- assign paper_role = 'Equal contribution' -%}
-        {%- assign paper_summary = 'Training-free decoding with map-level attention processing to mitigate hallucinations in vision-language models.' -%}
-      {%- elsif paper.path contains '2026-seeme-aaai' -%}
-        {%- assign paper_summary = 'Visual token engineering to improve consistency and reduce hallucinations in vision-language models.' -%}
-      {%- elsif paper.path contains '2025-star-neurips' -%}
-        {%- assign paper_role = 'First author' -%}
-        {%- assign paper_summary = 'Earlier STAR manuscript on two-stage, training-free visual token reduction; the current preprint is STAR-Pro.' -%}
-      {%- elsif paper.path contains '2025-dcla-neurips' -%}
-        {%- assign paper_summary = 'Training-free decoding that aggregates inter-layer representations to improve semantic consistency and reduce hallucinations.' -%}
       {%- endif -%}
     <li class="pub-item" id="paper-{{ paper.project_id | default: paper.slug | slugify }}">
-      <article class="pub-row {% if paper_media != '' %}pub-row--media{% else %}pub-row--text{% endif %}">
+      <article class="work-card pub-row {% if paper_media != '' %}pub-row--media{% else %}pub-row--text{% endif %}">
         {% if paper_media == 'regimevggt' %}
         <figure class="pub-media">
-          <a data-zoom href="{{ '/assets/research/regimevggt-method.png' | relative_url }}" aria-label="View the full RegimeVGGT framework figure">
-            <img class="teaser" src="{{ '/assets/research/regimevggt-method.png' | relative_url }}" width="1204" height="601" loading="lazy" alt="RegimeVGGT uses a layer-wise U-shaped schedule for token merging and spatially preserving key/value downsampling in visual geometry transformers.">
+          <a data-zoom href="{{ '/assets/research/regimevggt-method.png' | relative_url }}" aria-label="{{ copy.ui.view_figure | default: 'View full figure' | escape }}: {{ paper.project_name | default: paper.title | escape }}">
+            <img class="teaser" src="{{ '/assets/research/regimevggt-method.png' | relative_url }}" width="1204" height="601" loading="lazy" alt="{{ paper_image_alt | escape }}">
           </a>
         </figure>
         {% elsif paper_media == 'safedojo' %}
         <figure class="pub-media">
-          <a data-zoom href="{{ '/assets/research/safedojo-method.png' | relative_url }}" aria-label="View the full SafeDojo method figure">
-            <img class="teaser" src="{{ '/assets/research/safedojo-method.png' | relative_url }}" width="2015" height="832" loading="lazy" alt="SafeDojo's pipeline combines action-conditioned world-model rollouts, task-success and safety evaluation, and constrained GRPO policy updates.">
+          <a data-zoom href="{{ '/assets/research/safedojo-method.png' | relative_url }}" aria-label="{{ copy.ui.view_figure | default: 'View full figure' | escape }}: {{ paper.project_name | default: paper.title | escape }}">
+            <img class="teaser" src="{{ '/assets/research/safedojo-method.png' | relative_url }}" width="2015" height="832" loading="lazy" alt="{{ paper_image_alt | escape }}">
           </a>
         </figure>
         {% elsif paper_media == 'starpro' %}
         <figure class="pub-media">
-          <a data-zoom href="{{ '/assets/research/starpro-method.png' | relative_url }}" aria-label="View the full STAR-Pro method figure">
-            <img class="teaser" src="{{ '/assets/research/starpro-method.png' | relative_url }}" width="2200" height="1238" loading="lazy" alt="STAR-Pro's Adaptive Stage preserves visual feature coverage, followed by progressive token refinement across decoder layers.">
+          <a data-zoom href="{{ '/assets/research/starpro-method.png' | relative_url }}" aria-label="{{ copy.ui.view_figure | default: 'View full figure' | escape }}: {{ paper.project_name | default: paper.title | escape }}">
+            <img class="teaser" src="{{ '/assets/research/starpro-method.png' | relative_url }}" width="2200" height="1238" loading="lazy" alt="{{ paper_image_alt | escape }}">
           </a>
         </figure>
         {% elsif paper_media == 'worldecho' %}
         <figure class="pub-media">
-          <a data-zoom href="{{ '/assets/research/worldecho-overview.png' | relative_url }}" aria-label="View the full WorldEcho and WorldSync overview">
-            <img class="teaser" src="{{ '/assets/research/worldecho-overview.png' | relative_url }}" width="3200" height="1673" loading="lazy" alt="WorldEcho and WorldSync: diagnosing action following, aligning world models, and validating policy learning.">
+          <a data-zoom href="{{ '/assets/research/worldecho-overview.png' | relative_url }}" aria-label="{{ copy.ui.view_figure | default: 'View full figure' | escape }}: {{ paper.project_name | default: paper.title | escape }}">
+            <img class="teaser" src="{{ '/assets/research/worldecho-overview.png' | relative_url }}" width="3200" height="1673" loading="lazy" alt="{{ paper_image_alt | escape }}">
           </a>
         </figure>
         {% endif %}
         <div class="pub-content">
           <h3 class="title">{% if paper.paperurl %}<a href="{{ paper.paperurl | escape }}">{{ paper.title | escape }}</a>{% else %}{{ paper.title | escape }}{% endif %}</h3>
           <p class="author">
-            {%- if paper.category == 'preprints' and paper.show_all_authors != true -%}
-              {%- assign paper_authors = paper.authors | split: ',' -%}
-              {%- for author in paper_authors limit: 4 -%}
-                {%- assign author_name = author | strip -%}
-                {%- if author_name == 'Yichen Guo' -%}<strong>{{ author_name }}</strong>{%- else -%}{{ author_name | escape }}{%- endif -%}
-                {%- unless forloop.last -%}, {% endunless -%}
-              {%- endfor -%}
-              {%- if paper_authors.size > 4 -%}, et al.{%- endif -%}
-            {%- else -%}
-              {{- paper.authors | escape | replace: 'Yichen Guo', '<strong>Yichen Guo</strong>' -}}
-            {%- endif -%}
+            {{- paper.authors | escape | replace: 'Yichen Guo', '<strong>Yichen Guo</strong>' -}}
           </p>
-          <p class="periodical">{% if paper.status == 'under_review' and paper.category == 'preprints' %}Under review · {{ paper.date | date: '%Y' }}{% elsif paper.category == 'conferences' %}<strong>{{ paper.venue | escape }} {{ paper.year }}{% if paper.status == 'accepted' %} · Accepted{% endif %}</strong>{% elsif paper.category == 'preprints' %}Preprint · {{ paper.date | date: '%Y' }}{% else %}Manuscript · {{ paper.year }}{% endif %} · <span class="pub-role">{{ paper_role }}</span></p>
+          <p class="periodical">{% if paper.status == 'under_review' and paper.category == 'preprints' %}{{ copy.ui.under_review | default: 'Under review' }} · {{ paper.date | date: '%Y' }}{% elsif paper.category == 'conferences' %}<strong>{{ paper.venue | escape }} {{ paper.year }}{% if paper.status == 'accepted' %} · {{ copy.ui.accepted | default: 'Accepted' }}{% endif %}</strong>{% elsif paper.category == 'preprints' %}{{ copy.ui.preprint | default: 'Preprint' }} · {{ paper.date | date: '%Y' }}{% else %}{{ copy.ui.manuscript | default: 'Manuscript' }} · {{ paper.year }}{% endif %} · <span class="pub-role">{{ paper_role }}</span></p>
           {% if paper_summary != '' %}<p class="pub-summary">{{ paper_summary | escape }}</p>{% endif %}
-          {% if paper_contribution != '' %}<p class="pub-contribution"><strong>My contribution:</strong> {{ paper_contribution | escape }}</p>{% endif %}
+          {% if paper_contribution != '' %}<p class="pub-contribution"><strong>{{ copy.ui.contribution | default: 'My contribution' }}:</strong> {{ paper_contribution | escape }}</p>{% endif %}
           {%- assign paper_huggingface_url = paper.huggingfaceurl | default: '' | strip -%}
-          {%- assign paper_huggingface_note = paper.huggingfacenote | default: '' | strip -%}
+          {%- assign paper_huggingface_note = paper_copy.resource_note | default: paper.huggingfacenote | default: '' | strip -%}
           <div class="links{% if paper_huggingface_url != '' %} links--extended{% endif %}">
             {% include publication-links.html paper=paper %}
           </div>

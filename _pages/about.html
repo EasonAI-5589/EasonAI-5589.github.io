@@ -1,5 +1,8 @@
 ---
 layout: minimal
+lang: en
+lang_en: /
+lang_zh: /zh/
 permalink: /
 title: "Home"
 description: "Yichen Guo — vision-language models, world models, and AI agents: post-training, agent harnesses, and applications in finance and empirical research."
@@ -7,80 +10,4 @@ redirect_from:
   - /about/
   - /about.html
 ---
-{% include about-intro.html %}
-
-<h2 id="research">Research Interests</h2>
-<ul class="interests">
-  <li><strong>Vision-Language Models (VLMs):</strong> efficient inference, visual token reduction, and hallucination mitigation.</li>
-  <li><strong>World Models:</strong> action-conditioned generation, action-following evaluation, and policy learning.</li>
-  <li><strong>AI Agents:</strong> post-training and agent harnesses for tool use, execution, and evaluation, with applications in finance and empirical research.</li>
-</ul>
-
-{% include minimal-projects.html %}
-
-<h2 id="publications">Publications</h2>
-{% include minimal-publications.html %}
-
-<h2 id="experience"><span id="background" aria-hidden="true"></span>Experience</h2>
-<ul class="experience-list">
-  <li>
-    <img class="experience-logo experience-logo--shield" src="{{ '/assets/logos/nanyang-technological-university.png' | relative_url }}" alt="Nanyang Technological University logo" width="1042" height="1042" loading="lazy">
-    <div class="experience-heading"><strong>GIFTS, Nanyang Technological University</strong><span class="experience-dates">Apr 2026–Present</span></div>
-    <p class="experience-role">Research Affiliate · DEFT Lab</p>
-    <p class="experience-supervisor">Supervisor: <a href="https://www.linwilliamcong.com/about">Prof. Lin William Cong</a></p>
-    <ul class="experience-points">
-      <li>Researching AI agents for finance and empirical research, including financial and econometric reasoning, tool use, and agent evaluation.</li>
-      <li>Contributing to InferenceNet through evaluation pipelines and reproducibility audits for agents that carry out empirical studies in economics and finance.</li>
-    </ul>
-  </li>
-  <li>
-    <img class="experience-logo" src="{{ '/assets/logos/peking-university-emblem.png' | relative_url }}" alt="Peking University logo" width="360" height="360" loading="lazy">
-    <div class="experience-heading"><strong>HMI Lab, Peking University</strong><span class="experience-dates">Jul 2025–Present</span></div>
-    <p class="experience-role">Research Assistant · School of Computer Science</p>
-    <p class="experience-supervisor">Supervisor: <a href="https://www.shanghangzhang.com/">Prof. Shanghang Zhang</a></p>
-    <ul class="experience-points">
-      <li>Working on efficient vision-language models through STAR-Pro, combining adaptive visual token selection with progressive refinement inside the language decoder.</li>
-      <li>Studying reliable multimodal reasoning and hallucination mitigation by reducing the dominance of language priors.</li>
-      <li>Exploring robotic world models, with a focus on action following, model evaluation, and policy learning.</li>
-    </ul>
-  </li>
-  <li>
-    <img class="experience-logo" src="{{ '/assets/logos/binance.png' | relative_url }}" alt="Binance logo" width="200" height="200" loading="lazy">
-    <div class="experience-heading"><strong>Binance</strong><span class="experience-dates">Jun 2026–Present</span></div>
-    <p class="experience-role">Data Science Intern · Remote</p>
-    <p class="experience-supervisor">Supervisor: Harvin Wang</p>
-    <ul class="experience-points">
-      <li>Contributing to Binance Ai Pro and multi-agent cryptocurrency trading workflows for market analysis, strategy reasoning, and trading-signal generation.</li>
-      <li>Supporting agent post-training through supervised fine-tuning and reinforcement learning, alongside model inference and deployment.</li>
-      <li>Working on agent harnesses that connect models with tools, execution workflows, and evaluation for financial tasks.</li>
-    </ul>
-  </li>
-  <li>
-    <img class="experience-logo experience-logo--wordmark" src="{{ '/assets/logos/tencent-vertical.png' | relative_url }}" alt="Tencent logo" width="1915" height="889" loading="lazy">
-    <div class="experience-heading"><strong>Tencent LightSpeed Studios</strong><span class="experience-dates">Aug–Dec 2025</span></div>
-    <p class="experience-role">Data Scientist Intern · Singapore</p>
-    <p class="experience-supervisor">Supervisor: Don Li</p>
-    <ul class="experience-points">
-      <li>Conducted LLM post-training for game-specific language understanding, generation, and interactive decision-making.</li>
-      <li>Built multi-agent economic simulations with agent coordination, resource dynamics, and simulation workflows.</li>
-    </ul>
-  </li>
-  <li>
-    <img class="experience-logo experience-logo--shield" src="{{ '/assets/logos/harvard-university-shield.png' | relative_url }}" alt="Harvard University logo" width="512" height="512" loading="lazy">
-    <div class="experience-heading"><strong>Harvard AI and Robotics Lab, Harvard University</strong><span class="experience-dates">Sep–Nov 2025</span></div>
-    <p class="experience-role">Visiting Student · Remote</p>
-    <p class="experience-supervisor">Supervisor: Prof. Mengyu Wang</p>
-    <ul class="experience-points">
-      <li>Studied multi-objective reinforcement learning for financial agents and LLM-powered trading scenarios.</li>
-      <li>Explored multimodal visual-memory reasoning for medical models, including memory-enhanced post-training, multi-image inference, supervised fine-tuning, and GRPO.</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="education">Education</h2>
-<ul class="background-list">
-  <li><strong>Nanyang Technological University</strong><br>M.Eng (by Research), Computer Science &amp; Engineering<br><span class="education-dates">Sep 2025–Jun 2027 (expected)</span></li>
-  <li><strong>University of Electronic Science and Technology of China</strong><br>B.Eng, Electronic Information Engineering<br><span class="education-dates">Sep 2021–Jun 2025</span></li>
-</ul>
-<h2>Awards</h2>
-<p>International Talent &amp; Leadership Scholarship · Top 1% · 2022</p>
+{% include homepage-body.html %}

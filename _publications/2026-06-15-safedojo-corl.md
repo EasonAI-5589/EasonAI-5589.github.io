@@ -5,6 +5,11 @@ category: conferences
 selected_order: 3
 project_id: safedojo
 project_name: SafeDojo
+image: /assets/research/safedojo-method.png
+image_width: 2015
+image_height: 832
+projecturl: /projects/safedojo/
+projecturl_zh: /zh/projects/safedojo/
 authors: "Kai Tang, Peidong Jia, Zhong Chu, Jixian Wu, Rui Ma, Jiajun Cao, Fangyuan Zhao, Sixiang Chen, Yichen Guo, Xiaowei Chi, Chun-Kai Fan, Kevin Zhang, Jinchang Xu, Fubing Yang, Weishi Mi, Xiaozhu Ju, Jian Tang, Shanghang Zhang"
 date: 2026-06-15
 year: 2026

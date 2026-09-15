@@ -1,0 +1,40 @@
+{% assign locale = page.lang | default: 'en' %}
+{% assign copy = site.data.homepage[locale] %}
+{% assign locale_prefix = '' %}
+{% if locale == 'zh' %}{% assign locale_prefix = '/zh' %}{% endif %}
+{% include about-intro.html %}
+
+<h2 id="research">{{ copy.ui.research }}</h2>
+<ul class="interests">
+  {% for interest in copy.interests %}
+  <li><strong>{{ interest.label }}{% if locale == 'zh' %}：{% else %}:{% endif %}</strong> {{ interest.text }}</li>
+  {% endfor %}
+</ul>
+
+<section class="selected-work-section" aria-labelledby="selected-work">
+  <h2 class="visually-hidden" id="selected-work"><span id="projects" aria-hidden="true"></span>{{ copy.ui.work_navigation }}</h2>
+  <span id="publications" aria-hidden="true"></span>
+  {% include selected-work-cards.html show_archive_link=true %}
+</section>
+
+<h2 id="experience"><span id="background" aria-hidden="true"></span>{{ copy.ui.experience }}</h2>
+<ul class="experience-list">
+  {% for item in copy.experience %}
+  <li>
+    <img class="experience-logo {{ item.logo_class }}" src="{{ item.logo | relative_url }}" alt="{{ item.institution | escape }}" width="{{ item.width }}" height="{{ item.height }}" loading="lazy">
+    <div class="experience-heading"><strong>{{ item.institution }}</strong><span class="experience-dates">{{ item.dates }}</span></div>
+    <p class="experience-role">{{ item.role }}</p>
+    <p class="experience-supervisor">{{ copy.ui.supervisor }}{% if locale == 'zh' %}：{% else %}: {% endif %}{{ item.supervisor_html }}</p>
+    <ul class="experience-points">{% for point in item.points %}<li>{{ point }}</li>{% endfor %}</ul>
+  </li>
+  {% endfor %}
+</ul>
+
+<h2 id="education">{{ copy.ui.education }}</h2>
+<ul class="background-list">
+  {% for item in copy.education %}
+  <li><strong>{{ item.institution }}</strong><br>{{ item.degree }}<br><span class="education-dates">{{ item.dates }}</span></li>
+  {% endfor %}
+</ul>
+<h2>{{ copy.ui.awards }}</h2>
+<p>{{ copy.awards }}</p>

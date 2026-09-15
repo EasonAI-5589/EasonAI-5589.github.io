@@ -1,20 +1,21 @@
+# 项目标识、图片和资源链接在此维护；中英文显示文案见 homepage.yml。
 - id: inferencenet
   name: InferenceNet
   status: ongoing
-  focus: "AI agents for econometric analysis and replication"
-  card_summary: "Evaluating how AI agents plan econometric analyses, use tools, and reproduce statistical findings from published research."
-  highlights:
-    - "2,644 research tasks"
-    - "36 journals"
-    - "1,000-task evaluation subset"
-  summary: "InferenceNet is a collaborative research initiative investigating whether AI agents can carry out econometric analyses and reproduce key results from published studies. Its benchmark brings together 2,644 tasks from 36 academic journals, pairing task descriptions with published data and author-provided replication code."
-  benchmark: "Selected_1000 provides a 1,000-task evaluation subset covering ordinary least squares, difference-in-differences, instrumental variables, regression discontinuity, and other econometric methods."
-  contribution: "I work on evaluation pipelines, agent harness integration, and reproducibility audits. This includes connecting agents to controlled Python execution, aligning task inputs and scoring protocols, and investigating failures across data preparation, code generation, execution, and statistical replication."
-  current_research: "I am exploring how planning, tool use, and execution feedback affect agents' ability to carry out econometric analyses reliably, through controlled comparisons of direct code generation and agent workflows."
-  codeurl: "https://github.com/YTZSR/chatpilot_evaluator/tree/dev-gyc-eval"
-  codestatus: "Collaborator access"
-  codebranch: "dev-gyc-eval"
-  workspaceurl: "https://github.com/EasonAI-5589/NTU-GIFTS-InferenceNet"
-  projecturl: "https://easonai-5589.github.io/inferencenet-challenge/"
-  leaderboardurl: "https://huggingface.co/spaces/CamoAiLab/InferenceNet-Leaderboard"
-  dataseturl: "https://huggingface.co/datasets/CamoAiLab/InferenceNet"
+  image: /assets/research/inferencenet-agent-harness-leaderboard.svg
+  image_width: 1178
+  image_height: 862
+  caseurl: https://easonai-5589.github.io/inferencenet-challenge/agent.html
+  codeurl: https://github.com/YTZSR/chatpilot_evaluator/tree/dev-gyc-eval
+  codestatus: Collaborator access
+  codebranch: dev-gyc-eval
+  workspaceurl: https://github.com/EasonAI-5589/NTU-GIFTS-InferenceNet
+  projecturl: https://easonai-5589.github.io/inferencenet-challenge/
+  leaderboardurl: https://huggingface.co/spaces/CamoAiLab/InferenceNet-Leaderboard
+  dataseturl: https://huggingface.co/datasets/CamoAiLab/InferenceNet
+
+- id: qwan
+  name: qwan
+  status: ongoing
+  projecturl: https://github.com/Haohaha-11/qwan-physworldai-2026
+  projectlabel: GitHub

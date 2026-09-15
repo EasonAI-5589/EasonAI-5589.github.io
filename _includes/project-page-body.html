@@ -1,0 +1,62 @@
+{%- assign project_locale = page.lang | default: 'en' -%}
+{%- assign project_data = site.data.project_pages[page.project_id] -%}
+{%- assign project_copy = project_data[project_locale] -%}
+{%- assign project_ui = site.data.project_pages.ui[project_locale] -%}
+{%- assign project_site_copy = site.data.homepage[project_locale] -%}
+{%- assign project_paper = site.publications | where: 'project_id', page.project_id | first -%}
+{%- assign project_home = '/' -%}
+{%- if project_locale == 'zh' -%}{%- assign project_home = '/zh/' -%}{%- endif -%}
+<article class="project-detail publication-detail">
+  <a class="quiet-link project-detail-back" href="{{ project_home | relative_url }}#selected-work">← {{ project_ui.back }}</a>
+  <header class="project-detail-header">
+    <p class="eyebrow">{{ project_paper.venue | escape }} {{ project_paper.date | date: '%Y' }} · {{ project_site_copy.ui[project_paper.status] | default: project_paper.status | escape }}</p>
+    <h1>{{ project_data.name | escape }}</h1>
+    <p class="project-detail-subtitle">{{ project_copy.subtitle | escape }}</p>
+    <p class="authors">{{ project_paper.authors | escape | replace: 'Yichen Guo', '<strong>Yichen Guo</strong>' }}</p>
+    <p class="small-note project-detail-role">{{ project_site_copy.ui.profile_name | escape }} · {{ project_site_copy.ui.co_author }}</p>
+    <p class="small-note project-detail-source">{{ project_ui.page_note }}</p>
+    <div class="paper-links project-detail-resources">
+      <a class="btn btn-sm" href="{{ project_paper.paperurl | escape }}">{{ project_ui.paper }}</a>
+      <a class="btn btn-sm" href="{{ project_data.source_url | escape }}">{{ project_ui.full_text }}</a>
+    </div>
+  </header>
+
+  <section aria-labelledby="overview">
+    <h2 id="overview">{{ project_ui.overview }}</h2>
+    <p class="project-detail-lede">{{ project_copy.overview | escape }}</p>
+    <figure class="project-detail-figure paper-figure">
+      <a data-zoom href="{{ project_data.hero.src | relative_url }}" aria-label="{{ project_site_copy.ui.view_figure | escape }}: {{ project_data.name | escape }}">
+        <img src="{{ project_data.hero.src | relative_url }}" width="{{ project_data.hero.width }}" height="{{ project_data.hero.height }}" alt="{{ project_copy.hero_alt | escape }}">
+      </a>
+      <figcaption>{{ project_copy.hero_caption | escape }} <a href="{{ project_data.source_url | escape }}">{{ project_ui.full_text }}</a></figcaption>
+    </figure>
+  </section>
+
+  <section aria-labelledby="method">
+    <h2 id="method">{{ project_ui.method }}</h2>
+    <ol class="project-detail-method">
+      {% for step in project_copy.method %}
+      <li><h3>{{ step.title | escape }}</h3><p>{{ step.text | escape }}</p></li>
+      {% endfor %}
+    </ol>
+    {% if project_data.method_figure %}
+    <figure class="project-detail-figure paper-figure">
+      <a data-zoom href="{{ project_data.method_figure.src | relative_url }}" aria-label="{{ project_site_copy.ui.view_figure | escape }}: {{ project_ui.method | escape }}">
+        <img src="{{ project_data.method_figure.src | relative_url }}" width="{{ project_data.method_figure.width }}" height="{{ project_data.method_figure.height }}" loading="lazy" alt="{{ project_copy.method_alt | escape }}">
+      </a>
+      <figcaption>{{ project_copy.method_caption | escape }} <a href="{{ project_data.source_url | escape }}">{{ project_ui.full_text }}</a></figcaption>
+    </figure>
+    {% endif %}
+  </section>
+
+  <section aria-labelledby="evaluation">
+    <h2 id="evaluation">{{ project_ui.evaluation }}</h2>
+    <p>{{ project_copy.evaluation | escape }}</p>
+  </section>
+
+  <section aria-labelledby="resources">
+    <h2 id="resources">{{ project_ui.resources }}</h2>
+    <p><a href="{{ project_paper.paperurl | escape }}">{{ project_paper.title | escape }}</a><br>arXiv:{{ project_data.arxiv_id | escape }}</p>
+    <p class="small-note project-detail-source">{{ project_ui.source_note }}</p>
+  </section>
+</article>

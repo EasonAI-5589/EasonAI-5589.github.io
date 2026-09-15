@@ -1,0 +1,29 @@
+{% assign locale = page.lang | default: 'en' %}
+{% assign copy = site.data.homepage[locale] %}
+{% assign selected_papers = site.publications | where_exp: 'paper', 'paper.selected_order != nil' | sort: 'selected_order' %}
+{% assign ongoing_projects = site.data.projects | where: 'status', 'ongoing' %}
+<div class="work-switcher" data-work-switcher>
+  <nav class="work-tabs" data-work-tablist aria-label="{{ copy.ui.work_navigation }}">
+    <a class="work-tab" id="work-tab-selected" href="#selected-work-panel" data-work-tab="selected" aria-controls="selected-work-panel">{{ copy.ui.selected_work }} <span class="work-tab-count" aria-hidden="true">{{ selected_papers.size }}</span></a>
+    <a class="work-tab" id="work-tab-ongoing" href="#ongoing-projects" data-work-tab="ongoing" aria-controls="ongoing-projects">{{ copy.ui.ongoing_projects }} <span class="work-tab-count" aria-hidden="true">{{ ongoing_projects.size }}</span></a>
+  </nav>
+  <div class="work-panel" id="selected-work-panel" data-work-panel="selected" aria-labelledby="work-tab-selected">
+    <div class="selected-work-cards">
+      {% for paper in selected_papers %}
+        {% assign paper_display = copy.papers[paper.arxiv_id] %}
+        {% include work-entry-card.html work=paper display=paper_display is_paper=true %}
+      {% endfor %}
+    </div>
+    {% if include.show_archive_link %}
+    <p class="full-publications-link"><a href="{% if locale == 'zh' %}{{ '/zh/publications/' | relative_url }}{% else %}{{ '/publications/' | relative_url }}{% endif %}">{{ copy.ui.full_publications }} →</a></p>
+    {% endif %}
+  </div>
+  <div class="work-panel" id="ongoing-projects" data-work-panel="ongoing" aria-labelledby="work-tab-ongoing">
+    <div class="selected-work-cards">
+      {% for project in ongoing_projects %}
+        {% assign project_display = copy.projects[project.id] %}
+        {% include work-entry-card.html work=project display=project_display is_paper=false %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

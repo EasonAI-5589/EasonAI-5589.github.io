@@ -1,6 +1,6 @@
 # Add navigation entries only when the corresponding pages contain real content.
 main:
-  - title: "Projects"
-    url: /projects/
+  - title: "Selected Work"
+    url: /#selected-work
   - title: "Publications"
     url: /publications/

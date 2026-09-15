@@ -1,0 +1,101 @@
+# 独立项目介绍页：链接、图片为共享资产；显示文案按 en / zh 对照维护。
+# 标题、原作者列表和论文状态读取 _publications/，避免维护两套事实。
+safedojo:
+  name: SafeDojo
+  arxiv_id: "2606.20698"
+  source_url: "https://arxiv.org/html/2606.20698v1"
+  hero:
+    src: /assets/research/safedojo-overview.png
+    width: 2024
+    height: 504
+  method_figure:
+    src: /assets/research/safedojo-method.png
+    width: 2015
+    height: 832
+  en:
+    subtitle: "Safe Reinforcement Learning for VLA via Interactive World Model"
+    overview: "SafeDojo studies how vision-language-action policies can learn safer robot behavior by exploring imagined futures. An interactive world model supplies feedback on both task progress and collision risk, allowing policy optimization to consider these objectives separately."
+    hero_alt: "SafeDojo overview: world-model-based reward and cost evaluation supports safer VLA policy learning."
+    hero_caption: "An overview of SafeDojo, reproduced from Figure 1 of the paper."
+    method:
+      - title: "Imagine action-conditioned futures"
+        text: "A VLA policy proposes action chunks. An interactive video world model rolls them forward into predicted observations and latent dynamics."
+      - title: "Evaluate progress and safety separately"
+        text: "A task-success classifier scores imagined frames, while a safety head estimates collision costs from latent context and proposed actions."
+      - title: "Update the policy under a safety constraint"
+        text: "A Lagrangian-based constrained GRPO objective combines the reward and cost signals to improve task completion while controlling safety risk."
+    method_alt: "SafeDojo pipeline: imagined rollouts, separate task reward and safety cost estimation, and constrained GRPO updates."
+    method_caption: "The training pipeline, reproduced from Figure 2 of the paper."
+    evaluation: "The paper evaluates task completion, collision-free completion, and execution efficiency on SafeLIBERO with two obstacle settings, and tests transfer on five real-world Franka tasks. The linked paper provides the full protocols, comparisons, and limitations."
+  zh:
+    subtitle: "通过交互式世界模型开展 VLA 安全强化学习"
+    overview: "SafeDojo 研究如何让视觉语言动作策略通过探索想象中的未来，学习更安全的机器人行为。交互式世界模型同时提供任务进展与碰撞风险的反馈，使策略优化能够分别考虑这两个目标。"
+    hero_alt: "SafeDojo 总览：利用世界模型评估任务奖励和安全代价，支持更安全的 VLA 策略学习。"
+    hero_caption: "SafeDojo 总览，图自论文 Figure 1。"
+    method:
+      - title: "生成动作条件的想象轨迹"
+        text: "VLA 策略提出动作块，交互式视频世界模型据此向前预测视觉观测与隐空间动态。"
+      - title: "分别评估任务进展与安全性"
+        text: "任务成功分类器对想象帧评分；安全预测头结合隐空间上下文与候选动作，估计碰撞代价。"
+      - title: "在安全约束下更新策略"
+        text: "基于拉格朗日方法的受约束 GRPO 综合奖励与代价反馈，在控制安全风险的同时提高任务完成能力。"
+    method_alt: "SafeDojo 方法流程：想象轨迹、独立的任务奖励与安全代价评估，以及受约束的 GRPO 更新。"
+    method_caption: "训练流程，图自论文 Figure 2。"
+    evaluation: "论文在包含两种障碍设置的 SafeLIBERO 上评估任务完成、无碰撞完成和执行效率，并通过五项真实 Franka 任务验证迁移效果。完整实验协议、对比与局限见原论文。"
+
+regimevggt:
+  name: RegimeVGGT
+  arxiv_id: "2606.18439"
+  source_url: "https://arxiv.org/html/2606.18439v1"
+  hero:
+    src: /assets/research/regimevggt-method.png
+    width: 1204
+    height: 601
+  en:
+    subtitle: "Layer-Wise Spatially Preserving Redundancy Removal for Visual Geometry Grounded Transformer"
+    overview: "RegimeVGGT accelerates visual geometry transformers without additional training. It combines layer-dependent token merging with spatially preserving key/value downsampling, reducing redundant computation while protecting cross-view geometry and the information needed for camera pose estimation."
+    hero_alt: "RegimeVGGT overview: layer-wise compression with saliency-guided token merging and selectively protected key/value downsampling."
+    hero_caption: "RegimeVGGT's two complementary compression mechanisms, from the paper's method overview."
+    method:
+      - title: "Identify different roles across layers"
+        text: "Layer analyses distinguish shallow, middle, and deep regimes. The method uses a U-shaped compression schedule instead of applying one compression level everywhere."
+      - title: "Merge tokens while protecting spatial detail"
+        text: "Saliency-guided banded merging preserves geometry- and edge-relevant tokens when reducing the number of visual tokens."
+      - title: "Downsample keys and values selectively"
+        text: "A phase-shifted spatial grid reduces attention computation, while a full-resolution reference frame and protected camera/register tokens preserve cross-frame coverage and the pose pathway."
+    evaluation: "The paper examines reconstruction quality, camera pose estimation, and runtime, including long image sequences. Its comparisons and ablations investigate which information must remain available as computation is reduced. Detailed settings and reported results are in the paper."
+  zh:
+    subtitle: "面向视觉几何 Transformer 的逐层空间保持冗余消除"
+    overview: "RegimeVGGT 无需额外训练即可加速视觉几何 Transformer。它结合随层变化的 token 合并与保留空间结构的 key/value 下采样，在减少冗余计算的同时，保护跨视角几何信息与相机位姿估计所需的信息。"
+    hero_alt: "RegimeVGGT 总览：结合显著性引导的 token 合并与选择性保护的 key/value 下采样，实现逐层压缩。"
+    hero_caption: "RegimeVGGT 的两种互补压缩机制，图自论文方法总览。"
+    method:
+      - title: "识别不同层承担的作用"
+        text: "逐层分析区分浅层、中层和深层的不同特征，由此采用 U 形压缩调度，而不是对所有层施加相同压缩程度。"
+      - title: "合并 token 并保护空间细节"
+        text: "显著性引导的分段合并，在减少视觉 token 数量时保留与几何和边缘相关的重要 token。"
+      - title: "选择性下采样 key 与 value"
+        text: "相位偏移的空间网格减少注意力计算；完整分辨率的参考帧，以及受保护的相机与 register token，维持跨帧空间覆盖和位姿信息路径。"
+    evaluation: "论文考察重建质量、相机位姿估计与运行时间，包含长图像序列设置。对比与消融实验分析了减少计算时必须保留的信息；具体设置和结果见原论文。"
+
+ui:
+  en:
+    back: "Back to Selected Work"
+    overview: "Overview"
+    method: "How it works"
+    evaluation: "Evaluation"
+    resources: "Paper and resources"
+    paper: "Read the paper"
+    full_text: "Full text and figures"
+    page_note: "A project overview on Yichen Guo's research homepage, based on the linked paper."
+    source_note: "Figures and technical descriptions are based on the linked paper. The original author list and publication status are shown above."
+  zh:
+    back: "返回精选工作"
+    overview: "项目概述"
+    method: "方法流程"
+    evaluation: "评测"
+    resources: "论文与资源"
+    paper: "阅读论文"
+    full_text: "全文与原图"
+    page_note: "Yichen Guo 研究主页内的项目介绍，依据下方链接中的论文整理。"
+    source_note: "图示与技术介绍依据所链接的论文整理，原作者列表和发表状态见页首。"

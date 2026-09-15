@@ -1,0 +1,413 @@
+# 此文件维护页面显示文案；请对照编辑 en / zh，保持字段结构一致。
+# 论文标题、作者、日期与资源链接仍在 _publications/ 中维护。
+# 项目标识与资源链接仍在 _data/projects.yml 中维护。
+en:
+  ui:
+    profile_name: "Yichen Guo"
+    about: "About Me"
+    research: "Research Interests"
+    selected_work: "Selected Work"
+    ongoing_projects: "Ongoing Projects"
+    work_navigation: "Research work"
+    publications: "Publications"
+    projects: "Projects"
+    experience: "Experience"
+    education: "Education"
+    awards: "Awards"
+    full_publications: "Full publication list"
+    scholar: "Google Scholar"
+    ongoing: "Ongoing"
+    completed: "Completed"
+    completed_intro: "Projects that have developed into papers and preprints."
+    benchmark: "Benchmark"
+    contribution: "My contribution"
+    current_research: "Current research"
+    explore: "Explore project"
+    less: "Show less"
+    project_page: "Project page"
+    paper: "Paper"
+    code: "Code"
+    dataset: "Dataset"
+    leaderboard: "Leaderboard"
+    collaborator_access: "Collaborator access"
+    coming_soon: "Coming soon"
+    private_dataset: "Private dataset"
+    preprint: "Preprint"
+    under_review: "Under review"
+    accepted: "Accepted"
+    manuscript: "Manuscript"
+    co_author: "Co-author"
+    view_figure: "View the full figure"
+    close_figure: "Close enlarged figure"
+    figure_hint: "Scroll to inspect the full figure. Press Escape to close."
+    figure_title: "Research figure"
+    light: "Light"
+    dark: "Dark"
+    auto: "Auto"
+    download_cv: "Download CV (PDF)"
+    skip: "Skip to content"
+    profile_position: "AI Research"
+    profile_affiliation: "Nanyang Technological University"
+    phd_short: "Seeking PhD · Spring / Fall 2027"
+    supervisor: "Supervisor"
+    theme_credit: 'Powered by Jekyll and the <a href="https://github.com/yaoyao-liu/minimal-light">Minimal Light</a> theme.'
+    navigation: "Main navigation"
+    language: "Language"
+    color_theme: "Color theme"
+    academic_profiles: "Academic profiles"
+    email_label: "Email Yichen"
+    home: "Home"
+  about:
+    bio_html: >-
+      I am currently pursuing an <strong>M.Eng. (by Research) in Computer Science and Engineering</strong> at <strong>Nanyang Technological University (NTU)</strong> and am a <strong>Research Affiliate at GIFTS, NTU (DEFT Lab)</strong>, where I am honored to be advised by <a href="https://www.linwilliamcong.com/about">Prof. Lin William Cong</a>. I also have the privilege of working under the guidance of <a href="https://www.shanghangzhang.com/">Prof. Shanghang Zhang</a> at the <strong>School of Computer Science, Peking University</strong>. At <strong>Binance</strong>, I work on <strong>AI trading agents and trading algorithms</strong> as a Data Science Intern.
+    research_html: >-
+      My research focuses on <strong>efficient and reliable vision-language models (VLMs)</strong>, <strong>world models</strong>, and <strong>AI agents</strong>. My work on agents spans <strong>post-training and agent harnesses</strong>, with applications in finance and empirical research. Previously, I received my <strong>B.Eng. in Electronic Information Engineering</strong> from the University of Electronic Science and Technology of China (UESTC) in June 2025.
+    phd_html: >-
+      I am seeking <strong>PhD opportunities starting in Spring or Fall 2027</strong>. Feel free to contact me at <a href="mailto:yichen013@e.ntu.edu.sg">yichen013@e.ntu.edu.sg</a> to discuss research, PhD opportunities, or potential collaborations.
+  interests:
+    - label: "Vision-Language Models (VLMs)"
+      text: "Efficient inference, visual token reduction, and hallucination mitigation."
+    - label: "World Models"
+      text: "Action-conditioned generation, action-following evaluation, and policy learning."
+    - label: "AI Agents"
+      text: "Post-training and agent harnesses for tool use, execution, and evaluation, with applications in finance and empirical research."
+  experience:
+    - logo: "/assets/logos/nanyang-technological-university.png"
+      logo_class: "experience-logo--shield"
+      width: 1042
+      height: 1042
+      institution: "GIFTS, Nanyang Technological University"
+      dates: "Apr 2026–Present"
+      role: "Research Affiliate · DEFT Lab"
+      supervisor_html: '<a href="https://www.linwilliamcong.com/about">Prof. Lin William Cong</a>'
+      points:
+        - "Researching AI agents for finance and empirical research, including financial and econometric reasoning, tool use, and agent evaluation."
+        - "Contributing to InferenceNet through evaluation pipelines and reproducibility audits for agents that carry out empirical studies in economics and finance."
+    - logo: "/assets/logos/peking-university-emblem.png"
+      logo_class: ""
+      width: 360
+      height: 360
+      institution: "HMI Lab, Peking University"
+      dates: "Jul 2025–Present"
+      role: "Research Assistant · School of Computer Science"
+      supervisor_html: '<a href="https://www.shanghangzhang.com/">Prof. Shanghang Zhang</a>'
+      points:
+        - "Working on efficient vision-language models through STAR-Pro, combining adaptive visual token selection with progressive refinement inside the language decoder."
+        - "Studying reliable multimodal reasoning and hallucination mitigation by reducing the dominance of language priors."
+        - "Exploring robotic world models, with a focus on action following, model evaluation, and policy learning."
+    - logo: "/assets/logos/binance.png"
+      logo_class: ""
+      width: 200
+      height: 200
+      institution: "Binance"
+      dates: "Jun 2026–Present"
+      role: "Data Science Intern · Remote"
+      supervisor_html: "Harvin Wang"
+      points:
+        - "Contributing to Binance Ai Pro and multi-agent cryptocurrency trading workflows for market analysis, strategy reasoning, and trading-signal generation."
+        - "Supporting agent post-training through supervised fine-tuning and reinforcement learning, alongside model inference and deployment."
+        - "Working on agent harnesses that connect models with tools, execution workflows, and evaluation for financial tasks."
+    - logo: "/assets/logos/tencent-vertical.png"
+      logo_class: "experience-logo--wordmark"
+      width: 1915
+      height: 889
+      institution: "Tencent LightSpeed Studios"
+      dates: "Aug–Dec 2025"
+      role: "Data Scientist Intern · Singapore"
+      supervisor_html: "Don Li"
+      points:
+        - "Conducted LLM post-training for game-specific language understanding, generation, and interactive decision-making."
+        - "Built multi-agent economic simulations with agent coordination, resource dynamics, and simulation workflows."
+    - logo: "/assets/logos/harvard-university-shield.png"
+      logo_class: "experience-logo--shield"
+      width: 512
+      height: 512
+      institution: "Harvard AI and Robotics Lab, Harvard University"
+      dates: "Sep–Nov 2025"
+      role: "Visiting Student · Remote"
+      supervisor_html: "Prof. Mengyu Wang"
+      points:
+        - "Studied multi-objective reinforcement learning for financial agents and LLM-powered trading scenarios."
+        - "Explored multimodal visual-memory reasoning for medical models, including memory-enhanced post-training, multi-image inference, supervised fine-tuning, and GRPO."
+  education:
+    - institution: "Nanyang Technological University"
+      degree: "M.Eng. (by Research), Computer Science & Engineering"
+      dates: "Sep 2025–Dec 2026 (expected)"
+    - institution: "University of Electronic Science and Technology of China"
+      degree: "B.Eng., Electronic Information Engineering"
+      dates: "Sep 2021–Jun 2025"
+  awards: "International Talent & Leadership Scholarship · Top 1% · 2022"
+  papers:
+    "2609.05916":
+      summary: "Training-free visual token reduction that preserves feature coverage, then progressively refines retained tokens as language and vision interact."
+      contribution: "As a co-first author, I contributed to the design of adaptive-to-progressive token pruning and its evaluation across vision-language architectures."
+      role: "Co-first author"
+      image_alt: "STAR-Pro's Adaptive Stage preserves visual feature coverage, followed by progressive token refinement across decoder layers."
+      resource_note: ""
+    "2608.24885":
+      summary: "WorldEcho diagnoses action-following failures; WorldSync aligns generation with robot dynamics to support policy learning."
+      contribution: "As a core contributor, I work on understanding and improving action following in robotic world models."
+      role: "Core contributor"
+      image_alt: "WorldEcho and WorldSync: diagnosing action following, aligning world models, and validating policy learning."
+      resource_note: "Dataset access is currently restricted; data upload is pending."
+    "2606.20698":
+      summary: "Safe reinforcement learning for VLA policies through imagined rollouts in an interactive world model, balancing task progress and safety."
+      contribution: ""
+      role: "Co-author"
+      image_alt: "SafeDojo's pipeline combines action-conditioned world-model rollouts, task-success and safety evaluation, and constrained GRPO policy updates."
+      resource_note: ""
+    "2606.18439":
+      summary: "Training-free acceleration of visual geometry transformers with layer-wise token merging and spatially preserving K/V downsampling."
+      contribution: ""
+      role: "Co-author"
+      image_alt: "RegimeVGGT uses a layer-wise U-shaped schedule for token merging and spatially preserving key/value downsampling in visual geometry transformers."
+      resource_note: ""
+    "2026-seeme-aaai":
+      summary: "Visual token engineering to improve consistency and reduce hallucinations in vision-language models."
+      contribution: ""
+      role: "Co-author"
+      image_alt: ""
+      resource_note: ""
+    "2026-map-aaai":
+      summary: "Training-free decoding with map-level attention processing to mitigate hallucinations in vision-language models."
+      contribution: ""
+      role: "Equal contribution"
+      image_alt: ""
+      resource_note: ""
+    "2025-star-neurips":
+      summary: "Earlier STAR manuscript on two-stage, training-free visual token reduction; the current preprint is STAR-Pro."
+      contribution: ""
+      role: "First author"
+      image_alt: ""
+      resource_note: ""
+    "2025-dcla-neurips":
+      summary: "Training-free decoding that aggregates inter-layer representations to improve semantic consistency and reduce hallucinations."
+      contribution: ""
+      role: "Co-author"
+      image_alt: ""
+      resource_note: ""
+  projects:
+    inferencenet:
+      focus: "AI agents for econometric analysis and replication"
+      card_summary: "Can AI agents turn empirical research questions and data into reproducible statistical findings?"
+      card_contribution: "Evaluation pipelines, agent harness integration, and reproducibility audits."
+      highlights:
+        - "Benchmark: 2,644 tasks · 36 journals"
+        - "Evaluation: fixed 1,000-task subset"
+      summary: "InferenceNet is a collaborative research initiative investigating whether AI agents can carry out econometric analyses and reproduce key results from published studies. Its benchmark brings together 2,644 tasks from 36 academic journals, pairing task descriptions with published data and author-provided replication code."
+      benchmark: "Selected_1000 provides a 1,000-task evaluation subset covering ordinary least squares, difference-in-differences, instrumental variables, regression discontinuity, and other econometric methods."
+      contribution: "I work on evaluation pipelines, agent harness integration, and reproducibility audits. This includes connecting agents to controlled Python execution, aligning task inputs and scoring protocols, and investigating failures across data preparation, code generation, execution, and statistical replication."
+      current_research: "I am exploring how planning, tool use, and execution feedback affect agents' ability to carry out econometric analyses reliably. This includes comparing direct code generation with agent workflows while tracking model-call budgets and failure modes."
+      image_alt: "Agent + harness mountain chart comparing GPT-5.6 Sol and Claude Opus 4.8 with single generation and Deep Agents on 1,000 tasks per run."
+      image_caption: "Agent + harness climb · September 2026. Internal exploratory comparison on 1,000 tasks per run; model-call budgets differ."
+      case_label: "View a recorded case"
+      code_note_html: 'Code links to the evaluation development branch, <code>dev-gyc-eval</code>. The <a href="https://github.com/EasonAI-5589/NTU-GIFTS-InferenceNet">project workspace</a> contains the broader project source and documentation. Both repositories require collaborator access.'
+    qwan:
+      focus: "Unified robot policy and world model"
+      card_summary: "Joint action prediction and video world modeling for robotic manipulation."
+      summary: "qwan combines a Qwen3-VL action branch with a Wan video-generation branch and evaluates the unified policy in RoboTwin."
+zh:
+  ui:
+    profile_name: "郭奕辰"
+    about: "关于我"
+    research: "研究方向"
+    selected_work: "代表工作"
+    ongoing_projects: "进行中项目"
+    work_navigation: "研究工作"
+    publications: "论文"
+    projects: "项目"
+    experience: "研究与工作经历"
+    education: "教育经历"
+    awards: "荣誉奖项"
+    full_publications: "完整论文列表"
+    scholar: "Google Scholar"
+    ongoing: "进行中"
+    completed: "已完成"
+    completed_intro: "已形成论文或预印本的研究项目。"
+    benchmark: "评测基准"
+    contribution: "我的贡献"
+    current_research: "当前研究"
+    explore: "展开项目"
+    less: "收起详情"
+    project_page: "项目主页"
+    paper: "论文"
+    code: "代码"
+    dataset: "数据集"
+    leaderboard: "排行榜"
+    collaborator_access: "仅协作者可访问"
+    coming_soon: "即将公开"
+    private_dataset: "私有数据集"
+    preprint: "预印本"
+    under_review: "审稿中"
+    accepted: "已录用"
+    manuscript: "稿件"
+    co_author: "共同作者"
+    view_figure: "查看完整研究图"
+    close_figure: "关闭放大图"
+    figure_hint: "滚动查看完整图片，按 Esc 键关闭。"
+    figure_title: "研究图示"
+    light: "浅色"
+    dark: "深色"
+    auto: "跟随系统"
+    download_cv: "下载简历（PDF）"
+    skip: "跳转到正文"
+    profile_position: "人工智能研究"
+    profile_affiliation: "南洋理工大学"
+    phd_short: "寻求博士机会 · 2027 年春季 / 秋季"
+    supervisor: "导师"
+    theme_credit: '基于 Jekyll 与 <a href="https://github.com/yaoyao-liu/minimal-light">Minimal Light</a> 主题构建。'
+    navigation: "主导航"
+    language: "语言"
+    color_theme: "页面主题"
+    academic_profiles: "学术与个人账号"
+    email_label: "联系我"
+    home: "首页"
+  about:
+    bio_html: >-
+      我目前在<strong>南洋理工大学（NTU）</strong>攻读<strong>计算机科学与工程研究型硕士</strong>，同时担任 <strong>NTU GIFTS（DEFT Lab）的 Research Affiliate</strong>，接受 <a href="https://www.linwilliamcong.com/about">Prof. Lin William Cong</a> 的指导。我也在<strong>北京大学计算机学院</strong>参与研究，接受 <a href="https://www.shanghangzhang.com/">Prof. Shanghang Zhang</a> 的指导。此外，我在 <strong>Binance</strong> 担任数据科学实习生，研究 <strong>AI 交易智能体与交易算法</strong>。
+    research_html: >-
+      我的研究聚焦于<strong>高效、可靠的视觉语言模型（VLM）</strong>、<strong>世界模型</strong>与 <strong>AI 智能体</strong>。在智能体方向，我关注<strong>后训练与智能体运行框架</strong>，以及它们在金融和实证研究中的应用。我于 2025 年 6 月获得<strong>电子科技大学电子信息工程学士学位</strong>。
+    phd_html: >-
+      我正在寻求 <strong>2027 年春季或秋季入学的博士机会</strong>。欢迎通过 <a href="mailto:yichen013@e.ntu.edu.sg">yichen013@e.ntu.edu.sg</a> 与我交流研究、博士招生或合作机会。
+  interests:
+    - label: "视觉语言模型（VLM）"
+      text: "高效推理、视觉 token 压缩与幻觉缓解。"
+    - label: "世界模型"
+      text: "动作条件生成、动作遵循评测与策略学习。"
+    - label: "AI 智能体"
+      text: "面向工具调用、执行与评测的后训练及智能体运行框架，应用于金融与实证研究。"
+  experience:
+    - logo: "/assets/logos/nanyang-technological-university.png"
+      logo_class: "experience-logo--shield"
+      width: 1042
+      height: 1042
+      institution: "南洋理工大学 GIFTS"
+      dates: "2026 年 4 月至今"
+      role: "Research Affiliate · DEFT Lab"
+      supervisor_html: '<a href="https://www.linwilliamcong.com/about">Prof. Lin William Cong</a>'
+      points:
+        - "研究服务于金融与实证研究的 AI 智能体，包括金融与计量经济学推理、工具调用及智能体评测。"
+        - "参与 InferenceNet 的评测流程与可复现性审计，评估智能体完成经济学和金融实证研究的能力。"
+    - logo: "/assets/logos/peking-university-emblem.png"
+      logo_class: ""
+      width: 360
+      height: 360
+      institution: "北京大学 HMI Lab"
+      dates: "2025 年 7 月至今"
+      role: "研究助理 · 计算机学院"
+      supervisor_html: '<a href="https://www.shanghangzhang.com/">Prof. Shanghang Zhang</a>'
+      points:
+        - "通过 STAR-Pro 研究高效视觉语言模型，将自适应视觉 token 选择与语言解码器内的渐进细化相结合。"
+        - "研究可靠的多模态推理，通过减弱语言先验的过度主导来缓解幻觉。"
+        - "探索机器人世界模型，关注动作遵循、模型评测与策略学习。"
+    - logo: "/assets/logos/binance.png"
+      logo_class: ""
+      width: 200
+      height: 200
+      institution: "Binance"
+      dates: "2026 年 6 月至今"
+      role: "数据科学实习生 · 远程"
+      supervisor_html: "Harvin Wang"
+      points:
+        - "参与 Binance Ai Pro 与多智能体加密货币交易流程，支持市场分析、策略推理及交易信号生成。"
+        - "通过监督微调和强化学习支持智能体后训练，并参与模型推理与部署。"
+        - "构建面向金融任务的智能体运行框架，连接模型、工具、执行流程与评测。"
+    - logo: "/assets/logos/tencent-vertical.png"
+      logo_class: "experience-logo--wordmark"
+      width: 1915
+      height: 889
+      institution: "腾讯光子工作室群"
+      dates: "2025 年 8 月至 12 月"
+      role: "数据科学实习生 · 新加坡"
+      supervisor_html: "Don Li"
+      points:
+        - "开展面向游戏场景的大语言模型后训练，支持语言理解、生成与交互式决策。"
+        - "构建多智能体经济仿真，涉及智能体协作、资源动态与仿真流程。"
+    - logo: "/assets/logos/harvard-university-shield.png"
+      logo_class: "experience-logo--shield"
+      width: 512
+      height: 512
+      institution: "哈佛大学 Harvard AI and Robotics Lab"
+      dates: "2025 年 9 月至 11 月"
+      role: "访问学生 · 远程"
+      supervisor_html: "Prof. Mengyu Wang"
+      points:
+        - "研究金融智能体及大语言模型交易场景中的多目标强化学习。"
+        - "探索医疗模型的多模态视觉记忆推理，包括记忆增强后训练、多图推理、监督微调与 GRPO。"
+  education:
+    - institution: "南洋理工大学"
+      degree: "计算机科学与工程 · 研究型工学硕士"
+      dates: "2025 年 9 月至 2026 年 12 月（预计）"
+    - institution: "电子科技大学"
+      degree: "电子信息工程 · 工学学士"
+      dates: "2021 年 9 月至 2025 年 6 月"
+  awards: "International Talent & Leadership Scholarship · 前 1% · 2022 年"
+  papers:
+    "2609.05916":
+      summary: "无需训练的视觉 token 压缩：先保留特征覆盖度，再随语言与视觉交互逐步细化保留的 token。"
+      contribution: "作为共同第一作者，我参与了从自适应选择到渐进剪枝的方法设计，以及跨视觉语言模型架构的评测。"
+      role: "共同第一作者"
+      image_alt: "STAR-Pro 先通过自适应阶段保留视觉特征覆盖度，再跨解码器层逐步细化视觉 token。"
+      resource_note: ""
+    "2608.24885":
+      summary: "WorldEcho 诊断动作遵循失败；WorldSync 将生成过程与机器人动力学对齐，以支持策略学习。"
+      contribution: "作为核心贡献者，我参与理解并改善机器人世界模型的动作遵循能力。"
+      role: "核心贡献者"
+      image_alt: "WorldEcho 与 WorldSync 的研究流程：诊断动作遵循、对齐世界模型，并验证策略学习。"
+      resource_note: "数据集目前限制访问，数据尚待上传。"
+    "2606.20698":
+      summary: "通过交互式世界模型中的想象轨迹开展 VLA 策略的安全强化学习，兼顾任务进展与安全性。"
+      contribution: ""
+      role: "共同作者"
+      image_alt: "SafeDojo 将动作条件世界模型轨迹、任务成功与安全评测，以及受约束的 GRPO 策略更新相结合。"
+      resource_note: ""
+    "2606.18439":
+      summary: "通过逐层 token 合并与保留空间结构的 K/V 下采样，无需训练地加速视觉几何 Transformer。"
+      contribution: ""
+      role: "共同作者"
+      image_alt: "RegimeVGGT 使用逐层 U 形调度，在视觉几何 Transformer 中进行 token 合并与保留空间结构的 K/V 下采样。"
+      resource_note: ""
+    "2026-seeme-aaai":
+      summary: "通过视觉 token 工程提升一致性，缓解视觉语言模型中的幻觉。"
+      contribution: ""
+      role: "共同作者"
+      image_alt: ""
+      resource_note: ""
+    "2026-map-aaai":
+      summary: "通过语义图层面的注意力处理，在无需训练的解码过程中缓解视觉语言模型幻觉。"
+      contribution: ""
+      role: "同等贡献"
+      image_alt: ""
+      resource_note: ""
+    "2025-star-neurips":
+      summary: "STAR 的早期稿件，研究两阶段、无需训练的视觉 token 压缩；当前预印本为 STAR-Pro。"
+      contribution: ""
+      role: "第一作者"
+      image_alt: ""
+      resource_note: ""
+    "2025-dcla-neurips":
+      summary: "在无需训练的解码过程中聚合层间表征，改善语义一致性并缓解幻觉。"
+      contribution: ""
+      role: "共同作者"
+      image_alt: ""
+      resource_note: ""
+  projects:
+    inferencenet:
+      focus: "面向计量经济分析与研究复现的 AI 智能体"
+      card_summary: "AI 智能体能否从实证研究问题与数据出发，得到可复现的统计结果？"
+      card_contribution: "评测流程、智能体运行框架集成与可复现性审计。"
+      highlights:
+        - "基准：2,644 项任务 · 36 本期刊"
+        - "评测：固定 1,000 项任务子集"
+      summary: "InferenceNet 是一项合作研究，探索 AI 智能体能否完成计量经济分析并复现已发表研究的关键结果。基准汇集了来自 36 本学术期刊的 2,644 项任务，将任务描述与已发表的数据、作者提供的复现代码配对。"
+      benchmark: "Selected_1000 提供固定的 1,000 项任务评测子集，涵盖普通最小二乘法、双重差分、工具变量、断点回归等计量经济学方法。"
+      contribution: "我参与评测流程、智能体运行框架集成与可复现性审计，包括为智能体接入受控的 Python 执行环境、统一任务输入与评分协议，并排查数据准备、代码生成、执行及统计复现各环节的失败原因。"
+      current_research: "我正在研究规划、工具调用与执行反馈如何影响智能体可靠完成计量经济分析的能力，包括比较直接代码生成与智能体工作流，并记录模型调用预算和失败类型。"
+      image_alt: "Agent + harness 登峰榜：比较 GPT-5.6 Sol 和 Claude Opus 4.8 在单次生成与 Deep Agents 框架下的表现，每组评测 1,000 项任务。"
+      image_caption: "Agent + harness 登峰榜 · 2026 年 9 月。每组 1,000 项任务的内部探索性比较，模型调用预算不同。"
+      case_label: "查看已记录案例"
+      code_note_html: '代码链接指向评测开发分支 <code>dev-gyc-eval</code>。<a href="https://github.com/EasonAI-5589/NTU-GIFTS-InferenceNet">项目工作区</a>包含更完整的项目源码与文档。两个仓库均仅供协作者访问。'
+    qwan:
+      focus: "统一机器人策略与世界模型"
+      card_summary: "面向机器人操作的动作预测与视频世界建模。"
+      summary: "qwan 将 Qwen3-VL 动作分支与 Wan 视频生成分支统一建模，并在 RoboTwin 中评测策略。"

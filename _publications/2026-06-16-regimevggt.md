@@ -5,6 +5,11 @@ category: preprints
 selected_order: 4
 project_id: regimevggt
 project_name: RegimeVGGT
+image: /assets/research/regimevggt-method.png
+image_width: 1204
+image_height: 601
+projecturl: /projects/regimevggt/
+projecturl_zh: /zh/projects/regimevggt/
 authors: "Jinhao You, Shuo Lyu, Zhuohang Lyu, Tanxuan Li, Zibo Zhao, Jiaxiang Hu, Kai Tang, Yichen Guo"
 show_all_authors: true
 date: 2026-06-16

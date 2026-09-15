@@ -5,6 +5,9 @@ category: preprints
 selected_order: 2
 project_id: worldecho-worldsync
 project_name: WorldEcho / WorldSync
+image: /assets/research/worldecho-overview.png
+image_width: 3200
+image_height: 1673
 permalink: /publication/2026-worldecho-worldsync/
 authors: "Sixiang Chen, Jiaming Liu, Jixian Wu, Yichen Guo, Tinghao Wang, Siyuan Qian, Hao Chen, Jiajun Cao, Jian Tang, Shanghang Zhang"
 date: 2026-08-25
