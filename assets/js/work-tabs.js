@@ -48,7 +48,7 @@
       if (window.location.hash !== hash) {
         // Keep the controls in place; native hash navigation would scroll past them.
         window.history.pushState(null, '', hash);
-        // Language links also follow the current collection.
+        // Notify section listeners after updating the URL without native scrolling.
         window.dispatchEvent(new Event('hashchange'));
       }
     };

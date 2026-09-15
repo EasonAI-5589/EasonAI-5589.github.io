@@ -36,7 +36,6 @@
   <link rel="stylesheet" href="{{ '/assets/css/minimal.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   <script src="{{ '/assets/js/research.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/work-tabs.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/language.js' | relative_url }}" defer></script>
 </head>
 <body{% if page.layout == 'project' %} class="project-page"{% endif %}>
   <a class="skip-link" href="#main">{{ copy.ui.skip }}</a>
@@ -65,6 +64,7 @@
       </nav>
       <div class="display-controls">
         {% if page.lang_en and page.lang_zh %}
+        <!-- Language changes open the matching page at the top, without a section anchor. -->
         <nav class="language-switch" aria-label="{{ copy.ui.language }}">
           <a href="{{ page.lang_zh | relative_url }}" lang="zh-CN" hreflang="zh-CN" aria-label="中文" title="中文" data-language-link{% if locale == 'zh' %} aria-current="page"{% endif %}>中</a>
           <a href="{{ page.lang_en | relative_url }}" lang="en" hreflang="en" aria-label="English" title="English" data-language-link{% if locale == 'en' %} aria-current="page"{% endif %}>EN</a>
