@@ -87,14 +87,12 @@ class BilingualRoutes(unittest.TestCase):
         for route in ['/', '/zh/', '/projects/', '/zh/projects/']:
             with self.subTest(route=route):
                 entries = self.page(route).entries
-                self.assertEqual(len(entries), 6, 'All selected works need project entry cards')
+                self.assertEqual(len(entries), 5, 'All listed works need project entry cards')
                 for entry in entries:
-                    expected_images = 0 if entry['id'] == 'qwan' else 1
-                    self.assertEqual(len(entry['images']), expected_images)
+                    self.assertEqual(len(entry['images']), 1)
                     self.assertEqual(entry['details'], 0, 'Entry cards should navigate, not expand inline')
                     actions = [a for a in entry['links'] if 'data-project-entry' in a]
-                    expected_actions = 2 if entry['id'] == 'qwan' else 3
-                    self.assertEqual(len(actions), expected_actions, 'Available card actions should open the same project page')
+                    self.assertEqual(len(actions), 3, 'Available card actions should open the same project page')
                     targets = {a.get('href') for a in actions}
                     self.assertEqual(len(targets), 1)
                     url = urlsplit(next(iter(targets)))
@@ -104,20 +102,18 @@ class BilingualRoutes(unittest.TestCase):
                     if not url.hostname:
                         self.assertTrue((ROOT / url.path.strip('/') / 'index.html').is_file(), f'Broken project destination: {url.path}')
 
-    def test_qwan_opens_the_confirmed_github_repository(self):
-        expected = 'https://github.com/Haohaha-11/qwan-physworldai-2026'
+    def test_qwan_is_not_listed_on_public_project_surfaces(self):
         for route in ['/', '/zh/', '/projects/', '/zh/projects/']:
             with self.subTest(route=route):
-                entries = [entry for entry in self.page(route).entries if entry['id'] == 'qwan']
-                self.assertEqual(len(entries), 1, 'qwan must appear once on every project surface')
-                actions = [a for a in entries[0]['links'] if 'data-project-entry' in a]
-                self.assertEqual({a.get('href') for a in actions}, {expected})
+                page = self.page(route)
+                self.assertNotIn('qwan', page.ids)
+                self.assertFalse(any('qwan-physworldai-2026' in a.get('href', '') for a in page.links))
 
     def test_work_panels_keep_selected_and_ongoing_entries_separate(self):
         expected = {
             'selected': ['paper-starpro', 'paper-worldecho-worldsync',
                          'paper-safedojo', 'paper-regimevggt'],
-            'ongoing': ['inferencenet', 'qwan'],
+            'ongoing': ['inferencenet'],
         }
         for route in ['/', '/zh/', '/projects/', '/zh/projects/']:
             with self.subTest(route=route):

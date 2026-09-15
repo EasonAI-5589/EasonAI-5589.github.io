@@ -13,9 +13,3 @@
   projecturl: https://easonai-5589.github.io/inferencenet-challenge/
   leaderboardurl: https://huggingface.co/spaces/CamoAiLab/InferenceNet-Leaderboard
   dataseturl: https://huggingface.co/datasets/CamoAiLab/InferenceNet
-
-- id: qwan
-  name: qwan
-  status: ongoing
-  projecturl: https://github.com/Haohaha-11/qwan-physworldai-2026
-  projectlabel: GitHub

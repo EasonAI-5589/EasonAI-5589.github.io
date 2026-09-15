@@ -202,10 +202,6 @@ en:
       image_caption: "Agent + harness climb · September 2026. Internal exploratory comparison on 1,000 tasks per run; model-call budgets differ."
       case_label: "View a recorded case"
       code_note_html: 'Code links to the evaluation development branch, <code>dev-gyc-eval</code>. The <a href="https://github.com/EasonAI-5589/NTU-GIFTS-InferenceNet">project workspace</a> contains the broader project source and documentation. Both repositories require collaborator access.'
-    qwan:
-      focus: "Unified robot policy and world model"
-      card_summary: "Joint action prediction and video world modeling for robotic manipulation."
-      summary: "qwan combines a Qwen3-VL action branch with a Wan video-generation branch and evaluates the unified policy in RoboTwin."
 zh:
   ui:
     profile_name: "郭奕辰"
@@ -407,7 +403,3 @@ zh:
       image_caption: "Agent + harness 登峰榜 · 2026 年 9 月。每组 1,000 项任务的内部探索性比较，模型调用预算不同。"
       case_label: "查看已记录案例"
       code_note_html: '代码链接指向评测开发分支 <code>dev-gyc-eval</code>。<a href="https://github.com/EasonAI-5589/NTU-GIFTS-InferenceNet">项目工作区</a>包含更完整的项目源码与文档。两个仓库均仅供协作者访问。'
-    qwan:
-      focus: "统一机器人策略与世界模型"
-      card_summary: "面向机器人操作的动作预测与视频世界建模。"
-      summary: "qwan 将 Qwen3-VL 动作分支与 Wan 视频生成分支统一建模，并在 RoboTwin 中评测策略。"
