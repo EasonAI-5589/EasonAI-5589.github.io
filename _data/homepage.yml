@@ -264,16 +264,16 @@ zh:
     previous_html: >-
       此前，我曾在<strong>腾讯光子工作室群的新加坡团队</strong>实习，并以远程访问学生的身份，与<strong>哈佛大学 Harvard AI and Robotics Lab</strong> 开展科研合作。
     research_html: >-
-      我的研究主要围绕<strong>世界模型</strong>与<strong>智能体学习</strong>展开，关注模型如何理解环境、根据反馈改进行为，以及这些能力在机器人和金融任务中的应用。我也关注<strong>视觉语言模型的高效推理与可靠性</strong>。
+      我的研究兴趣主要集中在<strong>世界模型（World Models）</strong>与 <strong>AI 智能体（AI Agents）</strong>，关注动作条件生成、策略学习，以及智能体运行框架和后训练，面向机器人操作、交易算法与市场分析、计量研究复现等具体任务。我也关注<strong>视觉语言模型（VLMs）</strong>的高效推理与可靠性。
     phd_html: >-
       我计划于 <strong>2027 年春季或秋季</strong>开始博士阶段的研究，目前正在寻找合适的机会。欢迎通过 <a href="mailto:yichen013@e.ntu.edu.sg">yichen013@e.ntu.edu.sg</a> 联系我，交流研究想法、博士机会或合作，也欢迎推荐。
   interests:
     - label: "世界模型（World Models）"
-      text: "关注动作条件下的环境预测、生成结果是否符合动作，以及世界模型如何帮助机器人学习策略。"
-    - label: "智能体学习（Agent Learning）"
-      text: "研究如何通过后训练和工具交互提升智能体能力，并搭建运行框架（agent harness），支持金融分析与计量经济学研究复现。"
+      text: "关注动作条件生成、动作遵循、策略训练与学习，以及统一模型，探索其在机器人操作中的应用。"
+    - label: "AI 智能体（AI Agents）"
+      text: "关注 agent harness、自主规划与工具调用等 agentic 能力，以及结合监督微调（SFT）和强化学习（RL）的后训练；应用场景包括交易算法、市场分析与计量研究复现。"
     - label: "视觉语言模型（VLMs）"
-      text: "研究视觉 token 压缩、高效推理和幻觉缓解，让模型以更少的计算给出更可靠的回答。"
+      text: "关注视觉 token 压缩、高效推理与幻觉缓解，探索模型效率与可靠性的提升方法。"
   experience:
     - logo: "/assets/logos/nanyang-technological-university.png"
       logo_class: "experience-logo--shield"
