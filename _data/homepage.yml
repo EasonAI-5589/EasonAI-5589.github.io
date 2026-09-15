@@ -260,18 +260,20 @@ zh:
     home: "首页"
   about:
     bio_html: >-
-      我目前在<strong>南洋理工大学（NTU）</strong>攻读<strong>计算机科学与工程研究型硕士</strong>，同时担任 <strong>NTU GIFTS（DEFT Lab）的 Research Affiliate</strong>，接受 <a href="https://www.linwilliamcong.com/about">Prof. Lin William Cong</a> 的指导。我也在<strong>北京大学计算机学院</strong>参与研究，接受 <a href="https://www.shanghangzhang.com/">Prof. Shanghang Zhang</a> 的指导。此外，我在 <strong>Binance</strong> 担任数据科学实习生，研究 <strong>AI 交易智能体与交易算法</strong>。
+      我目前在<strong>南洋理工大学（NTU）</strong>攻读<strong>计算机科学与工程研究型硕士</strong>，并在 <strong>GIFTS（DEFT Lab）</strong>担任 Research Affiliate，很荣幸能在 <a href="https://www.linwilliamcong.com/about">Lin William Cong 教授</a>的指导下开展研究。我也与<strong>北京大学计算机学院 HMI Lab</strong> 的 <a href="https://www.shanghangzhang.com/">Shanghang Zhang 教授</a>开展科研合作。目前还在 <strong>Binance</strong> 担任数据科学实习生，参与 <strong>AI 交易智能体与交易算法</strong>的研发。
+    previous_html: >-
+      此前，我曾在<strong>腾讯光子工作室群的新加坡团队</strong>实习，并以远程访问学生的身份，与<strong>哈佛大学 Harvard AI and Robotics Lab</strong> 开展科研合作。
     research_html: >-
-      我的研究聚焦于<strong>高效、可靠的视觉语言模型（VLM）</strong>、<strong>世界模型</strong>与 <strong>AI 智能体</strong>。在智能体方向，我关注<strong>后训练与智能体运行框架</strong>，以及它们在金融和实证研究中的应用。我于 2025 年 6 月获得<strong>电子科技大学电子信息工程学士学位</strong>。
+      我的研究主要围绕<strong>世界模型</strong>与<strong>智能体学习</strong>展开，关注模型如何理解环境、根据反馈改进行为，以及这些能力在机器人和金融任务中的应用。我也关注<strong>视觉语言模型的高效推理与可靠性</strong>。
     phd_html: >-
-      我正在寻求 <strong>2027 年春季或秋季入学的博士机会</strong>。欢迎通过 <a href="mailto:yichen013@e.ntu.edu.sg">yichen013@e.ntu.edu.sg</a> 与我交流研究、博士招生或合作机会。
+      我计划于 <strong>2027 年春季或秋季</strong>开始博士阶段的研究，目前正在寻找合适的机会。欢迎通过 <a href="mailto:yichen013@e.ntu.edu.sg">yichen013@e.ntu.edu.sg</a> 联系我，交流研究想法、博士机会或合作，也欢迎推荐。
   interests:
-    - label: "视觉语言模型（VLM）"
-      text: "高效推理、视觉 token 压缩与幻觉缓解。"
-    - label: "世界模型"
-      text: "动作条件生成、动作遵循评测与策略学习。"
-    - label: "AI 智能体"
-      text: "面向工具调用、执行与评测的后训练及智能体运行框架，应用于金融与实证研究。"
+    - label: "世界模型（World Models）"
+      text: "关注动作条件下的环境预测、生成结果是否符合动作，以及世界模型如何帮助机器人学习策略。"
+    - label: "智能体学习（Agent Learning）"
+      text: "研究如何通过后训练和工具交互提升智能体能力，并搭建运行框架（agent harness），支持金融分析与计量经济学研究复现。"
+    - label: "视觉语言模型（VLMs）"
+      text: "研究视觉 token 压缩、高效推理和幻觉缓解，让模型以更少的计算给出更可靠的回答。"
   experience:
     - logo: "/assets/logos/nanyang-technological-university.png"
       logo_class: "experience-logo--shield"
