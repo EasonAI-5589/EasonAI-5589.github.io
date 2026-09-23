@@ -91,6 +91,19 @@
       "bytes": 4286,
       "sha256": "b0fc9d8535067e5d105ac62d2cc93607118707d2606e67f0b48a7a5bf781624e",
       "modified": false
+    },
+    {
+      "organization": "Tsinghua University",
+      "file": "tsinghua-university-emblem.jpg",
+      "official_page": "https://vi.tsinghua.edu.cn/gk/xxbz/xh/bzjbzsy.htm",
+      "asset_url": "https://vi.tsinghua.edu.cn/__local/8/1C/21/2F02A66E31BF084FE340463BB47_B9A95F73_185BC.jpg",
+      "retrieved_on": "2026-09-23",
+      "width": 1400,
+      "height": 600,
+      "bytes": 99772,
+      "sha256": "90132d030d8a70f9d21375c85d8a0c614d44a6201ab82200067b10aca38986a8",
+      "modified": false,
+      "notes": "Original official purple emblem; CSS centers the emblem and clips surrounding white space."
     }
   ]
 }
