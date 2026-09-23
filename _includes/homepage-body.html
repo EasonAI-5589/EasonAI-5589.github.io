@@ -7,7 +7,7 @@
 <h2 id="news">{{ copy.ui.news_heading }}</h2>
 <ul class="news-list" id="news-list" data-news-list>
   {% for item in site.data.news %}
-  <li data-news-date="{{ item.date | escape }}"><time datetime="{{ item.date | escape }}">{{ item.date | replace: '-', '.' | escape }}</time><span>{{ item[locale] | escape }}</span></li>
+  <li data-news-date="{{ item.date | escape }}"><time datetime="{{ item.date | escape }}">{{ item.date | replace: '-', '.' | escape }}</time><span>{{ item[locale] | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span></li>
   {% endfor %}
 </ul>
 <button class="news-toggle" type="button" data-news-toggle data-expand-label="{{ copy.ui.news_expand | escape }}" data-collapse-label="{{ copy.ui.news_collapse | escape }}" aria-controls="news-list" aria-expanded="false" hidden>{{ copy.ui.news_expand }}</button>
