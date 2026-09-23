@@ -72,7 +72,8 @@ html { scroll-padding-top:24px; }
 .experience-logo { box-sizing:border-box; grid-column:1; grid-row:1 / span 3; display:block; width:80px; height:80px; padding:8px; object-fit:contain; background:#fff; border:1px solid var(--rule); border-radius:5px; }
 .experience-logo--wordmark { padding:5px; }
 .experience-logo--shield { padding:1px; }
-.experience-logo--tsinghua { padding:0; object-fit:cover; }
+.experience-logo.experience-logo--tsinghua { padding:0; overflow:hidden; }
+.experience-logo--tsinghua img { display:block; width:100%; height:100%; max-width:none; object-fit:cover; object-position:48.4% 50%; transform:scale(1.12); }
 .experience-heading { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:0 18px; }
 .experience-heading strong { font-weight:600; }
 .experience-dates,.education-dates { color:var(--muted); font-size:14px; }
