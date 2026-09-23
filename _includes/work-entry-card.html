@@ -6,6 +6,7 @@
   {% if include.work.image %}
   <a class="work-entry-image" href="{{ entry_url | escape }}" data-project-entry aria-label="{{ entry_name | escape }} · {{ copy.ui.project_page }}">
     <img src="{{ include.work.image | relative_url }}" alt="{{ include.display.image_alt | escape }}" width="{{ include.work.image_width }}" height="{{ include.work.image_height }}" loading="lazy">
+    {% if include.is_paper %}{% include paper-corner-badge.html paper=include.work %}{% endif %}
   </a>
   {% endif %}
   <div class="work-entry-body">

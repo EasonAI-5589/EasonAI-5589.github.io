@@ -92,7 +92,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,
 .minimal-publications { margin-top:24px; }
 .minimal-publications .bibliography .pub-item { min-height:0; margin-bottom:30px; }
 .minimal-publications .pub-row { display:flex; align-items:center; gap:24px; }
-.minimal-publications .pub-media { flex:0 0 180px; min-width:0; margin:0; }
+.minimal-publications .pub-media { position:relative; flex:0 0 180px; min-width:0; margin:0; }
 .minimal-publications .pub-content { flex:1; min-width:0; }
 .minimal-publications .pub-media > a { display:block; }
 .publications.minimal-publications ol.bibliography li .pub-media img,.minimal-publications .pub-media video { box-sizing:border-box; display:block; width:180px; max-width:100%; height:auto; margin:0; object-fit:contain; border:1px solid var(--rule); border-radius:5px; box-shadow:var(--image-shadow); background:#fff; }
@@ -288,9 +288,11 @@ html[lang="zh-CN"] .pub-summary,html[lang="zh-CN"] .pub-contribution,html[lang="
 .selected-work-cards { display:grid; gap:20px; margin:20px 0 24px; }
 .work-entry { display:grid; grid-template-columns:minmax(220px,32%) minmax(0,1fr); align-items:center; gap:24px; padding:22px; overflow:hidden; }
 .work-entry--text { grid-template-columns:minmax(0,1fr); }
-.work-entry-image { display:block; padding:6px; border:1px solid var(--rule); border-radius:6px; background:#fff; }
+.work-entry-image { position:relative; display:block; padding:6px; border:1px solid var(--rule); border-radius:6px; background:#fff; }
 .work-entry-image img { display:block; width:100%; max-width:100%; height:auto; margin:0; object-fit:contain; }
 .work-entry-image:hover { box-shadow:inset 0 0 0 2px var(--link); }
+.paper-corner-badge { position:absolute; top:6px; left:6px; z-index:1; padding:4px 10px; background:#23429e; color:#fff; font:600 12px/1.2 system-ui,sans-serif; letter-spacing:.01em; box-shadow:0 1px 3px rgba(0,0,0,.18); pointer-events:none; }
+.pub-media .paper-corner-badge { top:0; left:0; }
 .work-entry-body { min-width:0; padding:0; }
 .work-entry-heading { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:4px 12px; margin-bottom:8px; }
 .work-entry-heading h3 { margin:0; font-size:21px; line-height:1.3; }
