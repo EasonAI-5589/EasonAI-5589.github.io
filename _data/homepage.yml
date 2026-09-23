@@ -78,8 +78,10 @@ en:
     - label: "Vision-Language Models (VLMs)"
       text: "Visual token reduction, efficient inference, and hallucination mitigation to improve model efficiency and reliability."
   experience:
-    - logo_text: "清华|五道口"
-      logo_caption: "TSINGHUA PBCSF"
+    - logo: "/assets/logos/tsinghua-pbcsf-emblem.ico"
+      logo_class: ""
+      width: 32
+      height: 32
       institution: "PBC School of Finance, Tsinghua University"
       dates: "Sep 2026–Present"
       role: "Research Affiliate"
@@ -291,8 +293,10 @@ zh:
     - label: "视觉语言模型（VLMs）"
       text: "关注视觉 token 压缩、高效推理与幻觉缓解，探索模型效率与可靠性的提升方法。"
   experience:
-    - logo_text: "清华|五道口"
-      logo_caption: "TSINGHUA PBCSF"
+    - logo: "/assets/logos/tsinghua-pbcsf-emblem.ico"
+      logo_class: ""
+      width: 32
+      height: 32
       institution: "清华大学五道口金融学院"
       dates: "2026 年 9 月至今"
       role: "Research Affiliate"
