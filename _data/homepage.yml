@@ -7,6 +7,8 @@ en:
     about: "About Me"
     news: "News"
     news_heading: "News & Milestones"
+    news_expand: "Show history"
+    news_collapse: "Hide history"
     research: "Research Interests"
     selected_work: "Selected Work"
     ongoing_projects: "Ongoing Projects"
@@ -210,6 +212,8 @@ zh:
   ui:
     news: "最新动态"
     news_heading: "动态与里程碑"
+    news_expand: "展开历史"
+    news_collapse: "收起历史"
     profile_name: "郭奕辰"
     about: "关于我"
     research: "研究方向"

@@ -55,6 +55,11 @@ html { scroll-padding-top:24px; }
 .news-list li { display:flex; align-items:baseline; gap:14px; margin-bottom:8px; }
 .news-list time { flex:none; color:var(--muted); font-variant-numeric:tabular-nums; }
 .news-list span { min-width:0; }
+.news-list li[hidden],.news-toggle[hidden] { display:none; }
+.news-list--collapsible { margin-bottom:12px; }
+.news-toggle { display:block; margin:0 0 28px; padding:7px 13px; min-height:40px; border:1px solid var(--rule); border-radius:4px; background:var(--page-bg); color:var(--link); font:inherit; cursor:pointer; }
+.news-toggle:hover { background:var(--surface); }
+.news-toggle:focus-visible { outline:2px solid var(--link); outline-offset:3px; }
 .interests { padding-left:24px; }
 .interests li { margin-bottom:4px; }
 .phd-opportunities a { font-family:inherit; }
