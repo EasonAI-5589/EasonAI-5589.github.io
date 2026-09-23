@@ -6,6 +6,7 @@ en:
     profile_name: "Yichen Guo"
     about: "About Me"
     news: "News"
+    news_heading: "News & Milestones"
     research: "Research Interests"
     selected_work: "Selected Work"
     ongoing_projects: "Ongoing Projects"
@@ -208,6 +209,7 @@ en:
 zh:
   ui:
     news: "最新动态"
+    news_heading: "动态与里程碑"
     profile_name: "郭奕辰"
     about: "关于我"
     research: "研究方向"

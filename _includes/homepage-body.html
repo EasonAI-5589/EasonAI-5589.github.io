@@ -4,7 +4,7 @@
 {% if locale == 'zh' %}{% assign locale_prefix = '/zh' %}{% endif %}
 {% include about-intro.html %}
 
-<h2 id="news">{{ copy.ui.news }}</h2>
+<h2 id="news">{{ copy.ui.news_heading }}</h2>
 <ul class="news-list">
   {% for item in site.data.news %}
   <li><time datetime="{{ item.date | escape }}">{{ item.date | replace: '-', '.' | escape }}</time><span>{{ item[locale] | escape }}</span></li>
