@@ -5,6 +5,7 @@ en:
   ui:
     profile_name: "Yichen Guo"
     about: "About Me"
+    news: "News"
     research: "Research Interests"
     selected_work: "Selected Work"
     ongoing_projects: "Ongoing Projects"
@@ -206,6 +207,7 @@ en:
       code_note_html: 'Code links to the evaluation development branch, <code>dev-gyc-eval</code>. The <a href="https://github.com/EasonAI-5589/NTU-GIFTS-InferenceNet">project workspace</a> contains the broader project source and documentation. Both repositories require collaborator access.'
 zh:
   ui:
+    news: "最新动态"
     profile_name: "郭奕辰"
     about: "关于我"
     research: "研究方向"

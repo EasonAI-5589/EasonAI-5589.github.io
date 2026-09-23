@@ -51,6 +51,10 @@ html { scroll-padding-top:24px; }
 .display-controls a,.display-controls button { box-sizing:border-box; display:flex; align-items:center; justify-content:center; min-width:30px; height:34px; padding:0 7px; border:0; border-bottom:3px solid transparent; border-radius:3px; background:transparent; color:var(--muted); font:inherit; font-weight:500; text-decoration:none; white-space:nowrap; }
 .display-controls a:hover,.display-controls button:hover { color:var(--strong); background:var(--surface); }
 .display-controls a[aria-current="page"],.display-controls button[aria-pressed="true"] { color:var(--strong); background:var(--surface); border-bottom-color:var(--strong); font-weight:600; }
+.news-list { list-style:none; padding:0; margin:0 0 28px; }
+.news-list li { display:flex; align-items:baseline; gap:14px; margin-bottom:8px; }
+.news-list time { flex:none; color:var(--muted); font-variant-numeric:tabular-nums; }
+.news-list span { min-width:0; }
 .interests { padding-left:24px; }
 .interests li { margin-bottom:4px; }
 .phd-opportunities a { font-family:inherit; }
