@@ -67,6 +67,18 @@
       "bytes": 487900,
       "sha256": "4ecb6a30579cca3a9603235bc65c31b4b41f48c44e2c81f05ba3dc49ac9771b5",
       "modified": false
+    },
+    {
+      "organization": "PBC School of Finance, Tsinghua University",
+      "file": "tsinghua-pbcsf.png",
+      "official_page": "https://eng.pbcsf.tsinghua.edu.cn/",
+      "asset_url": "https://eng.pbcsf.tsinghua.edu.cn/images/logo.png",
+      "retrieved_on": "2026-09-23",
+      "width": 418,
+      "height": 116,
+      "bytes": 22164,
+      "sha256": "2c3fa41e3e5a7fb8db40e56e34c4994c12a2af5f3abf01a3d082712f2d9556a2",
+      "modified": false
     }
   ]
 }

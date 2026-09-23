@@ -78,6 +78,14 @@ en:
     - label: "Vision-Language Models (VLMs)"
       text: "Visual token reduction, efficient inference, and hallucination mitigation to improve model efficiency and reliability."
   experience:
+    - logo: "/assets/logos/tsinghua-pbcsf.png"
+      logo_class: "experience-logo--wordmark"
+      width: 418
+      height: 116
+      institution: "PBC School of Finance, Tsinghua University"
+      dates: "Sep 2026–Present"
+      role: "Research Affiliate"
+      acknowledgement_html: 'Many thanks to <a href="https://www.linwilliamcong.com/">Prof. Lin William Cong</a> and <a href="https://sites.google.com/view/xiaoyanzhang/">Prof. Xiaoyan Zhang</a> for this opportunity.'
     - logo: "/assets/logos/nanyang-technological-university.png"
       logo_class: "experience-logo--shield"
       width: 1042
@@ -285,6 +293,14 @@ zh:
     - label: "视觉语言模型（VLMs）"
       text: "关注视觉 token 压缩、高效推理与幻觉缓解，探索模型效率与可靠性的提升方法。"
   experience:
+    - logo: "/assets/logos/tsinghua-pbcsf.png"
+      logo_class: "experience-logo--wordmark"
+      width: 418
+      height: 116
+      institution: "清华大学五道口金融学院"
+      dates: "2026 年 9 月至今"
+      role: "Research Affiliate"
+      acknowledgement_html: '感谢 <a href="https://www.linwilliamcong.com/">Prof. Lin William Cong</a> 和 <a href="https://sites.google.com/view/xiaoyanzhang/">Prof. Xiaoyan Zhang</a>给予这次机会。'
     - logo: "/assets/logos/nanyang-technological-university.png"
       logo_class: "experience-logo--shield"
       width: 1042
