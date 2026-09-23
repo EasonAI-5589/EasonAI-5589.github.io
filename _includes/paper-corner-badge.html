@@ -1,5 +1,5 @@
 {% if include.paper.status == 'accepted' and include.paper.venue %}
-<span class="paper-corner-badge" aria-label="{{ include.paper.venue | escape }} {{ include.paper.year }} · {{ copy.ui.accepted | escape }}">{{ include.paper.venue | escape }} {{ include.paper.year }}</span>
+<span class="paper-corner-badge paper-corner-badge--venue" aria-label="{{ include.paper.venue | escape }} {{ include.paper.year }} · {{ copy.ui.accepted | escape }}">{{ include.paper.venue | escape }} {{ include.paper.year }}</span>
 {% elsif include.paper.arxiv_id %}
-<span class="paper-corner-badge">arXiv</span>
+<span class="paper-corner-badge paper-corner-badge--arxiv">arXiv</span>
 {% endif %}
