@@ -2,6 +2,9 @@
 # Newest first. Use only the date precision confirmed for each announcement.
 # Use one emoji per category in both languages: 🔬 lab / research appointment; 🎉 paper acceptance; 🎓 education; 💼 industry appointment.
 - date: "2026-09"
+  en: "🎉 RegimeVGGT accepted to NeurIPS 2026! Congratulations to Jinhao You on this excellent work!"
+  zh: "🎉 RegimeVGGT 被 NeurIPS 2026 录用！恭喜 Jinhao You！"
+- date: "2026-09"
   en: "🔬 Joined the PBC School of Finance, Tsinghua University, as a Research Affiliate. Many thanks to Prof. [Lin William Cong](https://www.linwilliamcong.com/) and Prof. [Xiaoyan Zhang](https://sites.google.com/view/xiaoyanzhang/) for this opportunity!"
   zh: "🔬 加入清华大学五道口金融学院，担任 Research Affiliate。感谢 [Lin William Cong](https://www.linwilliamcong.com/) 教授和 [Xiaoyan Zhang](https://sites.google.com/view/xiaoyanzhang/) 教授给予这次机会！"
 - date: "2026-09"
