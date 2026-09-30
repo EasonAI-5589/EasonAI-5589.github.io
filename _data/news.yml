@@ -2,6 +2,9 @@
 # Newest first. Use only the date precision confirmed for each announcement.
 # Use one emoji per category in both languages: 🔬 lab / research appointment; 🎉 paper acceptance; 🎓 education; 💼 industry appointment.
 - date: "2026-09"
+  en: "🎉 ProbTraj accepted as a poster at the NeurIPS 2026 Workshop on Foundation Models for Temporal Systems! Congratulations to the ProbTraj team!"
+  zh: "🎉 ProbTraj 被 NeurIPS 2026 Workshop on Foundation Models for Temporal Systems 以 Poster 形式录用！祝贺 ProbTraj 团队！"
+- date: "2026-09"
   en: "🎉 RegimeVGGT accepted to NeurIPS 2026! Congratulations to Jinhao You on this excellent work!"
   zh: "🎉 RegimeVGGT 被 NeurIPS 2026 录用！祝贺 Jinhao You 完成这项出色的工作！"
 - date: "2026-09"
