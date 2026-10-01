@@ -152,6 +152,9 @@ en:
       dates: "Sep 2021–Jun 2025"
   awards: "International Talent & Leadership Scholarship · Top 1% · 2022"
   papers:
+    "2609.34330":
+      summary: "MICO preprint, available on arXiv."
+      image_alt: "MICO cover showing the project name and arXiv identifier 2609.34330."
     "2609.05916":
       summary: "Training-free visual token reduction that preserves feature coverage, then progressively refines retained tokens as language and vision interact."
       contribution: "As a co-first author, I contributed to the design of adaptive-to-progressive token pruning and its evaluation across vision-language architectures."
@@ -367,6 +370,9 @@ zh:
       dates: "2021 年 9 月至 2025 年 6 月"
   awards: "International Talent & Leadership Scholarship · 前 1% · 2022 年"
   papers:
+    "2609.34330":
+      summary: "MICO 预印本，已在 arXiv 发布。"
+      image_alt: "MICO 封面，展示项目名称与 arXiv 编号 2609.34330。"
     "2609.05916":
       summary: "无需训练的视觉 token 压缩：先保留特征覆盖度，再随语言与视觉交互逐步细化保留的 token。"
       contribution: "作为共同第一作者，我参与了从自适应选择到渐进剪枝的方法设计，以及跨视觉语言模型架构的评测。"

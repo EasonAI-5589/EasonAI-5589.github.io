@@ -14,6 +14,8 @@
     {% for paper in ml_publications %}
       {%- assign paper_key = paper.arxiv_id | default: paper.slug -%}
       {%- assign paper_copy = copy.papers[paper_key] -%}
+      {%- assign paper_year = paper.date | date: '%Y' -%}
+      {%- assign paper_year = paper.year | default: paper_year -%}
       {%- assign paper_media = '' -%}
       {%- assign paper_role = paper_copy.role | default: copy.ui.co_author | default: 'Co-author' -%}
       {%- assign paper_summary = paper_copy.summary | default: paper.excerpt | default: '' | strip_html -%}
@@ -27,6 +29,8 @@
         {%- assign paper_media = 'starpro' -%}
       {%- elsif paper.arxiv_id == '2608.24885' -%}
         {%- assign paper_media = 'worldecho' -%}
+      {%- elsif paper.image -%}
+        {%- assign paper_media = 'image' -%}
       {%- endif -%}
     <li class="pub-item" id="paper-{{ paper.project_id | default: paper.slug | slugify }}">
       <article class="work-card pub-row {% if paper_media != '' %}pub-row--media{% else %}pub-row--text{% endif %}">
@@ -58,13 +62,20 @@
           </a>
           {% include paper-corner-badge.html paper=paper %}
         </figure>
+        {% elsif paper_media == 'image' %}
+        <figure class="pub-media">
+          <a href="{{ paper.paperurl | escape }}" aria-label="{{ copy.ui.paper | escape }}: {{ paper.title | escape }}">
+            <img class="teaser" src="{{ paper.image | relative_url }}" width="{{ paper.image_width }}" height="{{ paper.image_height }}" loading="lazy" alt="{{ paper_image_alt | escape }}">
+          </a>
+          {% include paper-corner-badge.html paper=paper %}
+        </figure>
         {% endif %}
         <div class="pub-content">
           <h3 class="title">{% if paper.paperurl %}<a href="{{ paper.paperurl | escape }}">{{ paper.title | escape }}</a>{% else %}{{ paper.title | escape }}{% endif %}</h3>
-          <p class="author">
+          {% if paper.authors %}<p class="author">
             {{- paper.authors | escape | replace: 'Yichen Guo', '<strong>Yichen Guo</strong>' -}}
-          </p>
-          <p class="periodical">{% if paper.status == 'under_review' and paper.category == 'preprints' %}{{ copy.ui.under_review | default: 'Under review' }} · {{ paper.date | date: '%Y' }}{% elsif paper.category == 'conferences' %}<strong>{{ paper.venue | escape }} {{ paper.year }}{% if paper.status == 'accepted' %} · {{ copy.ui.accepted | default: 'Accepted' }}{% endif %}</strong>{% elsif paper.category == 'preprints' %}{{ copy.ui.preprint | default: 'Preprint' }} · {{ paper.date | date: '%Y' }}{% else %}{{ copy.ui.manuscript | default: 'Manuscript' }} · {{ paper.year }}{% endif %} · <span class="pub-role">{{ paper_role }}</span></p>
+          </p>{% endif %}
+          <p class="periodical">{% if paper.status == 'under_review' and paper.category == 'preprints' %}{{ copy.ui.under_review | default: 'Under review' }} · {{ paper_year }}{% elsif paper.category == 'conferences' %}<strong>{{ paper.venue | escape }} {{ paper.year }}{% if paper.status == 'accepted' %} · {{ copy.ui.accepted | default: 'Accepted' }}{% endif %}</strong>{% elsif paper.category == 'preprints' %}{{ copy.ui.preprint | default: 'Preprint' }} · {{ paper_year }}{% else %}{{ copy.ui.manuscript | default: 'Manuscript' }} · {{ paper.year }}{% endif %}{% if paper.authors %} · <span class="pub-role">{{ paper_role }}</span>{% endif %}</p>
           {% if paper_summary != '' %}<p class="pub-summary">{{ paper_summary | escape }}</p>{% endif %}
           {% if paper_contribution != '' %}<p class="pub-contribution"><strong>{{ copy.ui.contribution | default: 'My contribution' }}:</strong> {{ paper_contribution | escape }}</p>{% endif %}
           {%- assign paper_huggingface_url = paper.huggingfaceurl | default: '' | strip -%}

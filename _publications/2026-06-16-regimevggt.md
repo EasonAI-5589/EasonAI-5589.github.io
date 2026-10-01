@@ -2,7 +2,7 @@
 title: "RegimeVGGT: Layer-Wise Spatially Preserving Redundancy Removal for Visual Geometry Grounded Transformer"
 collection: publications
 category: conferences
-selected_order: 4
+selected_order: 5
 project_id: regimevggt
 project_name: RegimeVGGT
 image: /assets/research/regimevggt-method.png

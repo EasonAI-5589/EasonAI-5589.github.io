@@ -87,7 +87,7 @@ class BilingualRoutes(unittest.TestCase):
         for route in ['/', '/zh/', '/projects/', '/zh/projects/']:
             with self.subTest(route=route):
                 entries = self.page(route).entries
-                self.assertEqual(len(entries), 5, 'All listed works need project entry cards')
+                self.assertEqual(len(entries), 6, 'All listed works need project entry cards')
                 for entry in entries:
                     self.assertEqual(len(entry['images']), 1)
                     self.assertEqual(entry['details'], 0, 'Entry cards should navigate, not expand inline')
@@ -111,7 +111,7 @@ class BilingualRoutes(unittest.TestCase):
 
     def test_work_panels_keep_selected_and_ongoing_entries_separate(self):
         expected = {
-            'selected': ['paper-starpro', 'paper-worldecho-worldsync',
+            'selected': ['paper-starpro', 'paper-worldecho-worldsync', 'paper-mico',
                          'paper-safedojo', 'paper-regimevggt'],
             'ongoing': ['inferencenet'],
         }
@@ -166,7 +166,7 @@ class BilingualRoutes(unittest.TestCase):
                 self.assertEqual(len(ids), len(set(ids)), 'Duplicate anchors break tab and project navigation')
 
     def test_language_switch_keeps_same_page(self):
-        pairs = ['/', '/publications/', '/projects/', '/projects/safedojo/', '/projects/regimevggt/']
+        pairs = ['/', '/publications/', '/projects/', '/projects/mico/', '/projects/safedojo/', '/projects/regimevggt/']
         cases = [(route, '/zh' + route, 'en') for route in pairs]
         cases += [('/zh' + route, route, 'zh-CN') for route in pairs]
         for route, counterpart, lang in cases:
@@ -193,5 +193,16 @@ class BilingualRoutes(unittest.TestCase):
         for p in [en, zh, full_en, full_zh]:
             self.assertEqual(len(p.ids), len(set(p.ids)), 'Duplicate anchors break navigation')
             self.assertGreater(len(p.papers), 0)
+
+    def test_mico_paper_link_is_available_in_both_languages(self):
+        for route in ['/', '/zh/', '/projects/', '/zh/projects/',
+                      '/publications/', '/zh/publications/',
+                      '/projects/mico/', '/zh/projects/mico/']:
+            with self.subTest(route=route):
+                page = self.page(route)
+                self.assertTrue(any(a.get('href') == 'https://arxiv.org/abs/2609.34330'
+                                    for a in page.links), f'Missing MICO paper link: {route}')
+                if not route.endswith('/mico/'):
+                    self.assertIn('paper-mico', page.papers)
 
 if __name__ == '__main__': unittest.main()
