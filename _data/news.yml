@@ -2,8 +2,8 @@
 # Newest first. Use only the date precision confirmed for each announcement.
 # Use one emoji per category in both languages: 🔬 lab / research appointment; 🎉 paper acceptance; 🎓 education; 💼 industry appointment.
 - date: "2026-09"
-  en: "📄 New preprint: [MICO](https://arxiv.org/abs/2609.34330)."
-  zh: "📄 新预印本：[MICO](https://arxiv.org/abs/2609.34330)。"
+  en: "📄 New preprint: [MiCo](https://arxiv.org/abs/2609.34330), training-free visual token pruning through mutual information coverage optimization."
+  zh: "📄 新预印本：[MiCo](https://arxiv.org/abs/2609.34330)，通过互信息覆盖优化开展无需训练的视觉 token 剪枝。"
 - date: "2026-09"
   en: "🎉 ProbTraj accepted as a poster at the NeurIPS 2026 Workshop on Foundation Models for Temporal Systems! This has been a wonderful journey at Binance!"
   zh: "🎉 ProbTraj 被 NeurIPS 2026 Workshop on Foundation Models for Temporal Systems 以 Poster 形式录用！祝贺 ProbTraj 团队！"

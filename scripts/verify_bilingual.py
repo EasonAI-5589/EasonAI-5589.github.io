@@ -9,6 +9,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
 import sys
+import struct
 import unittest
 
 ROOT = Path(sys.argv.pop(1) if len(sys.argv) > 1 else '_site')
@@ -20,6 +21,9 @@ class Page(HTMLParser):
         self.links = []
         self.ids = []
         self.papers = []
+        self.paper_details = {}
+        self.text = []
+        self.images = []
         self.entries = []
         self.entry = None
         self.work_switchers = []
@@ -30,10 +34,17 @@ class Page(HTMLParser):
     def handle_starttag(self, tag, attrs):
         data = dict(attrs)
         context = dict(self._elements[-1]) if self._elements else {
-            'switcher': None, 'panel': None, 'tab': None, 'aria_hidden': False,
+            'switcher': None, 'panel': None, 'tab': None, 'paper': None, 'aria_hidden': False,
         }
         context['tag'] = tag
         context['aria_hidden'] = context['aria_hidden'] or data.get('aria-hidden') == 'true'
+        if 'pub-item' in data.get('class', '').split():
+            context['paper'] = {'text': [], 'images': []}
+            self.paper_details[data.get('id')] = context['paper']
+        if tag == 'img':
+            self.images.append(data)
+            if context['paper'] is not None:
+                context['paper']['images'].append(data)
         if 'data-work-switcher' in data:
             context['switcher'] = {'tabs': [], 'panels': []}
             self.work_switchers.append(context['switcher'])
@@ -66,6 +77,10 @@ class Page(HTMLParser):
             self._elements.append(context)
 
     def handle_data(self, data):
+        if self._elements and not self._elements[-1]['aria_hidden']:
+            self.text.append(data)
+            if self._elements[-1]['paper'] is not None:
+                self._elements[-1]['paper']['text'].append(data)
         if (self._elements and not self._elements[-1]['aria_hidden']
                 and self._elements[-1]['tab'] is not None):
             self._elements[-1]['tab']['label'] += data
@@ -204,5 +219,48 @@ class BilingualRoutes(unittest.TestCase):
                                     for a in page.links), f'Missing MICO paper link: {route}')
                 if not route.endswith('/mico/'):
                     self.assertIn('paper-mico', page.papers)
+
+    def test_mico_has_real_figures_ordered_authors_and_complete_project_pages(self):
+        authors = ('Tinghao Wang, Yichen Guo, Qizhe Zhang, Yuan Zhang, '
+                   'Weimin Ouyang, Rui Huang, Jiajun Cao, Sixiang Chen, '
+                   'Hao Jiang, Jixian Wu, Zheng Lu, Bofan Zhu, Renyuan Li, '
+                   'Shanghang Zhang')
+        title = ('MiCo: Mutual Information Coverage Optimization through '
+                 'Semantic Erasure Modeling for Efficient MLLM Inference')
+        hero = '/assets/research/mico-method.png'
+        experiment = '/assets/research/mico-efficiency.png'
+        for route in ['/', '/zh/', '/projects/', '/zh/projects/',
+                      '/publications/', '/zh/publications/',
+                      '/projects/mico/', '/zh/projects/mico/']:
+            with self.subTest(route=route):
+                page = self.page(route)
+                if route.endswith('/mico/'):
+                    text = ' '.join(''.join(page.text).split())
+                    images = page.images
+                    for section in ['overview', 'method', 'evaluation', 'resources']:
+                        self.assertIn(section, page.ids)
+                    self.assertIn(experiment, [img.get('src') for img in images])
+                    self.assertTrue(any(a.get('href') == 'https://arxiv.org/html/2609.34330v2'
+                                        for a in page.links))
+                    self.assertGreater(len(text), 900, 'Project page still contains only a placeholder')
+                else:
+                    paper = page.paper_details['paper-mico']
+                    text = ' '.join(''.join(paper['text']).split())
+                    images = paper['images']
+                    self.assertIn(title, text)
+                self.assertIn(authors, text, 'Missing or reordered MiCo authors')
+                self.assertIn('共同第一作者' if route.startswith('/zh/')
+                              else 'Co-first author', text)
+                self.assertIn(hero, [img.get('src') for img in images])
+                self.assertFalse(any('mico-cover.svg' in img.get('src', '') for img in images))
+                for img in images:
+                    if img.get('src') not in [hero, experiment]:
+                        continue
+                    asset = ROOT / img['src'].lstrip('/')
+                    with asset.open('rb') as handle:
+                        header = handle.read(24)
+                    self.assertEqual(header[:8], b'\x89PNG\r\n\x1a\n')
+                    self.assertEqual(struct.unpack('>II', header[16:24]),
+                                     (int(img['width']), int(img['height'])))
 
 if __name__ == '__main__': unittest.main()

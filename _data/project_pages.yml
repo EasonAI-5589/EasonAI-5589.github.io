@@ -1,5 +1,48 @@
 # 独立项目介绍页：链接、图片为共享资产；显示文案按 en / zh 对照维护。
 # 标题、原作者列表和论文状态读取 _publications/，避免维护两套事实。
+mico:
+  name: MiCo
+  arxiv_id: "2609.34330"
+  source_url: "https://arxiv.org/html/2609.34330v2"
+  hero:
+    src: /assets/research/mico-method.png
+    width: 2044
+    height: 859
+  evaluation_figure:
+    src: /assets/research/mico-efficiency.png
+    width: 858
+    height: 487
+  en:
+    subtitle: "Mutual Information Coverage Optimization through Semantic Erasure Modeling for Efficient MLLM Inference"
+    overview: "MiCo reduces the cost of multimodal language model inference without additional training. Through a semantic erasure model, it derives a mutual information coverage objective from task log-loss. Rather than ranking visual tokens independently, it selects a subset that covers useful visual information: first from visual features, then with task-aware signals inside the language model."
+    hero_alt: "MiCo's two-stage inference pipeline, stage-specific information and attention signals, and greedy mutual information coverage selection."
+    hero_caption: "The two-stage pruning framework and coverage selector, reproduced from Figure 2 of the paper (arXiv v2)."
+    method:
+      - title: "Build a representative visual candidate pool"
+        text: "Before the language model, Stage 1 combines visual feature norms with vision-encoder CLS attention. It retains a larger candidate pool to preserve visual coverage before the tokens interact with the question."
+      - title: "Refine the subset using the task"
+        text: "At a selected decoder layer, Stage 2 combines contextualized feature norms with text-to-visual attention. It selects a smaller subset that covers information relevant to the current question."
+      - title: "Optimize weighted coverage greedily"
+        text: "Both stages use nonnegative cosine similarity to measure how well retained tokens represent the source positions. Tokens are added by their marginal weighted coverage gain until the budget is reached. The observable coverage objective is monotone and submodular, giving greedy selection a 1 − 1/e approximation under a cardinality constraint."
+    evaluation: "The paper evaluates eight image models and one video model across visual reasoning, OCR, grounding, hallucination detection, and long-video understanding. On LLaVA-NeXT-13B, it reports retaining 97.5% of average baseline performance with 5.6% of visual tokens and about 3.8× one-token inference speedup. The NeXT timing protocol uses one A800 80GB GPU, batch size one, and excludes loading, preprocessing, and host-to-device transfer. On LLaVA-Video-7B at 16 tokens per frame, MiCo retains 93.0% of average baseline performance with a 2.31× complete-answer speedup. Full benchmark results, ablations, and limitations are in the paper."
+    evaluation_alt: "Performance versus speedup and latency-component breakdowns for MiCo on LLaVA-NeXT-7B and LLaVA-Video-7B."
+    evaluation_caption: "Performance–efficiency trade-offs and latency breakdowns, reproduced from Figure 3 (arXiv v2). NeXT uses one-token latency; Video uses complete-answer latency."
+  zh:
+    subtitle: "通过语义擦除建模进行互信息覆盖优化，实现高效多模态大语言模型推理"
+    overview: "MiCo 无需额外训练即可降低多模态大语言模型的推理成本。它通过语义擦除模型，从任务对数损失推导互信息覆盖目标。方法选择能够覆盖有用视觉信息的 token 子集：先依据视觉特征建立候选池，再在语言模型内部结合任务相关信号进行细化。"
+    hero_alt: "MiCo 两阶段推理流程、各阶段的信息量与注意力信号，以及贪心互信息覆盖选择。"
+    hero_caption: "两阶段剪枝框架与覆盖选择器，图自论文 Figure 2（arXiv v2）。"
+    method:
+      - title: "建立有代表性的视觉候选池"
+        text: "视觉 token 进入语言模型之前，第一阶段结合视觉特征范数与视觉编码器的 CLS 注意力，保留较大的候选池，在尚未与问题交互时维持视觉信息覆盖。"
+      - title: "依据当前任务细化子集"
+        text: "在选定的解码器层，第二阶段结合上下文化的特征范数与文本到视觉的注意力，进一步选择覆盖当前问题相关信息的较小子集。"
+      - title: "贪心优化加权覆盖目标"
+        text: "两个阶段均使用非负余弦相似度，衡量保留 token 对各源位置的代表程度；按边际加权覆盖增益逐个加入 token，直到达到预算。该可观测覆盖目标具有单调性与次模性，在基数约束下，贪心选择具有 1 − 1/e 的近似保证。"
+    evaluation: "论文在八个图像模型与一个视频模型上评测视觉推理、OCR、定位、幻觉检测和长视频理解。在 LLaVA-NeXT-13B 上，论文报告仅保留 5.6% 的视觉 token，维持平均基线性能的 97.5%，单 token 推理加速约 3.8 倍。NeXT 计时使用单张 A800 80GB、batch size 1，不包含模型加载、预处理与主机到设备的数据传输。在 LLaVA-Video-7B 每帧保留 16 个 token 时，MiCo 维持平均基线性能的 93.0%，完整回答生成加速 2.31 倍。完整基准结果、消融实验与局限见原论文。"
+    evaluation_alt: "MiCo 在 LLaVA-NeXT-7B 与 LLaVA-Video-7B 上的性能与加速比曲线，以及延迟组成分析。"
+    evaluation_caption: "性能与效率权衡及延迟组成，图自论文 Figure 3（arXiv v2）。NeXT 使用单 token 延迟，Video 使用完整回答延迟。"
+
 safedojo:
   name: SafeDojo
   arxiv_id: "2606.20698"

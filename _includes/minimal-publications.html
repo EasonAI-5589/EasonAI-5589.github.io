@@ -64,7 +64,7 @@
         </figure>
         {% elsif paper_media == 'image' %}
         <figure class="pub-media">
-          <a href="{{ paper.paperurl | escape }}" aria-label="{{ copy.ui.paper | escape }}: {{ paper.title | escape }}">
+          <a data-zoom href="{{ paper.image | relative_url }}" aria-label="{{ copy.ui.view_figure | escape }}: {{ paper.project_name | default: paper.title | escape }}">
             <img class="teaser" src="{{ paper.image | relative_url }}" width="{{ paper.image_width }}" height="{{ paper.image_height }}" loading="lazy" alt="{{ paper_image_alt | escape }}">
           </a>
           {% include paper-corner-badge.html paper=paper %}

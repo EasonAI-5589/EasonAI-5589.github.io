@@ -4,6 +4,7 @@
 {%- assign project_ui = site.data.project_pages.ui[project_locale] -%}
 {%- assign project_site_copy = site.data.homepage[project_locale] -%}
 {%- assign project_paper = site.publications | where: 'project_id', page.project_id | first -%}
+{%- assign project_paper_copy = project_site_copy.papers[project_paper.arxiv_id] -%}
 {%- assign project_home = '/' -%}
 {%- if project_locale == 'zh' -%}{%- assign project_home = '/zh/' -%}{%- endif -%}
 <article class="project-detail publication-detail">
@@ -13,7 +14,7 @@
     <h1>{{ project_data.name | escape }}</h1>
     <p class="project-detail-subtitle">{{ project_copy.subtitle | escape }}</p>
     <p class="authors">{{ project_paper.authors | escape | replace: 'Yichen Guo', '<strong>Yichen Guo</strong>' }}</p>
-    <p class="small-note project-detail-role">{{ project_site_copy.ui.profile_name | escape }} · {{ project_site_copy.ui.co_author }}</p>
+    <p class="small-note project-detail-role">{{ project_site_copy.ui.profile_name | escape }} · {{ project_paper_copy.role | default: project_site_copy.ui.co_author | escape }}</p>
     <p class="small-note project-detail-source">{{ project_ui.page_note }}</p>
     <div class="paper-links project-detail-resources">
       <a class="btn btn-sm" href="{{ project_paper.paperurl | escape }}">{{ project_ui.paper }}</a>
@@ -52,6 +53,14 @@
   <section aria-labelledby="evaluation">
     <h2 id="evaluation">{{ project_ui.evaluation }}</h2>
     <p>{{ project_copy.evaluation | escape }}</p>
+    {% if project_data.evaluation_figure %}
+    <figure class="project-detail-figure paper-figure">
+      <a data-zoom href="{{ project_data.evaluation_figure.src | relative_url }}" aria-label="{{ project_site_copy.ui.view_figure | escape }}: {{ project_ui.evaluation | escape }}">
+        <img src="{{ project_data.evaluation_figure.src | relative_url }}" width="{{ project_data.evaluation_figure.width }}" height="{{ project_data.evaluation_figure.height }}" loading="lazy" alt="{{ project_copy.evaluation_alt | escape }}">
+      </a>
+      <figcaption>{{ project_copy.evaluation_caption | escape }} <a href="{{ project_data.source_url | escape }}">{{ project_ui.full_text }}</a></figcaption>
+    </figure>
+    {% endif %}
   </section>
 
   <section aria-labelledby="resources">
