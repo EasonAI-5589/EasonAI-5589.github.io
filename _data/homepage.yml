@@ -86,29 +86,32 @@ en:
       dates: "Sep 2026–Present"
       role: "Research Affiliate"
       supervisor_html: '<a href="https://sites.google.com/view/xiaoyanzhang/">Prof. Xiaoyan Zhang</a>'
+      points:
+        - "Analyzed 1,740 human ratings of eight financial AI systems across 50 tasks using matched question–rater comparisons, two-way bootstrap uncertainty estimates, and fixed-effects models."
+        - "Diagnosed financial-reasoning failures through six-dimensional error decomposition and response-level evidence audits; developed technical reports and regression-test proposals targeting temporal grounding and conditional reasoning."
     - logo: "/assets/logos/nanyang-technological-university.png"
       logo_class: "experience-logo--shield"
       width: 1042
       height: 1042
       institution: "GIFTS, Nanyang Technological University"
-      dates: "May 2026–Present"
-      role: "Research Affiliate · DEFT Lab"
+      dates: "Apr 2026–Present"
+      role: "Research Affiliate · DEFT Lab · Singapore"
       supervisor_html: '<a href="https://www.linwilliamcong.com/about">Prof. Lin William Cong</a>'
       points:
-        - "Researching AI agents for finance and empirical research, including financial and econometric reasoning, tool use, and agent evaluation."
-        - "Contributing to InferenceNet through evaluation pipelines and reproducibility audits for agents that carry out empirical studies in economics and finance."
+        - "Develop agent-evaluation workflows integrating task ingestion, model-generated analysis, controlled Python execution, and statistical-result validation for empirical economics and finance."
+        - "Audit coefficients, standard errors, and significance measures with explicit task denominators, failure classifications, and versioned evaluation artifacts."
     - logo: "/assets/logos/peking-university-emblem.png"
       logo_class: ""
       width: 360
       height: 360
-      institution: "HMI Lab, Peking University"
+      institution: "HMI Lab, School of Computer Science, Peking University"
       dates: "Jul 2025–Present"
-      role: "Research Assistant · School of Computer Science"
+      role: "Research Assistant · China"
       supervisor_html: '<a href="https://www.ai.pku.edu.cn/en/info/1459/2068.htm">Prof. Shanghang Zhang</a>'
       points:
-        - "Working on efficient vision-language models through STAR-Pro, combining adaptive visual token selection with progressive refinement inside the language decoder."
-        - "Studying reliable multimodal reasoning and hallucination mitigation by reducing the dominance of language priors."
-        - "Exploring robotic world models, with a focus on action following, model evaluation, and policy learning."
+        - "Co-first author of STAR-Pro: adaptive visual-token selection and progressive decoder refinement, evaluated across model architectures for inference efficiency and task accuracy."
+        - "Contribute to MiCo / MiCo+ evaluation of training-free visual-token pruning via information-coverage objectives, spanning visual reasoning, grounding, hallucination, and video benchmarks."
+        - "Core contributor to WorldEcho / WorldSync: diagnose action-following errors in robotic world models and study generation alignment for downstream policy learning."
     - logo: "/assets/logos/binance.png"
       logo_class: ""
       width: 200
@@ -118,9 +121,8 @@ en:
       role: "Data Science Intern · Remote"
       supervisor_html: "Harvin Wang"
       points:
-        - "Contributing to Binance Ai Pro and multi-agent cryptocurrency trading workflows for market analysis, strategy reasoning, and trading-signal generation."
-        - "Supporting agent post-training through supervised fine-tuning and reinforcement learning, alongside model inference and deployment."
-        - "Working on agent harnesses that connect models with tools, execution workflows, and evaluation for financial tasks."
+        - "Contribute to financial-agent SFT/RL post-training, tool-execution harnesses, and inference-serving workflows for market analysis and trading-signal generation."
+        - "First author of ProbTraj: trajectory-based SFT and outcome-guided RL for probabilistic forecasting from frozen evidence, with forecast-quality and valid-output evaluation."
     - logo: "/assets/logos/tencent-vertical.png"
       logo_class: "experience-logo--wordmark"
       width: 1915
@@ -130,19 +132,19 @@ en:
       role: "Data Scientist Intern · Singapore"
       supervisor_html: "Don Li"
       points:
-        - "Conducted LLM post-training for game-specific language understanding, generation, and interactive decision-making."
-        - "Built multi-agent economic simulations with agent coordination, resource dynamics, and simulation workflows."
+        - "Conducted domain-specific LLM post-training for game-related language understanding, content generation, and interactive decision-making."
+        - "Built multi-agent economic simulations to study agent coordination and resource-allocation dynamics through structured interactions and environment feedback."
     - logo: "/assets/logos/harvard-university-shield.png"
       logo_class: "experience-logo--shield"
       width: 512
       height: 512
       institution: "Harvard AI and Robotics Lab, Harvard University"
       dates: "Sep–Nov 2025"
-      role: "Visiting Student · Remote"
+      role: "Visiting Student · United States (Remote)"
       supervisor_html: '<a href="https://eye.hms.harvard.edu/mengyuwang">Prof. Mengyu Wang</a>'
       points:
-        - "Studied multi-objective reinforcement learning for financial agents and LLM-powered trading scenarios."
-        - "Explored multimodal visual-memory reasoning for medical models, including memory-enhanced post-training, multi-image inference, supervised fine-tuning, and GRPO."
+        - "Continue post-visit collaboration as a ReMAP project leader, studying global/local latent visual memory and RL-trained memory-access policies for multimodal reasoning."
+        - "Studied multi-image medical reasoning with SFT and GRPO, alongside multi-objective reinforcement learning for financial-agent decision-making."
   education:
     - institution: "Nanyang Technological University"
       degree: "M.Eng. (by Research), Computer Science & Engineering"
@@ -311,29 +313,32 @@ zh:
       dates: "2026 年 9 月至今"
       role: "Research Affiliate"
       supervisor_html: '<a href="https://sites.google.com/view/xiaoyanzhang/">Prof. Xiaoyan Zhang</a>'
+      points:
+        - "分析八个金融 AI 系统在 50 项任务上的 1,740 份人工评分，采用题目—评分人配对比较、双向 bootstrap 不确定性估计和固定效应模型。"
+        - "通过六维错误分解与回答级证据审计，诊断金融推理失败；围绕时间依据核验和条件推理，编写技术报告并提出回归测试方案。"
     - logo: "/assets/logos/nanyang-technological-university.png"
       logo_class: "experience-logo--shield"
       width: 1042
       height: 1042
       institution: "南洋理工大学 GIFTS"
-      dates: "2026 年 5 月至今"
-      role: "Research Affiliate · DEFT Lab"
+      dates: "2026 年 4 月至今"
+      role: "Research Affiliate · DEFT Lab · 新加坡"
       supervisor_html: '<a href="https://www.linwilliamcong.com/about">Prof. Lin William Cong</a>'
       points:
-        - "研究服务于金融与实证研究的 AI 智能体，包括金融与计量经济学推理、工具调用及智能体评测。"
-        - "参与 InferenceNet 的评测流程与可复现性审计，评估智能体完成经济学和金融实证研究的能力。"
+        - "开发面向经济学与金融实证研究的智能体评测流程，整合任务输入、模型生成分析、受控 Python 执行和统计结果验证。"
+        - "审计回归系数、标准误和显著性指标，明确任务统计分母、失败分类，并维护版本化评测产物。"
     - logo: "/assets/logos/peking-university-emblem.png"
       logo_class: ""
       width: 360
       height: 360
-      institution: "北京大学 HMI Lab"
+      institution: "北京大学计算机学院 HMI Lab"
       dates: "2025 年 7 月至今"
-      role: "研究助理 · 计算机学院"
+      role: "研究助理 · 中国"
       supervisor_html: '<a href="https://cs.pku.edu.cn/info/1086/1735.htm">Prof. Shanghang Zhang</a>'
       points:
-        - "通过 STAR-Pro 研究高效视觉语言模型，将自适应视觉 token 选择与语言解码器内的渐进细化相结合。"
-        - "研究可靠的多模态推理，通过减弱语言先验的过度主导来缓解幻觉。"
-        - "探索机器人世界模型，关注动作遵循、模型评测与策略学习。"
+        - "STAR-Pro 共同第一作者：研究自适应视觉 token 选择与渐进式解码器细化，跨模型架构评测推理效率和任务准确率。"
+        - "参与 MiCo / MiCo+ 基于信息覆盖目标的免训练视觉 token 剪枝评测，覆盖视觉推理、定位、幻觉和视频基准。"
+        - "WorldEcho / WorldSync 核心贡献者：诊断机器人世界模型的动作遵循错误，研究服务于下游策略学习的生成对齐方法。"
     - logo: "/assets/logos/binance.png"
       logo_class: ""
       width: 200
@@ -343,9 +348,8 @@ zh:
       role: "数据科学实习生 · 远程"
       supervisor_html: "Harvin Wang"
       points:
-        - "参与 Binance Ai Pro 与多智能体加密货币交易流程，支持市场分析、策略推理及交易信号生成。"
-        - "通过监督微调和强化学习支持智能体后训练，并参与模型推理与部署。"
-        - "构建面向金融任务的智能体运行框架，连接模型、工具、执行流程与评测。"
+        - "参与金融智能体的 SFT/RL 后训练、工具执行框架和推理服务流程，支持市场分析与交易信号生成。"
+        - "ProbTraj 第一作者：结合基于轨迹的 SFT 与结果引导的 RL，在固定证据条件下开展概率预测，并评测预测质量和有效输出。"
     - logo: "/assets/logos/tencent-vertical.png"
       logo_class: "experience-logo--wordmark"
       width: 1915
@@ -355,19 +359,19 @@ zh:
       role: "数据科学实习生 · 新加坡"
       supervisor_html: "Don Li"
       points:
-        - "开展面向游戏场景的大语言模型后训练，支持语言理解、生成与交互式决策。"
-        - "构建多智能体经济仿真，涉及智能体协作、资源动态与仿真流程。"
+        - "开展面向游戏领域的大语言模型后训练，支持语言理解、内容生成和交互式决策。"
+        - "构建多智能体经济仿真，通过结构化交互与环境反馈研究智能体协作和资源分配动态。"
     - logo: "/assets/logos/harvard-university-shield.png"
       logo_class: "experience-logo--shield"
       width: 512
       height: 512
       institution: "哈佛大学 Harvard AI and Robotics Lab"
       dates: "2025 年 9 月至 11 月"
-      role: "访问学生 · 远程"
+      role: "访问学生 · 美国（远程）"
       supervisor_html: '<a href="https://eye.hms.harvard.edu/mengyuwang">Prof. Mengyu Wang</a>'
       points:
-        - "研究金融智能体及大语言模型交易场景中的多目标强化学习。"
-        - "探索医疗模型的多模态视觉记忆推理，包括记忆增强后训练、多图推理、监督微调与 GRPO。"
+        - "访问结束后继续以 ReMAP 项目负责人的身份合作，研究面向多模态推理的全局／局部隐空间视觉记忆，以及通过强化学习训练的记忆调用策略。"
+        - "使用 SFT 和 GRPO 研究多图像医疗推理，同时研究面向金融智能体决策的多目标强化学习。"
   education:
     - institution: "南洋理工大学"
       degree: "计算机科学与工程 · 研究型工学硕士"
