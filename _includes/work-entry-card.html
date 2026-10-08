@@ -17,6 +17,7 @@
       <span class="work-entry-status">{% if include.work.status == 'ongoing' %}{{ copy.ui.ongoing }}{% elsif include.work.status == 'accepted' %}{{ copy.ui.accepted }}{% elsif include.work.status == 'under_review' %}{{ copy.ui.under_review }} · {{ entry_year }}{% else %}{{ copy.ui.preprint }} · {{ entry_year }}{% endif %}</span>
     </div>
     {% if include.is_paper and include.work.authors %}<p class="work-entry-authors">{{ include.work.authors | escape | replace: 'Yichen Guo', '<strong>Yichen Guo</strong>' }}</p>{% endif %}
+    {% if include.display.authors_note %}<p class="small-note">{{ include.display.authors_note | escape }}</p>{% endif %}
     <p class="work-entry-summary">{{ include.display.card_summary | default: include.display.summary }}</p>
     {% if include.display.role %}<p class="work-entry-role">{{ include.display.role }}</p>{% endif %}
     {% assign entry_contribution = include.display.card_contribution | default: include.display.contribution | strip %}

@@ -2,7 +2,7 @@
 title: "Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned Generation for Policy Learning"
 collection: publications
 category: preprints
-selected_order: 2
+selected_order: 4
 project_id: worldecho-worldsync
 project_name: WorldEcho / WorldSync
 image: /assets/research/worldecho-overview.png

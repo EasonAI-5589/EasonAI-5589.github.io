@@ -102,7 +102,7 @@ class BilingualRoutes(unittest.TestCase):
         for route in ['/', '/zh/', '/projects/', '/zh/projects/']:
             with self.subTest(route=route):
                 entries = self.page(route).entries
-                self.assertEqual(len(entries), 6, 'All listed works need project entry cards')
+                self.assertEqual(len(entries), 7, 'All listed works need project entry cards')
                 for entry in entries:
                     self.assertEqual(len(entry['images']), 1)
                     self.assertEqual(entry['details'], 0, 'Entry cards should navigate, not expand inline')
@@ -126,8 +126,8 @@ class BilingualRoutes(unittest.TestCase):
 
     def test_work_panels_keep_selected_and_ongoing_entries_separate(self):
         expected = {
-            'selected': ['paper-starpro', 'paper-worldecho-worldsync', 'paper-mico',
-                         'paper-safedojo', 'paper-regimevggt'],
+            'selected': ['paper-starpro', 'paper-mico', 'paper-remap',
+                         'paper-worldecho-worldsync', 'paper-regimevggt', 'paper-safedojo'],
             'ongoing': ['inferencenet'],
         }
         for route in ['/', '/zh/', '/projects/', '/zh/projects/']:
@@ -181,7 +181,7 @@ class BilingualRoutes(unittest.TestCase):
                 self.assertEqual(len(ids), len(set(ids)), 'Duplicate anchors break tab and project navigation')
 
     def test_language_switch_keeps_same_page(self):
-        pairs = ['/', '/publications/', '/projects/', '/projects/mico/', '/projects/safedojo/', '/projects/regimevggt/']
+        pairs = ['/', '/publications/', '/projects/', '/projects/mico/', '/projects/remap/', '/projects/safedojo/', '/projects/regimevggt/']
         cases = [(route, '/zh' + route, 'en') for route in pairs]
         cases += [('/zh' + route, route, 'zh-CN') for route in pairs]
         for route, counterpart, lang in cases:

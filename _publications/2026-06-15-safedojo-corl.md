@@ -2,7 +2,7 @@
 title: "SafeDojo: Safe Reinforcement Learning for VLA via Interactive World Model"
 collection: publications
 category: conferences
-selected_order: 4
+selected_order: 6
 project_id: safedojo
 project_name: SafeDojo
 image: /assets/research/safedojo-method.png

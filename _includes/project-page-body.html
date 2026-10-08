@@ -14,11 +14,13 @@
     <h1>{{ project_data.name | escape }}</h1>
     <p class="project-detail-subtitle">{{ project_copy.subtitle | escape }}</p>
     <p class="authors">{{ project_paper.authors | escape | replace: 'Yichen Guo', '<strong>Yichen Guo</strong>' }}</p>
+    {% if project_paper_copy.authors_note %}<p class="small-note">{{ project_paper_copy.authors_note | escape }}</p>{% endif %}
     <p class="small-note project-detail-role">{{ project_site_copy.ui.profile_name | escape }} · {{ project_paper_copy.role | default: project_site_copy.ui.co_author | escape }}</p>
     <p class="small-note project-detail-source">{{ project_ui.page_note }}</p>
     <div class="paper-links project-detail-resources">
       <a class="btn btn-sm" href="{{ project_paper.paperurl | escape }}">{{ project_ui.paper }}</a>
       <a class="btn btn-sm" href="{{ project_data.source_url | escape }}">{{ project_ui.full_text }}</a>
+      {% if project_paper.codeurl %}<a class="btn btn-sm" href="{{ project_paper.codeurl | escape }}">{{ project_site_copy.ui.code | default: 'Code' }}</a>{% endif %}
     </div>
   </header>
 

@@ -152,6 +152,12 @@ en:
       dates: "Sep 2021–Jun 2025"
   awards: "International Talent & Leadership Scholarship · Top 1% · 2022"
   papers:
+    "2610.05097":
+      summary: "Global and local latent visual memories restore visual grounding during reasoning; a reinforcement-learning policy decides when to retrieve each type of evidence."
+      contribution: "Project leader, working on latent visual memory and learned memory-access policies for multimodal reasoning."
+      role: "Project Leader"
+      authors_note: "* Equal contribution · † Project leaders"
+      image_alt: "ReMAP combines global scene context, local region evidence, and reinforcement-learned memory access during multimodal reasoning."
     "2609.34330":
       summary: "Training-free, two-stage visual token pruning that maximizes mutual information coverage: select a representative visual pool, then refine it with task-aware signals."
       role: "Co-first author"
@@ -371,6 +377,12 @@ zh:
       dates: "2021 年 9 月至 2025 年 6 月"
   awards: "International Talent & Leadership Scholarship · 前 1% · 2022 年"
   papers:
+    "2610.05097":
+      summary: "通过全局与局部潜在视觉记忆，在推理过程中补充视觉证据；强化学习策略决定何时检索哪类记忆。"
+      contribution: "担任项目负责人，参与潜在视觉记忆与多模态推理中记忆访问策略的研究。"
+      role: "项目负责人（Project Leader）"
+      authors_note: "* 共同第一作者 · † 项目负责人"
+      image_alt: "ReMAP 将全局场景上下文、局部区域证据与强化学习记忆访问策略结合，用于多模态推理。"
     "2609.34330":
       summary: "通过互信息覆盖优化开展无需训练的两阶段视觉 token 剪枝：先选择有代表性的视觉候选池，再利用任务相关信号细化。"
       role: "共同第一作者"

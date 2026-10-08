@@ -75,6 +75,7 @@
           {% if paper.authors %}<p class="author">
             {{- paper.authors | escape | replace: 'Yichen Guo', '<strong>Yichen Guo</strong>' -}}
           </p>{% endif %}
+          {% if paper_copy.authors_note %}<p class="small-note">{{ paper_copy.authors_note | escape }}</p>{% endif %}
           <p class="periodical">{% if paper.status == 'under_review' and paper.category == 'preprints' %}{{ copy.ui.under_review | default: 'Under review' }} · {{ paper_year }}{% elsif paper.category == 'conferences' %}<strong>{{ paper.venue | escape }} {{ paper.year }}{% if paper.status == 'accepted' %} · {{ copy.ui.accepted | default: 'Accepted' }}{% endif %}</strong>{% elsif paper.category == 'preprints' %}{{ copy.ui.preprint | default: 'Preprint' }} · {{ paper_year }}{% else %}{{ copy.ui.manuscript | default: 'Manuscript' }} · {{ paper.year }}{% endif %}{% if paper.authors %} · <span class="pub-role">{{ paper_role }}</span>{% endif %}</p>
           {% if paper_summary != '' %}<p class="pub-summary">{{ paper_summary | escape }}</p>{% endif %}
           {% if paper_contribution != '' %}<p class="pub-contribution"><strong>{{ copy.ui.contribution | default: 'My contribution' }}:</strong> {{ paper_contribution | escape }}</p>{% endif %}

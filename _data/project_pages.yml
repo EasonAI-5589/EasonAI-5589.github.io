@@ -1,5 +1,48 @@
 # 独立项目介绍页：链接、图片为共享资产；显示文案按 en / zh 对照维护。
 # 标题、原作者列表和论文状态读取 _publications/，避免维护两套事实。
+remap:
+  name: ReMAP
+  arxiv_id: "2610.05097"
+  source_url: "https://arxiv.org/html/2610.05097v1"
+  hero:
+    src: /assets/research/remap-teaser.png
+    width: 1800
+    height: 1392
+  method_figure:
+    src: /assets/research/remap-framework.png
+    width: 1800
+    height: 1013
+  en:
+    subtitle: "Restoring the Perceptual Cycle with Reasoning-Time Latent Visual Memory"
+    overview: "ReMAP lets a multimodal model retrieve visual evidence while reasoning. Global memory retains scene and cross-image context; Local memory retrieves regions relevant to the current reasoning state. Both return compact latent tokens, and a learned policy decides when and which memory to access."
+    hero_alt: "ReMAP studies how global context, compact visual representations, and state-dependent memory access affect visual reasoning."
+    hero_caption: "Memory-design analysis from Figure 1 of the paper; image from the official ReMAP repository."
+    method:
+      - title: "Preserve global context"
+        text: "Question-conditioned Global memory summarizes individual images and their relationships before decoding."
+      - title: "Retrieve local evidence"
+        text: "Local memory selects and re-encodes relevant image regions, using Global context to interpret the details."
+      - title: "Learn when to look again"
+        text: "Reinforcement learning compares branched continuations to train the choice between continued reasoning and Global or Local memory access."
+    method_alt: "ReMAP connects Global and Local latent visual memory to reasoning through learned memory requests."
+    method_caption: "The ReMAP framework from Figure 2 of the paper; image from the official repository."
+    evaluation: "The paper evaluates ten benchmark families and reports gains over prior visual-memory methods on all four multi-image benchmarks. Cross-backbone comparisons and memory ablations examine where access helps; visual-context analysis measures the tokens entering the reasoning sequence. Full protocols and limitations are in the paper."
+  zh:
+    subtitle: "以推理时隐空间视觉记忆恢复感知循环"
+    overview: "ReMAP 让多模态模型在推理过程中重新获取视觉证据。全局记忆保留场景与跨图像关系，局部记忆检索当前推理状态所需的区域细节。两者均返回紧凑的隐空间 token，并由学习到的策略决定何时调用哪一种记忆。"
+    hero_alt: "ReMAP 研究全局上下文、紧凑视觉表示与依赖推理状态的记忆调用如何影响视觉推理。"
+    hero_caption: "记忆设计分析，图自论文 Figure 1，图片来自 ReMAP 官方仓库。"
+    method:
+      - title: "保留全局上下文"
+        text: "解码前，全局记忆根据问题汇总各图像内容及图像之间的关系。"
+      - title: "检索局部证据"
+        text: "局部记忆选择并重新编码相关图像区域，借助全局上下文理解细节。"
+      - title: "学习何时再次观察"
+        text: "强化学习比较分支续写结果，训练策略在继续推理、读取全局记忆和读取局部记忆之间作出选择。"
+    method_alt: "ReMAP 通过学习到的记忆请求，将全局和局部隐空间视觉记忆接入推理过程。"
+    method_caption: "ReMAP 方法框架，图自论文 Figure 2，图片来自官方仓库。"
+    evaluation: "论文评测十个基准家族，并报告在四个多图像基准上均优于已有视觉记忆方法。跨模型骨干对比与记忆消融分析调用在何种情境下有效；视觉上下文分析衡量进入推理序列的 token 数量。完整协议与局限见原论文。"
+
 mico:
   name: MiCo
   arxiv_id: "2609.34330"
