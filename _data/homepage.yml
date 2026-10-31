@@ -65,7 +65,7 @@ en:
     bio_html: >-
       I am currently pursuing an <strong>M.Eng. (by Research) in Computer Science and Engineering</strong> at <strong>Nanyang Technological University (NTU)</strong> and am a <strong>Research Affiliate at <a href="https://www.ntu.edu.sg/gifts/about">GIFTS</a></strong>. I am honored to work under the guidance of <a href="https://www.linwilliamcong.com/about">Prof. Lin William Cong</a> in the <a href="https://www.ntu.edu.sg/gifts/research-and-innovation">Digital Economy and Financial Technology Lab (DEFT Lab)</a>. I also collaborate with the <a href="https://github.com/PKU-HMI-Lab">Human Machine Intelligence (HMI) Lab</a> at <strong>Peking University's School of Computer Science</strong> under the guidance of <a href="https://www.ai.pku.edu.cn/en/info/1459/2068.htm">Prof. Shanghang Zhang</a>. In addition, I maintain a long-term remote research collaboration with <a href="https://eye.hms.harvard.edu/mengyuwang">Prof. Mengyu Wang</a> and his <a href="https://wang.hms.harvard.edu/">Harvard AI and Robotics Lab</a> at <strong>Harvard University</strong>.
     internships_html: >-
-      I am currently a <strong>Data Science Intern at Binance</strong>, working on <strong>AI trading agents and trading algorithms</strong>. Previously, I interned with <strong>Tencent LightSpeed Studios' Singapore team</strong>.
+      Previously, I interned with <strong>Tencent LightSpeed Studios' Singapore team</strong>.
     research_html: >-
       My research interests center on <strong>world models</strong> and <strong>AI agents</strong>, with a focus on action-conditioned generation, policy learning, agent harnesses, and post-training for tasks such as robotic manipulation, trading algorithms, market analysis, and the replication of econometric studies. I also study the efficiency and reliability of <strong>vision-language models (VLMs)</strong>.
     phd_html: >-
@@ -112,17 +112,6 @@ en:
         - "Co-first author of STAR-Pro: adaptive visual-token selection and progressive decoder refinement, evaluated across model architectures for inference efficiency and task accuracy."
         - "Contribute to MiCo / MiCo+ evaluation of training-free visual-token pruning via information-coverage objectives, spanning visual reasoning, grounding, hallucination, and video benchmarks."
         - "Core contributor to WorldEcho / WorldSync: diagnose action-following errors in robotic world models and study generation alignment for downstream policy learning."
-    - logo: "/assets/logos/binance.png"
-      logo_class: ""
-      width: 200
-      height: 200
-      institution: "Binance"
-      dates: "Jun 2026–Present"
-      role: "Data Science Intern · Remote"
-      supervisor_html: "Harvin Wang"
-      points:
-        - "Contribute to financial-agent SFT/RL post-training, tool-execution harnesses, and inference-serving workflows for market analysis and trading-signal generation."
-        - "First author of ProbTraj: trajectory-based SFT and outcome-guided RL for probabilistic forecasting from frozen evidence, with forecast-quality and valid-output evaluation."
     - logo: "/assets/logos/tencent-vertical.png"
       logo_class: "experience-logo--wordmark"
       width: 1915
@@ -292,7 +281,7 @@ zh:
     bio_html: >-
       我目前在<strong>南洋理工大学（NTU）</strong>攻读<strong>计算机科学与工程研究型硕士</strong>，并在 <a href="https://www.ntu.edu.sg/gifts/about">GIFTS</a> 担任 Research Affiliate，很荣幸能在 <a href="https://www.linwilliamcong.com/about">Lin William Cong 教授</a>的指导下，于<a href="https://www.ntu.edu.sg/gifts/research-and-innovation">数字经济与金融科技实验室（DEFT Lab）</a>开展研究。我也在 <a href="https://cs.pku.edu.cn/info/1086/1735.htm">Shanghang Zhang 教授</a>的指导下，与<strong>北京大学计算机学院</strong>的<a href="https://github.com/PKU-HMI-Lab">人机智能实验室（HMI Lab）</a>开展科研合作。此外，我与<strong>哈佛大学</strong>的 <a href="https://eye.hms.harvard.edu/mengyuwang">Mengyu Wang 教授</a>及其 <a href="https://wang.hms.harvard.edu/">Harvard AI and Robotics Lab</a> 长期保持线上科研合作。
     internships_html: >-
-      目前，我在 <strong>Binance</strong> 担任<strong>数据科学实习生</strong>，参与 <strong>AI 交易智能体与交易算法</strong>的研发。此前，我曾在<strong>腾讯光子工作室群的新加坡团队</strong>实习。
+      此前，我曾在<strong>腾讯光子工作室群的新加坡团队</strong>实习。
     research_html: >-
       我的研究兴趣主要集中在<strong>世界模型（World Models）</strong>与 <strong>AI 智能体（AI Agents）</strong>，关注动作条件生成、策略学习，以及智能体运行框架和后训练，面向机器人操作、交易算法与市场分析、计量研究复现等具体任务。我也关注<strong>视觉语言模型（VLMs）</strong>的高效推理与可靠性。
     phd_html: >-
@@ -339,17 +328,6 @@ zh:
         - "STAR-Pro 共同第一作者：研究自适应视觉 token 选择与渐进式解码器细化，跨模型架构评测推理效率和任务准确率。"
         - "参与 MiCo / MiCo+ 基于信息覆盖目标的免训练视觉 token 剪枝评测，覆盖视觉推理、定位、幻觉和视频基准。"
         - "WorldEcho / WorldSync 核心贡献者：诊断机器人世界模型的动作遵循错误，研究服务于下游策略学习的生成对齐方法。"
-    - logo: "/assets/logos/binance.png"
-      logo_class: ""
-      width: 200
-      height: 200
-      institution: "Binance"
-      dates: "2026 年 6 月至今"
-      role: "数据科学实习生 · 远程"
-      supervisor_html: "Harvin Wang"
-      points:
-        - "参与金融智能体的 SFT/RL 后训练、工具执行框架和推理服务流程，支持市场分析与交易信号生成。"
-        - "ProbTraj 第一作者：结合基于轨迹的 SFT 与结果引导的 RL，在固定证据条件下开展概率预测，并评测预测质量和有效输出。"
     - logo: "/assets/logos/tencent-vertical.png"
       logo_class: "experience-logo--wordmark"
       width: 1915

@@ -174,7 +174,10 @@ exclude:
   - _pages/category-archive.html
   - _pages/collection-archive.html
   - _pages/cv-json.md
+  - _pages/cv-preview.html
+  - _pages/cv-preview-zh.html
   - _pages/cv.md
+  - assets/cv
   - _pages/markdown.md
   - _pages/non-menu-page.md
   - _pages/page-archive.html
