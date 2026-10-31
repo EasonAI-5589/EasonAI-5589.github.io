@@ -65,7 +65,7 @@ en:
     bio_html: >-
       I am currently pursuing an <strong>M.Eng. (by Research) in Computer Science and Engineering</strong> at <strong>Nanyang Technological University (NTU)</strong> and am a <strong>Research Affiliate at <a href="https://www.ntu.edu.sg/gifts/about">GIFTS</a></strong>. I am honored to work under the guidance of <a href="https://www.linwilliamcong.com/about">Prof. Lin William Cong</a> in the <a href="https://www.ntu.edu.sg/gifts/research-and-innovation">Digital Economy and Financial Technology Lab (DEFT Lab)</a>. I also collaborate with the <a href="https://github.com/PKU-HMI-Lab">Human Machine Intelligence (HMI) Lab</a> at <strong>Peking University's School of Computer Science</strong> under the guidance of <a href="https://www.ai.pku.edu.cn/en/info/1459/2068.htm">Prof. Shanghang Zhang</a>. In addition, I maintain a long-term remote research collaboration with <a href="https://eye.hms.harvard.edu/mengyuwang">Prof. Mengyu Wang</a> and his <a href="https://wang.hms.harvard.edu/">Harvard AI and Robotics Lab</a> at <strong>Harvard University</strong>.
     internships_html: >-
-      Previously, I interned with <strong>Tencent LightSpeed Studios' Singapore team</strong>.
+      I am also a <strong>Research Affiliate at the PBC School of Finance, Tsinghua University</strong>, working under the guidance of <a href="https://sites.google.com/view/xiaoyanzhang/">Prof. Xiaoyan Zhang</a>. Previously, I interned with <strong>Tencent LightSpeed Studios' Singapore team</strong>.
     research_html: >-
       My research interests center on <strong>world models</strong> and <strong>AI agents</strong>, with a focus on action-conditioned generation, policy learning, agent harnesses, and post-training for tasks such as robotic manipulation, trading algorithms, market analysis, and the replication of econometric studies. I also study the efficiency and reliability of <strong>vision-language models (VLMs)</strong>.
     phd_html: >-
@@ -281,7 +281,7 @@ zh:
     bio_html: >-
       我目前在<strong>南洋理工大学（NTU）</strong>攻读<strong>计算机科学与工程研究型硕士</strong>，并在 <a href="https://www.ntu.edu.sg/gifts/about">GIFTS</a> 担任 Research Affiliate，很荣幸能在 <a href="https://www.linwilliamcong.com/about">Lin William Cong 教授</a>的指导下，于<a href="https://www.ntu.edu.sg/gifts/research-and-innovation">数字经济与金融科技实验室（DEFT Lab）</a>开展研究。我也在 <a href="https://cs.pku.edu.cn/info/1086/1735.htm">Shanghang Zhang 教授</a>的指导下，与<strong>北京大学计算机学院</strong>的<a href="https://github.com/PKU-HMI-Lab">人机智能实验室（HMI Lab）</a>开展科研合作。此外，我与<strong>哈佛大学</strong>的 <a href="https://eye.hms.harvard.edu/mengyuwang">Mengyu Wang 教授</a>及其 <a href="https://wang.hms.harvard.edu/">Harvard AI and Robotics Lab</a> 长期保持线上科研合作。
     internships_html: >-
-      此前，我曾在<strong>腾讯光子工作室群的新加坡团队</strong>实习。
+      同时，我在<strong>清华大学五道口金融学院</strong>担任 <strong>Research Affiliate</strong>，在 <a href="https://sites.google.com/view/xiaoyanzhang/">Xiaoyan Zhang 教授</a>的指导下开展研究。此前，我曾在<strong>腾讯光子工作室群的新加坡团队</strong>实习。
     research_html: >-
       我的研究兴趣主要集中在<strong>世界模型（World Models）</strong>与 <strong>AI 智能体（AI Agents）</strong>，关注动作条件生成、策略学习，以及智能体运行框架和后训练，面向机器人操作、交易算法与市场分析、计量研究复现等具体任务。我也关注<strong>视觉语言模型（VLMs）</strong>的高效推理与可靠性。
     phd_html: >-
