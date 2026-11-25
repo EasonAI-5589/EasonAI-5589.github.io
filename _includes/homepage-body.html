@@ -51,9 +51,9 @@
 </ul>
 <h2>{{ copy.ui.awards }}</h2>
 <p>{{ copy.awards }}</p>
-{% if site.clustrmaps_id %}
+{% if site.mapmyvisitors_id %}
 <h2 id="visitors">{{ copy.ui.visitors }}</h2>
 <div class="visitor-map">
-  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d={{ site.clustrmaps_id }}&cl=ffffff&w=a"></script>
+  <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d={{ site.mapmyvisitors_id }}&cl=ffffff&w=a"></script>
 </div>
 {% endif %}

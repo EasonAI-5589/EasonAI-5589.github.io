@@ -157,8 +157,9 @@ analytics:
   google:
     tracking_id          : "G-6TQ89BMGW3" # GA4 Measurement ID; empty = no tracking
 
-# ClustrMaps visitor map on the homepage: the "d" value from the widget code; empty = hidden
-clustrmaps_id            :
+# MapMyVisitors visitor map on the homepage: the "d" value from the widget code; empty = hidden
+# Stats: https://mapmyvisitors.com/web/1c9oh (ClustrMaps is unreachable, so it is not used)
+mapmyvisitors_id         : "b62MJgfLx49SYGCjgV1xM7DswosPfq-0XClcoi4pyf0"
 
 
 # Reading Files
