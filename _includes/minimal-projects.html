@@ -73,7 +73,7 @@
     {% for paper in completed_projects %}
     <li>
       <a href="{{ publications_path | relative_url }}#paper-{{ paper.project_id | slugify }}" title="{{ paper.title | escape }}">{{ paper.project_name | escape }} <span aria-hidden="true">↗</span></a>
-      <span class="completed-project-status">{% if paper.status == 'accepted' %}{{ paper.venue | escape }} {{ paper.year }} · {{ copy.ui.accepted | default: 'Accepted' }}{% elsif paper.status == 'under_review' %}{{ copy.ui.under_review | default: 'Under review' }}{% else %}{{ copy.ui.preprint | default: 'Preprint' }}{% endif %}</span>
+      <span class="completed-project-status">{% if paper.review %}{% include review-status.html paper=paper ui=copy.ui %}{% elsif paper.status == 'accepted' %}{{ paper.venue | escape }} {{ paper.year }} · {{ copy.ui.accepted | default: 'Accepted' }}{% elsif paper.status == 'under_review' %}{{ copy.ui.under_review | default: 'Under review' }}{% else %}{{ copy.ui.preprint | default: 'Preprint' }}{% endif %}</span>
     </li>
     {% endfor %}
   </ul>

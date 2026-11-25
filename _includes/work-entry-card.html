@@ -14,7 +14,7 @@
   <div class="work-entry-body">
     <div class="work-entry-heading">
       <h3><a href="{{ entry_url | escape }}" data-project-entry>{{ entry_name }}</a></h3>
-      <span class="work-entry-status">{% if include.work.status == 'ongoing' %}{{ copy.ui.ongoing }}{% elsif include.work.status == 'accepted' %}{{ copy.ui.accepted }}{% elsif include.work.status == 'under_review' %}{{ copy.ui.under_review }} · {{ entry_year }}{% else %}{{ copy.ui.preprint }} · {{ entry_year }}{% endif %}</span>
+      <span class="work-entry-status">{% if include.work.review %}{% include review-status.html paper=include.work ui=copy.ui %}{% elsif include.work.status == 'ongoing' %}{{ copy.ui.ongoing }}{% elsif include.work.status == 'accepted' %}{{ copy.ui.accepted }}{% elsif include.work.status == 'under_review' %}{{ copy.ui.under_review }} · {{ entry_year }}{% else %}{{ copy.ui.preprint }} · {{ entry_year }}{% endif %}</span>
     </div>
     {% if include.is_paper and include.work.authors %}<p class="work-entry-authors">{{ include.work.authors | escape | replace: 'Yichen Guo', '<strong>Yichen Guo</strong>' }}</p>{% endif %}
     {% if include.display.authors_note %}<p class="small-note">{{ include.display.authors_note | escape }}</p>{% endif %}

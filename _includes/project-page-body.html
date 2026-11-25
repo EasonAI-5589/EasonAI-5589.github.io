@@ -10,7 +10,7 @@
 <article class="project-detail publication-detail">
   <a class="quiet-link project-detail-back" href="{{ project_home | relative_url }}#selected-work">← {{ project_ui.back }}</a>
   <header class="project-detail-header">
-    <p class="eyebrow">{{ project_paper.venue | escape }} {{ project_paper.date | date: '%Y' }} · {{ project_site_copy.ui[project_paper.status] | default: project_paper.status | escape }}</p>
+    <p class="eyebrow">{% if project_paper.review %}{% include review-status.html paper=project_paper ui=project_site_copy.ui %} · arXiv {{ project_paper.date | date: '%Y' }}{% else %}{{ project_paper.venue | escape }} {{ project_paper.date | date: '%Y' }} · {{ project_site_copy.ui[project_paper.status] | default: project_paper.status | escape }}{% endif %}</p>
     <h1>{{ project_data.name | escape }}</h1>
     <p class="project-detail-subtitle">{{ project_copy.subtitle | escape }}</p>
     <p class="authors">{{ project_paper.authors | escape | replace: 'Yichen Guo', '<strong>Yichen Guo</strong>' }}</p>

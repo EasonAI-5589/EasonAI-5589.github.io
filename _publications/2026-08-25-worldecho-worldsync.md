@@ -20,6 +20,10 @@ projecturl: "https://siriyep.github.io/worldecho-worldsync-project-page/"
 huggingfaceurl: "https://huggingface.co/datasets/YICHEN013/WorldEcho"
 huggingfacestatus: "Private dataset"
 huggingfacenote: "Dataset access is currently restricted; data upload is pending."
+review:
+  venue: "ICLR 2027"
+  scores: "4/4/3"
+  rank: "1%"
 excerpt: "WorldEcho diagnoses action following beyond expert demonstrations; WorldSync improves action-conditioned generation for more reliable policy learning."
 ---
 

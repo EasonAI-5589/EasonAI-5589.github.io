@@ -1,0 +1,2 @@
+{%- assign rv = include.paper.review -%}
+<span class="review-status" title="{{ include.ui.review_note | escape }}">{{ rv.venue | escape }} · {{ include.ui.under_review }} · {{ include.ui.review_scores }} {{ rv.scores | escape }}{% if rv.rank %} · <strong class="review-rank">{{ include.ui.review_top }} {{ rv.rank | escape }}</strong>{% endif %}</span>

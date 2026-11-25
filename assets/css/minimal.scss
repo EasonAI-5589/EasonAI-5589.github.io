@@ -369,3 +369,4 @@ html[lang="zh-CN"] .display-controls a[aria-current="page"],html[lang="zh-CN"] .
   .project-page .project-detail-header h1 { font-size:34px; }
 }
 @media print { :root, :root[data-theme] { @include light-theme; } .profile { position:static; } .site-content { padding-top:0; } .profile-nav,.display-controls,.social-icons,.demo-controls,dialog { display:none; } .work-card { break-inside:avoid; } }
+.review-status .review-rank { color:var(--strong); font-weight:700; }
