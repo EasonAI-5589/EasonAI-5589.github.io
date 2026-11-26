@@ -56,7 +56,7 @@ en:
     skip: "Skip to content"
     profile_position: "AI Research"
     profile_affiliation: "Nanyang Technological University"
-    phd_short: "Seeking PhD · Spring / Fall 2027"
+    phd_short: "Seeking PhD · Fall 2027"
     supervisor: "Supervisor"
     theme_credit: 'Powered by Jekyll and the <a href="https://github.com/yaoyao-liu/minimal-light">Minimal Light</a> theme.'
     navigation: "Main navigation"
@@ -73,7 +73,7 @@ en:
     research_html: >-
       My research interests center on <strong>world models</strong> and <strong>AI agents</strong>, with a focus on action-conditioned generation, policy learning, agent harnesses, and post-training for tasks such as robotic manipulation, trading algorithms, market analysis, and the replication of econometric studies. I also study the efficiency and reliability of <strong>vision-language models (VLMs)</strong>.
     phd_html: >-
-      I am seeking <strong>PhD opportunities starting in Spring or Fall 2027</strong>. Feel free to contact me at <a href="mailto:yichen013@e.ntu.edu.sg">yichen013@e.ntu.edu.sg</a> to discuss research ideas, PhD opportunities, or potential collaborations. Recommendations are also welcome.
+      I am seeking <strong>PhD opportunities starting in Fall 2027</strong>. Feel free to contact me at <a href="mailto:yichen013@e.ntu.edu.sg">yichen013@e.ntu.edu.sg</a> to discuss research ideas, PhD opportunities, or potential collaborations. Recommendations are also welcome.
   interests:
     - label: "World Models"
       text: "Action-conditioned generation, action following, policy training and learning, and unified models, with applications in robotic manipulation."
@@ -276,7 +276,7 @@ zh:
     skip: "跳转到正文"
     profile_position: "人工智能研究"
     profile_affiliation: "南洋理工大学"
-    phd_short: "寻求博士机会 · 2027 年春季 / 秋季"
+    phd_short: "寻求博士机会 · 2027 年秋季"
     supervisor: "导师"
     theme_credit: '基于 Jekyll 与 <a href="https://github.com/yaoyao-liu/minimal-light">Minimal Light</a> 主题构建。'
     navigation: "主导航"
@@ -293,7 +293,7 @@ zh:
     research_html: >-
       我的研究兴趣主要集中在<strong>世界模型（World Models）</strong>与 <strong>AI 智能体（AI Agents）</strong>，关注动作条件生成、策略学习，以及智能体运行框架和后训练，面向机器人操作、交易算法与市场分析、计量研究复现等具体任务。我也关注<strong>视觉语言模型（VLMs）</strong>的高效推理与可靠性。
     phd_html: >-
-      我计划于 <strong>2027 年春季或秋季</strong>开始博士阶段的研究，目前正在寻找合适的机会。欢迎通过 <a href="mailto:yichen013@e.ntu.edu.sg">yichen013@e.ntu.edu.sg</a> 联系我，交流研究想法、博士机会或合作，也欢迎推荐。
+      我计划于 <strong>2027 年秋季</strong>开始博士阶段的研究，目前正在寻找合适的机会。欢迎通过 <a href="mailto:yichen013@e.ntu.edu.sg">yichen013@e.ntu.edu.sg</a> 联系我，交流研究想法、博士机会或合作，也欢迎推荐。
   interests:
     - label: "世界模型（World Models）"
       text: "关注动作条件生成、动作遵循、策略训练与学习，以及统一模型，探索其在机器人操作中的应用。"
