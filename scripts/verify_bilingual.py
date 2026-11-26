@@ -126,8 +126,8 @@ class BilingualRoutes(unittest.TestCase):
 
     def test_work_panels_keep_selected_and_ongoing_entries_separate(self):
         expected = {
-            'selected': ['paper-starpro', 'paper-mico', 'paper-remap',
-                         'paper-worldecho-worldsync', 'paper-regimevggt', 'paper-safedojo'],
+            'selected': ['paper-worldecho-worldsync', 'paper-starpro', 'paper-mico',
+                         'paper-remap', 'paper-regimevggt', 'paper-safedojo'],
             'ongoing': ['inferencenet'],
         }
         for route in ['/', '/zh/', '/projects/', '/zh/projects/']:
