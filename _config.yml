@@ -167,6 +167,9 @@ include:
   - .htaccess
   - _pages
 exclude:
+  # Agent instructions for this repo; not part of the site.
+  - AGENTS.md
+  - CLAUDE.md
   # Legacy template pages are retained in source but excluded from the Minimal Light site.
   - files
   - talkmap
